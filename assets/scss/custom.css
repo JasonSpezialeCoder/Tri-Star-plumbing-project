@@ -1639,4 +1639,22 @@ footer .btn:focus {
 .career-contact-section .btn-form {
   background-color: var(--bkg3-btn);
   color: var(--accent-white-btn);
+}
+
+.career-detail-section li {
+  list-style-type: none;
+  padding-bottom: 1rem;
+}
+
+.career-detail-section li:last-child {
+  padding-bottom: 0;
+}
+
+.career-detail-section ul {
+  padding-left: 0;
+}
+
+.career-detail-section i {
+  color: var(--accent3-yellow-light);
+  padding-right: 1rem;
 }/*# sourceMappingURL=custom.css.map */
