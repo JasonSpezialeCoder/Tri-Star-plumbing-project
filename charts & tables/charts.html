@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Fabrx">
+<meta name="keywords" content="Fabrx">
+<meta name="author" content="Fabrx">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Fabrx - Charts Light</title>
+<link href="../assets/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<!-- Fabrx External CSS -->
+<link href="../assets/vendor/flatpickr/dist/flatpickr.min.css" rel="stylesheet" type="text/css" media="all">
+<link href="../assets/css/fabrx-styles.min.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body class="charts-page">
+
+<!-- Fabrx Customize Sidebar -->
+<div class="customize-sidebar">
+  <div class="border-bottom border-gray-300 p-3 p-md-4 bg-white">
+    <div class="text-end">
+      <a href="javascript:void(0);" class="badge badge-primary circle customize-close">
+        <svg width="18" height="18" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <path d="M19.7396505,4.26034953 C20.0552257,4.57592471 20.0839143,5.06974834 19.8257164,5.41773233 L19.7396505,5.51742825 L13.257,12 L19.7396505,18.4825718 C20.0867832,18.8297045 20.0867832,19.3925178 19.7396505,19.7396505 C19.4240753,20.0552257 18.9302517,20.0839143 18.5822677,19.8257164 L18.4825718,19.7396505 L12,13.257 L5.51742825,19.7396505 C5.17029555,20.0867832 4.60748223,20.0867832 4.26034953,19.7396505 C3.94477434,19.4240753 3.91608569,18.9302517 4.17428357,18.5822677 L4.26034953,18.4825718 L10.743,12 L4.26034953,5.51742825 C3.91321682,5.17029555 3.91321682,4.60748223 4.26034953,4.26034953 C4.57592471,3.94477434 5.06974834,3.91608569 5.41773233,4.17428357 L5.51742825,4.26034953 L12,10.743 L18.4825718,4.26034953 C18.8297045,3.91321682 19.3925178,3.91321682 19.7396505,4.26034953 Z" fill="#ffffff"></path>
+          </g>
+        </svg>
+      </a>
+    </div>
+    <div class="px-2 px-md-4">
+      <h4 class="mb-0 font-weight-bold"><img src="../assets/images/icons/adjustments.svg" alt="Icon"> Customize</h4>
+      <p class="text-muted mb-0 lh-lg">Choose your style and settings</p>
+    </div>
+  </div>
+  <div class="customize-body" data-simplebar>
+    <div class="p-4 px-lg-5 border-bottom border-gray-300">
+      <h6 class="font-weight-semibold pb-3">Select Skin</h6>
+      <div class="d-flex fabrx-skins customizer-controls">
+        <div class="text-center pe-4">
+          <div class="form-check-lg badge bg-white circle xxl d-flex align-items-center justify-content-center">
+            <input class="form-check-input mx-0 rounded-circle" type="radio" name="FabrxSkins" id="LightMode" value="light-mode" checked="checked">
+          </div>
+          <label for="LightMode" class="text-gray-700 mt-2">Light mode</label>
+        </div>
+        <div class="text-center ps-4 dark-radio">
+          <div class="form-check-lg bg-gray-800 badge circle xxl d-flex align-items-center justify-content-center">
+            <input class="form-check-input mx-0 rounded-circle" type="radio" name="FabrxSkins" id="DarkMode" value="dark-mode">
+          </div>
+          <label for="DarkMode" class="text-gray-700 mt-2">Dark mode</label>
+        </div>
+      </div>
+    </div>
+    <div class="p-4 ps-lg-5 border-bottom border-gray-300">
+      <div class="d-flex align-items-center">
+        <h6 class="font-weight-semibold mb-0">RTL Mode</h6>
+        <div class="custom-control custom-switch custom-switch-lg ms-auto">
+          <input type="checkbox" class="custom-control-input" id="RTLMode" value="fabrx-rtl">
+          <label class="custom-control-label" for="RTLMode">&nbsp;</label>
+        </div>
+      </div>
+      <p class="text-gray-600 pt-2 mb-0">Switch layout direction</p>
+    </div>
+  </div>
+  <div class="p-4 px-lg-5 border-top border-gray-300 bg-white mt-auto">
+    <div class="row">
+      <div class="col-6 d-grid">
+        <a href="Javascript:void(0);" class="btn btn-lg btn-outline-dark" id="ResetCustomizer">Reset</a>
+      </div>
+      <div class="col-6 d-grid">
+        <a href="Javascript:void(0);" class="btn btn-lg btn-primary" id="CustomizerPreview">Preview</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Fabrx Customize Button, Position Fixed, P 2, P Md 3, Bottom 0, End 0, Z Index 10 -->
+<div class="position-fixed p-2 p-md-3 bottom-0 end-0 z-index-10">
+  <a href="javascript:void(0);" class="customize-btn badge badge-primary circle xl shadow"><svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path d="M9.59614123,4.14018119 C10.2075438,1.6199396 13.7924562,1.6199396 14.4038588,4.14018119 C14.4771527,4.44267767 14.6903653,4.69180757 14.9777167,4.81085792 C15.265068,4.92990827 15.5919974,4.90456048 15.8578028,4.74249541 C18.0723244,3.3934025 20.6072863,5.92775159 19.2585342,8.14314869 C19.0968482,8.40859979 19.0715615,8.73527802 19.1904716,9.02244876 C19.3093818,9.30961949 19.558208,9.52279454 19.8598188,9.59614123 C22.3800604,10.2075438 22.3800604,13.7924562 19.8596122,14.4039089 C19.5573223,14.4771527 19.3081924,14.6903653 19.1891421,14.9777167 C19.0700917,15.265068 19.0954395,15.5919974 19.2575046,15.8578028 C20.6065975,18.0723244 18.0722484,20.6072863 15.8568513,19.2585342 C15.5914002,19.0968482 15.264722,19.0715615 14.9775512,19.1904716 C14.6903805,19.3093818 14.4772055,19.558208 14.4038588,19.8598188 C13.7924562,22.3800604 10.2075438,22.3800604 9.59609113,19.8596122 C9.52284732,19.5573223 9.30963471,19.3081924 9.02228334,19.1891421 C8.73493198,19.0700917 8.4080026,19.0954395 8.14219722,19.2575046 C5.92767555,20.6065975 3.39271371,18.0722484 4.74146585,15.8568513 C4.90315184,15.5914002 4.92843848,15.264722 4.80952836,14.9775512 C4.69061823,14.6903805 4.44179204,14.4772055 4.14018119,14.4038588 C1.6199396,13.7924562 1.6199396,10.2075438 4.14038784,9.59609113 C4.44267767,9.52284732 4.69180757,9.30963471 4.81085792,9.02228334 C4.92990827,8.73493198 4.90456048,8.4080026 4.74249541,8.14219722 C3.3934025,5.92767555 5.92775159,3.39271371 8.14263487,4.74115317 C8.70858295,5.08524959 9.44004109,4.78211428 9.59614123,4.14018119 Z M12.9101396,4.37501445 C12.5899851,3.50378289 11.2844273,3.54340015 11.0537627,4.49421453 C10.6577145,6.12289084 8.79653305,6.89421293 7.36298714,6.02261687 L7.36298714,6.02261687 L7.26911143,5.97148934 C6.42125334,5.56266023 5.51134412,6.52109682 6.02335926,7.36156432 L6.02335926,7.36156432 L6.1189414,7.53330082 C6.44282572,8.17381945 6.47382709,8.92735295 6.1966337,9.59641354 C5.89424092,10.3262978 5.26144074,10.8678666 4.49381881,11.0538588 C3.5020604,11.2944562 3.5020604,12.7055438 4.49422209,12.9462392 C5.26135037,13.1327916 5.89337912,13.674265 6.19541571,14.4036904 C6.4974523,15.1331159 6.43322321,15.962892 6.02261687,16.6370129 L6.02261687,16.6370129 L5.97148934,16.7308886 C5.56266023,17.5787467 6.52109682,18.4886559 7.36156432,17.9766407 L7.36156432,17.9766407 L7.53330082,17.8810586 C8.17381945,17.5571743 8.92735295,17.5261729 9.59641354,17.8033663 C10.3262978,18.1057591 10.8678666,18.7385593 11.0538588,19.5061812 C11.2944562,20.4979396 12.7055438,20.4979396 12.9462392,19.5057779 C13.1327916,18.7386496 13.674265,18.1066209 14.4036904,17.8045843 C15.1331159,17.5025477 15.962892,17.5667768 16.6370129,17.9773831 L16.6370129,17.9773831 L16.7308886,18.0285107 C17.5787467,18.4373398 18.4886559,17.4789032 17.9766407,16.6384357 L17.9766407,16.6384357 L17.8810586,16.4666992 C17.5571743,15.8261806 17.5261729,15.072647 17.8033663,14.4035865 C18.1057591,13.6737022 18.7385593,13.1321334 19.5061812,12.9461412 C20.4979396,12.7055438 20.4979396,11.2944562 19.5057779,11.0537608 C18.7386496,10.8672084 18.1066209,10.325735 17.8045843,9.59630958 C17.5025477,8.86688412 17.5667768,8.03710801 17.9773831,7.36298714 L17.9773831,7.36298714 L18.0285107,7.26911143 C18.4373398,6.42125334 17.4789032,5.51134412 16.6384357,6.02335926 L16.6384357,6.02335926 L16.4666992,6.1189414 C15.8261806,6.44282572 15.072647,6.47382709 14.4035865,6.1966337 C13.6737022,5.89424092 13.1321334,5.26144074 12.9460911,4.49361216 L12.9460911,4.49361216 Z M12,8.25 C14.0710678,8.25 15.75,9.92893219 15.75,12 C15.75,14.0710678 14.0710678,15.75 12,15.75 C9.92893219,15.75 8.25,14.0710678 8.25,12 C8.25,9.92893219 9.92893219,8.25 12,8.25 Z M12,9.75 C10.7573593,9.75 9.75,10.7573593 9.75,12 C9.75,13.2426407 10.7573593,14.25 12,14.25 C13.2426407,14.25 14.25,13.2426407 14.25,12 C14.25,10.7573593 13.2426407,9.75 12,9.75 Z" fill="#ffffff"></path></g></svg></a>
+</div>  
+
+<!-- Fabrx Section -->
+<section class="fabrx-section">
+  <div class="container">
+    <div class="fabrx-components">
+      <div class="component-item">
+        <div class="row">
+          <!-- Fabrx Stacked Columns Chart -->
+          <div class="col-lg-6 col-md-12 mb-3 mb-sm-5">
+            <div class="card rounded-12 shadow-20">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-4">
+                  <h6>Stacked columns</h6>
+                  <div class="dropdown text-end mb-md-2 ms-auto">
+                    <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="text-primary" id="Action3"><small>This week</small> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 13.502 7.5"><path data-name="Icon Color" d="M12.751,7.5h-12a.75.75,0,0,1-.6-1.2L.221,6.22l6-6A.75.75,0,0,1,7.2.147L7.282.22l6.033,6.035.04.049.059.092.03.063.032.092.02.1L13.5,6.7l0,.052,0,.052-.005.049-.02.1-.032.092-.03.063-.063.1a.772.772,0,0,1-.091.1l-.061.05-.092.058-.062.031-.093.032-.1.02-.05,0Zm-6-5.689h0L2.561,6H10.94L6.752,1.811Z" transform="translate(13.502 7.5) rotate(180)" fill="#0D6EFD"></path></svg></a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action3">
+                      <a class="dropdown-item" href="#0">Action</a>
+                      <a class="dropdown-item" href="#0">Another action</a>
+                      <a class="dropdown-item" href="#0">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="FabrxStackedChartThree"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fabrx Single Bar Chart -->
+          <div class="col-lg-6 col-md-12 mb-3 mb-sm-5">
+            <div class="card rounded-12 shadow-20">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-4">
+                  <h6>Single bar</h6>
+                  <div class="dropdown text-end mb-md-2 ms-auto">
+                    <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="text-primary" id="Action4"><small>This week</small> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 13.502 7.5"><path data-name="Icon Color" d="M12.751,7.5h-12a.75.75,0,0,1-.6-1.2L.221,6.22l6-6A.75.75,0,0,1,7.2.147L7.282.22l6.033,6.035.04.049.059.092.03.063.032.092.02.1L13.5,6.7l0,.052,0,.052-.005.049-.02.1-.032.092-.03.063-.063.1a.772.772,0,0,1-.091.1l-.061.05-.092.058-.062.031-.093.032-.1.02-.05,0Zm-6-5.689h0L2.561,6H10.94L6.752,1.811Z" transform="translate(13.502 7.5) rotate(180)" fill="#0D6EFD"></path></svg></a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action3">
+                      <a class="dropdown-item" href="#0">Action</a>
+                      <a class="dropdown-item" href="#0">Another action</a>
+                      <a class="dropdown-item" href="#0">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="FabrxStackedChartTwo"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fabrx Stacked Bar Chart -->
+          <div class="col-lg-6 col-md-12 mb-3 mb-sm-5">
+            <div class="card rounded-12 shadow-20">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-4">
+                  <h6>Stacked bar</h6>
+                  <div class="dropdown text-end mb-md-2 ms-auto">
+                    <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="text-primary" id="Action5"><small>This week</small> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 13.502 7.5"><path data-name="Icon Color" d="M12.751,7.5h-12a.75.75,0,0,1-.6-1.2L.221,6.22l6-6A.75.75,0,0,1,7.2.147L7.282.22l6.033,6.035.04.049.059.092.03.063.032.092.02.1L13.5,6.7l0,.052,0,.052-.005.049-.02.1-.032.092-.03.063-.063.1a.772.772,0,0,1-.091.1l-.061.05-.092.058-.062.031-.093.032-.1.02-.05,0Zm-6-5.689h0L2.561,6H10.94L6.752,1.811Z" transform="translate(13.502 7.5) rotate(180)" fill="#0D6EFD"></path></svg></a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action3">
+                      <a class="dropdown-item" href="#0">Action</a>
+                      <a class="dropdown-item" href="#0">Another action</a>
+                      <a class="dropdown-item" href="#0">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="FabrxStackedChartOne"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fabrx Multiple Bar Chart -->
+          <div class="col-lg-6 col-md-12 mb-3 mb-sm-5">
+            <div class="card rounded-12 shadow-20">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-4">
+                  <h6>Multiple bar</h6>
+                  <div class="dropdown text-end mb-md-2 ms-auto">
+                    <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="text-primary" id="Action6"><small>This week</small> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 13.502 7.5"><path data-name="Icon Color" d="M12.751,7.5h-12a.75.75,0,0,1-.6-1.2L.221,6.22l6-6A.75.75,0,0,1,7.2.147L7.282.22l6.033,6.035.04.049.059.092.03.063.032.092.02.1L13.5,6.7l0,.052,0,.052-.005.049-.02.1-.032.092-.03.063-.063.1a.772.772,0,0,1-.091.1l-.061.05-.092.058-.062.031-.093.032-.1.02-.05,0Zm-6-5.689h0L2.561,6H10.94L6.752,1.811Z" transform="translate(13.502 7.5) rotate(180)" fill="#0D6EFD"></path></svg></a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action3">
+                      <a class="dropdown-item" href="#0">Action</a>
+                      <a class="dropdown-item" href="#0">Another action</a>
+                      <a class="dropdown-item" href="#0">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="FabrxMultipleColumnsChartOne"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fabrx Single Line Chart -->
+          <div class="col-lg-6 col-md-12 mb-3 mb-sm-5">
+            <div class="card rounded-12 shadow-20">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-4">
+                  <h6>Single line</h6>
+                  <div class="dropdown text-end mb-md-2 ms-auto">
+                    <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="text-primary" id="Action7"><small>This week</small> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 13.502 7.5"><path data-name="Icon Color" d="M12.751,7.5h-12a.75.75,0,0,1-.6-1.2L.221,6.22l6-6A.75.75,0,0,1,7.2.147L7.282.22l6.033,6.035.04.049.059.092.03.063.032.092.02.1L13.5,6.7l0,.052,0,.052-.005.049-.02.1-.032.092-.03.063-.063.1a.772.772,0,0,1-.091.1l-.061.05-.092.058-.062.031-.093.032-.1.02-.05,0Zm-6-5.689h0L2.561,6H10.94L6.752,1.811Z" transform="translate(13.502 7.5) rotate(180)" fill="#0D6EFD"></path></svg></a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action3">
+                      <a class="dropdown-item" href="#0">Action</a>
+                      <a class="dropdown-item" href="#0">Another action</a>
+                      <a class="dropdown-item" href="#0">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="FabrxPointsChartOne"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fabrx Double Line Chart -->
+          <div class="col-lg-6 col-md-12 mb-3 mb-sm-5">
+            <div class="card rounded-12 shadow-20">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-4">
+                  <h6>Double line</h6>
+                  <div class="dropdown text-end mb-md-2 ms-auto">
+                    <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="text-primary" id="Action8"><small>This week</small> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 13.502 7.5"><path data-name="Icon Color" d="M12.751,7.5h-12a.75.75,0,0,1-.6-1.2L.221,6.22l6-6A.75.75,0,0,1,7.2.147L7.282.22l6.033,6.035.04.049.059.092.03.063.032.092.02.1L13.5,6.7l0,.052,0,.052-.005.049-.02.1-.032.092-.03.063-.063.1a.772.772,0,0,1-.091.1l-.061.05-.092.058-.062.031-.093.032-.1.02-.05,0Zm-6-5.689h0L2.561,6H10.94L6.752,1.811Z" transform="translate(13.502 7.5) rotate(180)" fill="#0D6EFD"></path></svg></a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action3">
+                      <a class="dropdown-item" href="#0">Action</a>
+                      <a class="dropdown-item" href="#0">Another action</a>
+                      <a class="dropdown-item" href="#0">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="FabrxPointsChartTwo"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fabrx Curved Line Chart -->
+          <div class="col-lg-6 col-md-12 mb-3 mb-sm-5">
+            <div class="card rounded-12 shadow-20">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-4">
+                  <h6>Curved line</h6>
+                  <div class="dropdown text-end mb-md-2 ms-auto">
+                    <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="text-primary" id="Action9"><small>This week</small> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 13.502 7.5"><path data-name="Icon Color" d="M12.751,7.5h-12a.75.75,0,0,1-.6-1.2L.221,6.22l6-6A.75.75,0,0,1,7.2.147L7.282.22l6.033,6.035.04.049.059.092.03.063.032.092.02.1L13.5,6.7l0,.052,0,.052-.005.049-.02.1-.032.092-.03.063-.063.1a.772.772,0,0,1-.091.1l-.061.05-.092.058-.062.031-.093.032-.1.02-.05,0Zm-6-5.689h0L2.561,6H10.94L6.752,1.811Z" transform="translate(13.502 7.5) rotate(180)" fill="#0D6EFD"></path></svg></a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action3">
+                      <a class="dropdown-item" href="#0">Action</a>
+                      <a class="dropdown-item" href="#0">Another action</a>
+                      <a class="dropdown-item" href="#0">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="FabrxSplineChartOne"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fabrx Dot Plots Chart Chart -->
+          <div class="col-lg-6 col-md-12 mb-3 mb-sm-5">
+            <div class="card rounded-12 shadow-20">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-4">
+                  <h6>Dot Plots Chart</h6>
+                  <div class="dropdown text-end mb-md-2 ms-auto">
+                    <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="text-primary" id="Action10"><small>This week</small> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 13.502 7.5"><path data-name="Icon Color" d="M12.751,7.5h-12a.75.75,0,0,1-.6-1.2L.221,6.22l6-6A.75.75,0,0,1,7.2.147L7.282.22l6.033,6.035.04.049.059.092.03.063.032.092.02.1L13.5,6.7l0,.052,0,.052-.005.049-.02.1-.032.092-.03.063-.063.1a.772.772,0,0,1-.091.1l-.061.05-.092.058-.062.031-.093.032-.1.02-.05,0Zm-6-5.689h0L2.561,6H10.94L6.752,1.811Z" transform="translate(13.502 7.5) rotate(180)" fill="#0D6EFD"></path></svg></a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action3">
+                      <a class="dropdown-item" href="#0">Action</a>
+                      <a class="dropdown-item" href="#0">Another action</a>
+                      <a class="dropdown-item" href="#0">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="Fabrx3dBubbleChartOne"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fabrx Stacked Area Chart -->
+          <div class="col-lg-6 col-md-12 mb-3 mb-sm-5">
+            <div class="card rounded-12 shadow-20">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-4">
+                  <h6>Stacked area</h6>
+                  <div class="dropdown text-end mb-md-2 ms-auto">
+                    <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="text-primary" id="Action11"><small>This week</small> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 13.502 7.5"><path data-name="Icon Color" d="M12.751,7.5h-12a.75.75,0,0,1-.6-1.2L.221,6.22l6-6A.75.75,0,0,1,7.2.147L7.282.22l6.033,6.035.04.049.059.092.03.063.032.092.02.1L13.5,6.7l0,.052,0,.052-.005.049-.02.1-.032.092-.03.063-.063.1a.772.772,0,0,1-.091.1l-.061.05-.092.058-.062.031-.093.032-.1.02-.05,0Zm-6-5.689h0L2.561,6H10.94L6.752,1.811Z" transform="translate(13.502 7.5) rotate(180)" fill="#0D6EFD"></path></svg></a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action3">
+                      <a class="dropdown-item" href="#0">Action</a>
+                      <a class="dropdown-item" href="#0">Another action</a>
+                      <a class="dropdown-item" href="#0">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="FabrxAreaChartTwo"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fabrx Area Chart Chart -->
+          <div class="col-lg-6 col-md-12 mb-3 mb-sm-5">
+            <div class="card rounded-12 shadow-20">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-4">
+                  <h6>Area chart</h6>
+                  <div class="dropdown text-end mb-md-2 ms-auto">
+                    <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="text-primary" id="Action12"><small>This week</small> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 13.502 7.5"><path data-name="Icon Color" d="M12.751,7.5h-12a.75.75,0,0,1-.6-1.2L.221,6.22l6-6A.75.75,0,0,1,7.2.147L7.282.22l6.033,6.035.04.049.059.092.03.063.032.092.02.1L13.5,6.7l0,.052,0,.052-.005.049-.02.1-.032.092-.03.063-.063.1a.772.772,0,0,1-.091.1l-.061.05-.092.058-.062.031-.093.032-.1.02-.05,0Zm-6-5.689h0L2.561,6H10.94L6.752,1.811Z" transform="translate(13.502 7.5) rotate(180)" fill="#0D6EFD"></path></svg></a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action3">
+                      <a class="dropdown-item" href="#0">Action</a>
+                      <a class="dropdown-item" href="#0">Another action</a>
+                      <a class="dropdown-item" href="#0">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="FabrxAreaChartOne"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fabrx Pie Chart Chart -->
+          <div class="col-lg-6 col-md-12 mb-3 mb-sm-5">
+            <div class="card rounded-12 shadow-20">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-4">
+                  <h6>Pie Chart</h6>
+                  <div class="dropdown text-end mb-md-2 ms-auto">
+                    <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="text-primary" id="Action13"><small>This week</small> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 13.502 7.5"><path data-name="Icon Color" d="M12.751,7.5h-12a.75.75,0,0,1-.6-1.2L.221,6.22l6-6A.75.75,0,0,1,7.2.147L7.282.22l6.033,6.035.04.049.059.092.03.063.032.092.02.1L13.5,6.7l0,.052,0,.052-.005.049-.02.1-.032.092-.03.063-.063.1a.772.772,0,0,1-.091.1l-.061.05-.092.058-.062.031-.093.032-.1.02-.05,0Zm-6-5.689h0L2.561,6H10.94L6.752,1.811Z" transform="translate(13.502 7.5) rotate(180)" fill="#0D6EFD"></path></svg></a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action3">
+                      <a class="dropdown-item" href="#0">Action</a>
+                      <a class="dropdown-item" href="#0">Another action</a>
+                      <a class="dropdown-item" href="#0">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="FabrxPieChartOne"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fabrx Pie Chart Chart -->
+          <div class="col-lg-6 col-md-12 mb-3 mb-sm-5">
+            <div class="card rounded-12 shadow-20">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-4">
+                  <h6>Pie Chart</h6>
+                  <div class="dropdown text-end mb-md-2 ms-auto">
+                    <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="text-primary" id="Action14"><small>This week</small> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 13.502 7.5"><path data-name="Icon Color" d="M12.751,7.5h-12a.75.75,0,0,1-.6-1.2L.221,6.22l6-6A.75.75,0,0,1,7.2.147L7.282.22l6.033,6.035.04.049.059.092.03.063.032.092.02.1L13.5,6.7l0,.052,0,.052-.005.049-.02.1-.032.092-.03.063-.063.1a.772.772,0,0,1-.091.1l-.061.05-.092.058-.062.031-.093.032-.1.02-.05,0Zm-6-5.689h0L2.561,6H10.94L6.752,1.811Z" transform="translate(13.502 7.5) rotate(180)" fill="#0D6EFD"></path></svg></a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action3">
+                      <a class="dropdown-item" href="#0">Action</a>
+                      <a class="dropdown-item" href="#0">Another action</a>
+                      <a class="dropdown-item" href="#0">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="FabrxPieChartTwo"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fabrx Pie Chart Chart -->
+          <div class="col-lg-6 col-md-12 mb-3 mb-sm-5">
+            <div class="card rounded-12 shadow-20">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-4">
+                  <h6>Pie Chart</h6>
+                  <div class="dropdown text-end mb-md-2 ms-auto">
+                    <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="text-primary" id="Action15"><small>This week</small> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 13.502 7.5"><path data-name="Icon Color" d="M12.751,7.5h-12a.75.75,0,0,1-.6-1.2L.221,6.22l6-6A.75.75,0,0,1,7.2.147L7.282.22l6.033,6.035.04.049.059.092.03.063.032.092.02.1L13.5,6.7l0,.052,0,.052-.005.049-.02.1-.032.092-.03.063-.063.1a.772.772,0,0,1-.091.1l-.061.05-.092.058-.062.031-.093.032-.1.02-.05,0Zm-6-5.689h0L2.561,6H10.94L6.752,1.811Z" transform="translate(13.502 7.5) rotate(180)" fill="#0D6EFD"></path></svg></a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action3">
+                      <a class="dropdown-item" href="#0">Action</a>
+                      <a class="dropdown-item" href="#0">Another action</a>
+                      <a class="dropdown-item" href="#0">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="FabrxPieChartThree"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Fabrx Scripts -->
+<script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/vendor/lodash/lodash.min.js"></script>
+<script src="../assets/js/html5.min.js"></script>
+<script src="../assets/js/highcharts.min.js"></script>
+<script src="../assets/js/highcharts-more.min.js"></script>
+<script src="../assets/js/solid-gauge.min.js"></script>
+<script src="../assets/vendor/flatpickr/dist/flatpickr.min.js"></script>
+<script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="../assets/vendor/sticky-js/dist/sticky.min.js"></script>
+<script src="../assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="../assets/js/fabrx-scripts.js"></script>
+<script>
+//Fabrx Stacked Columns Script
+Highcharts.chart('FabrxAreaChartOne', {
+  chart: {
+    type: 'areaspline',
+    backgroundColor: null,
+  },
+  title: {
+    text: '',
+  },
+  credits: {
+    enabled: false,
+  },
+  xAxis: {
+    lineColor: '#EAEAEA',
+    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    labels: {
+      style: {
+        color: '#807E7E',
+        fontSize: '12px',
+        fontFamily: "'Roboto', sans-serif",
+      },
+    },
+  },
+  yAxis: {
+    gridLineColor: '#EAEAEA',
+    lineWidth: 1,
+    lineColor: '#EAEAEA',
+    title: {
+      text: '',
+    },
+    labels: {
+      style: {
+        color: '#807E7E',
+        fontSize: '12px',
+        fontFamily: "'Roboto', sans-serif",
+      },
+    },
+  },
+  legend: {
+    itemStyle: {
+      color: '#212121',
+      fontSize: '12px',
+      fontWeight: 'normal',
+      fontFamily: "'Roboto', sans-serif",
+    },
+    margin: 30,
+    padding: 0,
+    symbolWidth: 9,
+    symbolHeight: 9,
+    itemDistance: 30,
+    symbolPadding: 10,
+  },
+  tooltip: {
+    pointFormat: '{series.name} had stockpiled <b>{point.y:,.0f}</b><br/>warheads in {point.x}',
+  },
+  plotOptions: {
+    column: {
+      pointPadding: 0,
+      borderWidth: 0,
+    },
+    areaspline: {
+      pointStart: 0,
+      marker: {
+        enabled: false,
+        symbol: 'circle',
+        radius: 2,
+        states: {
+          hover: {
+            enabled: true,
+          },
+        }
+      }
+    }
+  },
+  series: [{
+    name: 'Legend',
+    data: [0, 568, 985, 1023, 1230, 652, 1456, 456, 2340, 1865, 1455, 2300],
+    color: '#5A9CFE',
+  }]
+});
+
+//Fabrx Single Bar Script
+Highcharts.chart('FabrxAreaChartTwo', {
+  chart: {
+    type: 'areaspline',
+    backgroundColor: null,
+  },
+  title: {
+    text: '',
+  },
+  credits: {
+    enabled: false,
+  },
+  xAxis: {
+    lineColor: '#EAEAEA',
+    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    labels: {
+      style: {
+        color: '#807E7E',
+        fontSize: '12px',
+        fontFamily: "'Roboto', sans-serif",
+      },
+    },
+  },
+  yAxis: {
+    gridLineColor: '#EAEAEA',
+    lineWidth: 1,
+    lineColor: '#EAEAEA',
+    title: {
+      text: '',
+    },
+    labels: {
+      style: {
+        color: '#807E7E',
+        fontSize: '12px',
+        fontFamily: "'Roboto', sans-serif",
+      },
+    },
+  },
+  legend: {
+    itemStyle: {
+      color: '#212121',
+      fontSize: '12px',
+      fontWeight: 'normal',
+      fontFamily: "'Roboto', sans-serif",
+    },
+    margin: 30,
+    padding: 0,
+    symbolWidth: 9,
+    symbolHeight: 9,
+    itemDistance: 30,
+    symbolPadding: 10,
+  },
+  tooltip: {
+    pointFormat: '{series.name} had stockpiled <b>{point.y:,.0f}</b><br/>warheads in {point.x}',
+  },
+  plotOptions: {
+    column: {
+      pointPadding: 0,
+      borderWidth: 0,
+    },
+    areaspline: {
+      pointStart: 0,
+      marker: {
+        enabled: false,
+        symbol: 'circle',
+        radius: 2,
+        states: {
+          hover: {
+            enabled: true,
+          },
+        }
+      }
+    }
+  },
+  series: [{
+    name: 'Legend',
+    color: '#0D6EFD',
+    data: [0, 17, 899, 50, 55, 66, 76, 86, 96, 1420, 74, 84],
+  },
+  {
+    name: 'Legend',
+    color: '#5A9CFE',
+    data: [0, 8, 15, 785, 596, 33, 2380, 43, 48, 28, 37, 42],
+  },]
+});
+
+//Fabrx Stacked Bar Script
+Highcharts.chart('FabrxPointsChartOne', {
+  chart: {
+    type: 'line',
+    backgroundColor: null,
+  },
+  title: {
+    text: '',
+  },
+  credits: {
+    enabled: false,
+  },
+  xAxis: {
+    lineColor: '#EAEAEA',
+    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    labels: {
+      style: {
+        color: '#807E7E',
+        fontSize: '12px',
+        fontFamily: "'Roboto', sans-serif",
+      },
+    },
+  },
+  yAxis: {
+    gridLineColor: '#EAEAEA',
+    title: {
+      text: '',
+    },
+    labels: {
+      style: {
+        color: '#807E7E',
+        fontSize: '12px',
+        fontFamily: "'Roboto', sans-serif",
+      },
+    },
+    lineWidth: 1,
+    lineColor: '#EAEAEA',
+  },
+  legend: {
+    itemStyle: {
+      color: '#212121',
+      fontSize: '12px',
+      fontWeight: 'normal',
+      fontFamily: "'Roboto', sans-serif",
+    },
+    margin: 30,
+    padding: 0,
+    symbolWidth: 9,
+    symbolHeight: 9,
+    itemDistance: 30,
+    symbolPadding: 10,
+  },
+  plotOptions: {
+    line: {
+      marker: {
+        lineWidth: 0,
+        enabledThreshold: 0,
+        symbol: false,
+      },
+    },
+    series: {
+      lineWidth: 1,
+    },
+  },
+  series: [{
+    name: 'Legend',
+    color: '#0D6EFD',
+    data: [450, 586, 1155, 800, 456, 1456, 1256, 956, 1156, 1856, 1669, 2356],
+  }]
+});
+
+//Fabrx Multiple Bar Script
+Highcharts.chart('FabrxPointsChartTwo', {
+  chart: {
+    type: 'line',
+    backgroundColor: null,
+  },
+  title: {
+    text: '',
+  },
+  credits: {
+    enabled: false,
+  },
+  xAxis: {
+    lineColor: '#EAEAEA',
+    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    labels: {
+      style: {
+        color: '#807E7E',
+        fontSize: '12px',
+        fontFamily: "'Roboto', sans-serif",
+      },
+    },
+  },
+  yAxis: {
+    gridLineColor: '#EAEAEA',
+    lineWidth: 1,
+    lineColor: '#EAEAEA',
+    title: {
+      text: '',
+    },
+    labels: {
+      style: {
+        color: '#807E7E',
+        fontSize: '12px',
+        fontFamily: "'Roboto', sans-serif",
+      },
+    },
+  },
+  legend: {
+    itemStyle: {
+      color: '#212121',
+      fontSize: '12px',
+      fontWeight: 'normal',
+      fontFamily: "'Roboto', sans-serif",
+    },
+    margin: 30,
+    padding: 0,
+    symbolWidth: 9,
+    symbolHeight: 9,
+    itemDistance: 30,
+    symbolPadding: 10,
+  },
+  plotOptions: {
+    series: {
+      lineWidth: 1,
+    },
+  },
+  series: [{
+    name: 'Legend',
+    color: '#0D6EFD',
+    data: [0, 980, 550, 1500, 1000, 1950, 1300, 1450, 1456, 1956, 1236, 1450],
+  },
+  {
+    name: 'Legend',
+    color: '#5A9CFE',
+    data: [1300, 500, 850, 1100, 650, 980, 2100, 1000, 456, 350, 1030, 962],
+  }]
+});
+
+//Fabrx Single Line Chart Script
+Highcharts.chart('FabrxMultipleColumnsChartOne', {
+  chart: {
+    type: 'column',
+    backgroundColor: null,
+  },
+  title: {
+    text: '',
+  },
+  credits: {
+    enabled: false,
+  },
+  xAxis: {
+    lineColor: '#EAEAEA',
+    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    labels: {
+      style: {
+        color: '#807E7E',
+        fontSize: '12px',
+        fontFamily: "'Roboto', sans-serif",
+      },
+    },
+  },
+  yAxis: {
+    gridLineColor: '#EAEAEA',
+    title: {
+      text: '',
+    },
+    lineWidth: 1,
+    lineColor: '#EAEAEA',
+    labels: {
+      style: {
+        color: '#807E7E',
+        fontSize: '12px',
+        fontFamily: "'Roboto', sans-serif",
+      },
+    },
+  },
+  legend: {
+    itemStyle: {
+      color: '#212121',
+      fontSize: '12px',
+      fontWeight: 'normal',
+      fontFamily: "'Roboto', sans-serif",
+    },
+    margin: 30,
+    padding: 0,
+    symbolWidth: 9,
+    symbolHeight: 9,
+    itemDistance: 30,
+    symbolPadding: 10,
+  },
+  plotOptions: {
+    series: {
+      lineWidth: 1,
+    },
+    column: {
+      pointPadding: 0.17,
+      borderWidth: 0,
+    },
+  },
+  series: [{
+    name: 'Legend',
+    color: '#0D6EFD',
+    data: [350, 1856, 876, 963, 856, 456, 750, 2156, 1489, 876, 456, 1150],
+  },
+  {
+    name: 'Legend',
+    color: '#5A9CFE',
+    data: [465, 1236, 700, 356, 513, 654, 458, 1456, 956, 1321, 789, 1585],
+  }]
+});
+
+//Fabrx Double Line Chart Script
+Highcharts.chart('FabrxStackedChartOne', {
+  chart: {
+    type: 'column',
+    backgroundColor: null,
+  },
+  title: {
+    text: '',
+  },
+  credits: {
+    enabled: false,
+  },
+  xAxis: {
+    lineColor: '#EAEAEA',
+    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    labels: {
+      style: {
+        color: '#807E7E',
+        fontSize: '12px',
+        fontFamily: "'Roboto', sans-serif",
+      },
+    },
+  },
+  yAxis: {
+    gridLineColor: '#EAEAEA',
+    title: {
+      text: '',
+    },
+    labels: {
+      style: {
+        color: '#807E7E',
+        fontSize: '12px',
+        fontFamily: "'Roboto', sans-serif",
+      },
+    },
+    lineWidth: 1,
+    lineColor: '#EAEAEA',
+  },
+  legend: {
+    itemStyle: {
+      color: '#212121',
+      fontSize: '12px',
+      fontWeight: 'normal',
+      fontFamily: "'Roboto', sans-serif",
+    },
+    margin: 30,
+    padding: 0,
+    symbolWidth: 9,
+    symbolHeight: 9,
+    itemDistance: 30,
+    symbolPadding: 10,
+  },
+  plotOptions: {
+    series: {
+      lineWidth: 1,
+    },
+    column: {
+      pointPadding: 0,
+      borderWidth: 0,
+      stacking: 'normal',
+    },
+  },
+  series: [{
+    name: 'Legend',
+    color: '#0D6EFD',
+    data: [256, 632, 120, 230, 200, 542, 653, 450, 236, 759, 1352, 1230],
+    stack: 'male',
+  },
+  {
+    name: 'Legend',
+    color: '#5A9CFE',
+    data: [152, 546, 1590, 546, 1800, 1653, 1450, 450, 236, 759, 356, 756],
+    stack: 'male',
+  }]
+});
+
+//Fabrx Curved Line Chart Script
+Highcharts.chart('FabrxStackedChartTwo', {
+  chart: {
+    type: 'column',
+    backgroundColor: null,
+  },
+  title: {
+    text: '',
+  },
+  credits: {
+    enabled: false,
+  },
+  xAxis: {
+    lineColor: '#EAEAEA',
+    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    labels: {
+      style: {
+        color: '#807E7E',
+        fontSize: '12px',
+        fontFamily: "'Roboto', sans-serif",
+      },
+    },
+  },
+  yAxis: {
+    gridLineColor: '#EAEAEA',
+    title: {
+      text: '',
+    },
+    labels: {
+      style: {
+        color: '#807E7E',
+        fontSize: '12px',
+        fontFamily: "'Roboto', sans-serif",
+      },
+    },
+    lineWidth: 1,
+    lineColor: '#EAEAEA',
+  },
+  legend: {
+    itemStyle: {
+      color: '#212121',
+      fontSize: '12px',
+      fontWeight: 'normal',
+      fontFamily: "'Roboto', sans-serif",
+    },
+    margin: 30,
+    padding: 0,
+    symbolWidth: 9,
+    symbolHeight: 9,
+    itemDistance: 30,
+    symbolPadding: 10,
+  },
+  plotOptions: {
+    series: {
+      lineWidth: 1,
+    },
+    column: {
+      pointPadding: 0,
+      borderWidth: 0,
+    },
+  },
+  series: [{
+    name: 'Legend',
+    color: '#0D6EFD',
+    data: [0, 480, 850, 1345, 1675, 2340, 524, 1450, 1856, 956, 775, 1240],
+    stack: 'male',
+  },
+  {
+    name: 'Legend',
+    color: '#5A9CFE',
+    data: [0, 480, 850, 1345, 1675, 2340, 524, 1450, 1856, 956, 775, 1240],
+    stack: 'male',
+  }]
+});
+
+//Fabrx Dot Plots Chart Chart Script
+Highcharts.chart('FabrxStackedChartThree', {
+  chart: {
+    type: 'column',
+    backgroundColor: null,
+  },
+  title: {
+    text: '',
+  },
+  credits: {
+    enabled: false,
+  },
+  xAxis: {
+    lineColor: '#EAEAEA',
+    labels: {
+      style: {
+        color: '#807E7E',
+        fontSize: '12px',
+        fontFamily: "'Roboto', sans-serif",
+      },
+    },
+    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+  },
+  yAxis: {
+    gridLineColor: '#EAEAEA',
+    title: {
+      text: '',
+    },
+    labels: {
+      enabled: true,
+      style: {
+        color: '#807E7E',
+        fontSize: '12px',
+        fontFamily: "'Roboto', sans-serif",
+      },
+    },
+    lineWidth: 1,
+    lineColor: '#EAEAEA',
+  },
+  legend: {
+    itemStyle: {
+      color: '#212121',
+      fontSize: '12px',
+      fontWeight: 'normal',
+      fontFamily: "'Roboto', sans-serif",
+    },
+    margin: 30,
+    padding: 0,
+    symbolWidth: 9,
+    symbolHeight: 9,
+    itemDistance: 30,
+    symbolPadding: 10,
+  },
+  plotOptions: {
+    series: {
+      lineWidth: 1,
+    },
+    column: {
+      pointPadding: 0,
+      borderWidth: 0,
+    },
+  },
+  series: [{
+    name: 'Legend',
+    color: '#0D6EFD',
+    data: [450, 652, 785, 986, 1023, 1356, 1562, 1763, 1950, 2100, 1600, 1789, 1235, 1020, 850, 650, 350, 950, 1562, 1950, 250],
+    stack: 'male',
+  },
+  {
+    name: 'Legend',
+    color: '#5A9CFE',
+    data: [450, 652, 785, 986, 1023, 1356, 1562, 1763, 1950, 2100, 1600, 1789, 1235, 1020, 850, 650, 350, 950, 1562, 1950, 250],
+    stack: 'male',
+  }]
+});
+
+//Fabrx Stacked Area Chart Script
+Highcharts.chart('Fabrx3dBubbleChartOne', {
+  chart: {
+    borderWidth: 0,
+    type: 'bubble',
+    zoomType: 'xy',
+    backgroundColor: null,
+  },
+  title: {
+    text: '',
+  },
+  credits: {
+    enabled: false,
+  },
+  xAxis: {
+    lineColor: '#EAEAEA',
+    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    labels: {
+      style: {
+        color: '#807E7E',
+        fontSize: '12px',
+        fontFamily: "'Roboto', sans-serif",
+      },
+    },
+  },
+  yAxis: {
+    gridLineColor: '#EAEAEA',
+    lineWidth: 1,
+    lineColor: '#EAEAEA',
+    title: {
+      text: '',
+    },
+    labels: {
+      style: {
+        color: '#807E7E',
+        fontSize: '12px',
+        fontFamily: "'Roboto', sans-serif",
+      },
+    },
+  },
+  legend: {
+    itemStyle: {
+      color: '#212121',
+      fontSize: '12px',
+      fontWeight: 'normal',
+      fontFamily: "'Roboto', sans-serif",
+    },
+    margin: 30,
+    padding: 0,
+    symbolWidth: 9,
+    symbolHeight: 9,
+    itemDistance: 30,
+    symbolPadding: 10,
+  },
+  series: [{
+      data: [[9, 81, 15.2], [98, 5, 15], [51, 50, 15], [41, 22, 15], [58, 24, 15], [78, 37, 15], [55, 56, 15.2], [18, 45, 15], [42, 44, 15], [3, 52, 15], [31, 18, 15.2], [79, 91, 15], [93, 23, 15], [44, 83, 15], [42, 38, 15]],
+      marker: {
+        lineWidth: 0,
+        fillColor: {
+          radialGradient: {
+            cx: 0.4, cy: 0.3, r: 0.7,
+          },
+          stops: [[0, '#0D6EFD']]
+        }
+      }
+    }]
+});
+
+//Fabrx Area Chart Chart Script
+Highcharts.chart('FabrxSplineChartOne', {
+  chart: {
+    type: 'spline',
+    animation: Highcharts.svg,
+    backgroundColor: null,
+    events: {
+      load: function () {
+        var series = this.series[0];
+        setInterval(function () {
+        var x = (new Date()).getTime(),
+        y = Math.random();
+        series.addPoint([x, y], true, true);
+        }, 1000);
+      }
+    }
+  },
+  title: {
+    text: '',
+  },
+  credits: {
+    enabled: false,
+  },
+  xAxis: {
+    lineColor: '#EAEAEA',
+    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    labels: {
+      enabled: false,
+      style: {
+        color: '#807E7E',
+        fontSize: '12px',
+        fontFamily: "'Roboto', sans-serif",
+      },
+    },
+  },
+  yAxis: {
+    gridLineColor: '#EAEAEA',
+    lineWidth: 1,
+    lineColor: '#EAEAEA',
+    title: {
+      text: '',
+    },
+    labels: {
+      style: {
+        color: '#807E7E',
+        fontSize: '12px',
+        fontFamily: "'Roboto', sans-serif",
+      },
+    },
+  },
+  legend: {
+    itemStyle: {
+      color: '#212121',
+      fontSize: '12px',
+      fontWeight: 'normal',
+      fontFamily: "'Roboto', sans-serif",
+    },
+    margin: 30,
+    padding: 0,
+    symbolWidth: 9,
+    symbolHeight: 9,
+    itemDistance: 30,
+    symbolPadding: 10,
+  },
+  time: {
+    useUTC: false
+  },
+  accessibility: {
+    announceNewData: {
+      enabled: true,
+      minAnnounceInterval: 2500,
+      announcementFormatter: function (allSeries, newSeries, newPoint) {
+        if (newPoint) {
+          return 'New point added. Value: ' + newPoint.y;
+        }
+        return false;
+      }
+    }
+  },
+  tooltip: {
+    headerFormat: '<b>{series.name}</b><br/>',
+    pointFormat: '{point.x:%Y-%m-%d %H:%M:%S}<br/>{point.y:.2f}'
+  },
+  plotOptions: {
+    spline: {
+      marker: {
+        enabled: false,
+      },
+    },
+  },
+  series: [{
+    color: '#0D6EFD',
+    name: 'Legend',
+    data: (function () {
+      var data = [],
+      time = (new Date()).getTime(),
+      i;
+      for (i = -19; i <= 0; i += 1) {
+        data.push ({
+          x: time + i * 1000,
+          y: Math.random()
+        });
+      }
+      return data;
+    }())
+  }]
+});
+
+//Fabrx Pie Chart Script
+Highcharts.chart('FabrxPieChartOne', {
+  chart: {
+    type: 'pie',
+    backgroundColor: null,
+  },
+  title: {
+    text: '',
+  },
+  credits: {
+    enabled: false,
+  },
+  xAxis: {
+    lineColor: 'transparent',
+    tickLength: 0,
+    labels: {
+      enabled: false,
+    },
+  },
+  yAxis: {
+    gridLineColor: 'transparent',
+    title: {
+      text: '',
+    },
+    labels: {
+      enabled: false,
+    },
+  },
+  legend: {
+    itemStyle: {
+      color: '#5D6F88',
+      fontSize: '12px',
+      fontWeight: '500',
+      fontFamily: "'Roboto', sans-serif",
+    },
+    margin: 30,
+    padding: 0,
+    symbolWidth: 11,
+    symbolHeight: 11,
+    itemDistance: 30,
+    symbolPadding: 10,
+  },
+  plotOptions: {
+    pie: {
+      size: 230,
+      borderWidth: 0,
+      allowPointSelect: true,
+    },
+    series: {
+      lineWidth: 1,
+    },
+    column: {
+      pointPadding: 0,
+      borderWidth: 0,
+    },
+  },
+  accessibility: {
+    announceNewData: {
+      enabled: true,
+    },
+    point: {
+      valueSuffix: '%',
+    }
+  },
+  tooltip: {
+    headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+    pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+  },
+  series: [{
+    innerSize: '70%',
+    dataLabels: [{
+      enabled: false,
+    }],
+    name: 'Browsers',
+    showInLegend: true,
+    data: [
+      {name: '$986.27', y: 20, color: '#5A9CFE',},
+      {name: '$67.70', y: 15, color: '#5FDD97',},
+      {name: '$361.12', y: 15, color: '#DC3545',},
+      {name: '$678.81', y: 10, color: '#FF9138',},
+      {name: '$818.12', y: 5, color: '#605F5F',}],
+    }
+  ],
+});
+
+//Fabrx Pie Chart Script
+Highcharts.chart('FabrxPieChartTwo', {
+  chart: {
+    type: 'pie',
+    backgroundColor: null,
+  },
+  title: {
+    text: '',
+  },
+  credits: {
+    enabled: false,
+  },
+  legend: {
+      symbolWidth: 11,
+      symbolHeight: 11,
+      itemDistance: 30,
+      itemMarginTop: 7,
+      itemMarginBottom: 7,
+      itemStyle: {
+        color: '#5D6F88',
+        fontSize: '16px',
+        fontWeight: 'normal',
+        fontFamily: "'Roboto', sans-serif",
+      },
+  },
+  xAxis: {
+    lineColor: 'transparent',
+    tickLength: 0,
+    labels: {
+      enabled: false,
+    },
+  },
+  yAxis: {
+    gridLineColor: 'transparent',
+    title: {
+      text: '',
+    },
+    labels: {
+      enabled: false,
+    },
+  },
+  responsive: {  
+    rules: [{  
+      condition: {  
+        minWidth: 500  
+      },  
+      chartOptions: {  
+        legend: {  
+          align: 'right',
+          verticalAlign: 'middle',
+          layout: 'vertical', 
+        },
+      },
+    }],
+  },
+  plotOptions: {
+    pie: {
+      size: 230,
+      borderWidth: 0,
+      allowPointSelect: true,
+    },
+    showInLegend: true,
+    series: {
+      lineWidth: 1,
+    },
+    column: {
+      pointPadding: 0,
+      borderWidth: 0,
+    },
+  },
+  accessibility: {
+    announceNewData: {
+      enabled: true,
+    },
+    point: {
+      valueSuffix: '%',
+    }
+  },
+  tooltip: {
+    headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+    pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+  },
+  series: [{
+    dataLabels: [{
+      enabled: false,
+    }],
+    name: 'Browsers',
+    showInLegend: true,
+    data: [
+      {name: '$1,079.41', y: 28, color: '#5A9CFE',},
+      {name: '$435.61', y: 20, color: '#DC3545',},
+      {name: '$424.01', y: 10, color: '#FF9138',}],
+    }
+  ],
+});
+
+//Fabrx Pie Chart Script
+Highcharts.Legend.prototype.colorizeItem = function(item, visible) {
+  //item.legendGroup[visible ? 'removeClass' : 'addClass']('highcharts-legend-item-hidden');
+  if (!this.chart.styledMode) {
+    var legend = this,
+      options = legend.options,
+      legendItem = item.legendItem,
+      legendLine = item.legendLine,
+      legendSymbol = item.legendSymbol,
+      hiddenColor = legend.itemHiddenStyle.color,
+      textColor = visible ?
+      options.itemStyle.color :
+      hiddenColor,
+      symbolColor = visible ?
+      (item.color || hiddenColor) :
+      hiddenColor,
+      markerOptions = item.options && item.options.marker,
+      symbolAttr = {
+        fill: symbolColor
+      };
+    if (legendSymbol) {
+      // Apply marker options
+      if (markerOptions) { // #585
+
+        symbolAttr = item.pointAttribs();
+        if (!visible) {
+          // #6769
+          symbolAttr.stroke = symbolAttr.fill = hiddenColor;
+        }
+      }
+      legendSymbol.attr(symbolAttr);
+    }
+  }
+  Highcharts.fireEvent(this, 'afterColorizeItem', {
+    item: item,
+    visible: visible
+  });
+}
+
+Highcharts.chart('FabrxPieChartThree', {
+  chart: {
+    type: 'solidgauge',
+    height: '65%',
+    backgroundColor: null,
+  },
+  title: {
+    text: '',
+  },
+  legend: {
+    align: 'right',
+    verticalAlign: 'middle',
+    layout: 'vertical',
+    symbolWidth: 11,
+    symbolHeight: 11,
+    itemDistance: 30,
+    itemMarginTop: 7,
+    itemMarginBottom: 7,
+    itemStyle: {
+      color: '#5D6F88',
+      fontSize: '16px',
+      fontWeight: 'normal',
+      fontFamily: "'Roboto', sans-serif",
+    },
+  },
+  credits: {
+    enabled: false,
+  },
+  tooltip: {
+    enabled: false,
+  },
+  pane: {
+    startAngle: 0,
+    endAngle: 360,
+    background: [{
+      outerRadius: '95%',
+      innerRadius: '88%',
+      backgroundColor: '#F5F5F5',
+      borderWidth: 0
+    },
+    {
+      outerRadius: '70%',
+      innerRadius: '63%',
+      backgroundColor: '#F5F5F5',
+      borderWidth: 0
+    },
+    {
+      outerRadius: '45%',
+      innerRadius: '38%',
+      backgroundColor: '#F5F5F5',
+      borderWidth: 0
+    }]
+  },
+  yAxis: {
+    min: 0,
+    max: 100,
+    lineWidth: 0,
+    tickPositions: []
+  },
+  plotOptions: {
+    solidgauge: {
+      dataLabels: {
+        enabled: false
+      },
+      linecap: 'round',
+      stickyTracking: false,
+      rounded: true,
+      showInLegend: true
+    }
+  },
+  series: [{
+    name: '$425.48',
+    marker: {
+      fillColor: '#0D6EFD',
+    },
+    data: [{
+      color: '#0D6EFD',
+      radius: '95%',
+      innerRadius: '88%',
+      y: 62
+    }]
+  },
+  {
+    name: '$582.64',
+    marker: {
+      fillColor: '#3485FD',
+    },
+    data: [{
+      color: '#3485FD',
+      radius: '70%',
+      innerRadius: '63%',
+      y: 75
+    }]
+  },
+  {
+    name: '$65.04',
+    marker: {
+      fillColor: '#5A9CFE',
+    },
+    data: [{
+      color: '#5A9CFE',
+      radius: '45%',
+      innerRadius: '38%',
+      y: 75
+    }]
+  }]
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon/media/play fill</title>
+    <g id="Icon/media/play-fill" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M5.25,4 L5.25,20 C5.25,20.5867405 5.89337063,20.9462529 6.39307307,20.6387437 L19.3930731,12.6387437 C19.8689756,12.3458806 19.8689756,11.6541194 19.3930731,11.3612563 L6.39307307,3.36125626 C5.89337063,3.05374707 5.25,3.41325948 5.25,4 Z" id="Path" fill="#212121"></path>
+    </g>
+</svg>

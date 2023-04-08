@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon/Bookmark Fill</title>
+    <g id="Icon/Bookmark-Fill" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M15,3.25 C16.4625318,3.25 17.6584043,4.3917046 17.7449812,5.83247767 L17.75,6 L17.75,20 C17.75,20.5486785 17.1866419,20.8999216 16.7036002,20.6892871 L16.6141282,20.6431197 L12,17.874 L7.38587182,20.6431197 C6.91538392,20.9254124 6.32435011,20.62305 6.25644471,20.1004745 L6.25,20 L6.25,6 C6.25,4.53746816 7.3917046,3.34159572 8.83247767,3.25501879 L9,3.25 L15,3.25 Z" id="Icon-Color" fill="#212121"></path>
+    </g>
+</svg>

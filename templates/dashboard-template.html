@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Fabrx">
+<meta name="keywords" content="Fabrx">
+<meta name="author" content="Fabrx">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Fabrx - Dashboard Template</title>
+<link href="../assets/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<!-- Fabrx External CSS -->
+<link href="../assets/css/swiper-bundle.min.css" rel="stylesheet" type="text/css" media="all">
+<link href="../assets/css/flatpickr.min.css" rel="stylesheet" type="text/css" media="all">
+<link href="../assets/css/simplebar.min.css" rel="stylesheet" type="text/css" media="all">
+<link href="../assets/css/fabrx-styles.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body>
+
+<!-- Fabrx Dashboard Bg Dark Light -->
+<section class="fabrx-dashboard fabrx-sidebar bg-dark-light">
+  <div class="row g-0">
+    <div class="col-auto">
+      <!-- Fabrx Aside, Has Aside Bg Dark 100 -->
+      <aside class="fabrx-aside fabrx-aside-lg has-aside bg-dark-100">
+        <div class="fabrx-aside-header bg-dark-100">
+          <div class="d-flex align-items-center pt-5">
+            <a href="#0" class="fabrx-avatar fabrx-status dnd md"><img src="../assets/images/avatars/avatar-1.png" alt="Avatar"></a>
+            <div class="ps-2">
+              <strong class="d-block text-white font-size-14 font-weight-medium">Bruce Lee</strong>
+              <small class="text-secondary d-block">Guru member</small>
+            </div>
+          </div>
+        </div>
+        <div class="fabrx-aside-body fabrx-scroll accordion1" data-simplebar>
+          <div class="fabrx-menu-category">
+            <small class="menu-category-title">Tasks</small>
+            <ul class="list-unstyled menu-category pt-2">
+              <li>
+                <a href="#0">
+                  <span>
+                    <svg data-name="Icon/Calendar" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <path data-name="Icon Color" d="M1.5,24A1.5,1.5,0,0,1,0,22.5V3.375a1.5,1.5,0,0,1,1.5-1.5H6V0H7.5V1.875h9V0H18V1.875h4.5a1.5,1.5,0,0,1,1.5,1.5V22.5A1.5,1.5,0,0,1,22.5,24Zm0-1.5h21V9H1.5Zm21-15V3.375H18V5.25H16.5V3.375h-9V5.25H6V3.375H1.5V7.5Zm-6,11.625v-1.5h3.75v1.5Zm-6.375,0v-1.5h3.75v1.5Zm-6.375,0v-1.5H7.5v1.5ZM16.5,13.5V12h3.75v1.5Zm-6.375,0V12h3.75v1.5Zm-6.375,0V12H7.5v1.5Z" fill="#959393"/>
+                    </svg>
+                    <span class="dropdown-text ms-2">Calendar</span>
+                  </span>
+                </a>
+              </li>
+              <li class="active">
+                <a href="#0">
+                  <span>
+                    <svg data-name="Icon/Trending" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <path data-name="Icon Color" d="M16.8,0l2.754,2.754L13.7,8.6,8.9,3.8,0,12.7l1.7,1.7L8.9,7.2,13.7,12l7.548-7.554L24,7.2V0Z" transform="translate(0 5)" fill="#959393"></path>
+                    </svg>
+                    <span class="dropdown-text ms-2">Performance</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#0">
+                  <span>
+                    <svg data-name="Icon/Gift" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <path data-name="Icon Color" d="M21,22.8H3.023a1.43,1.43,0,0,1-1.066-.45,1.494,1.494,0,0,1-.433-1.066V11.4H0V6.873A1.479,1.479,0,0,1,.434,5.8,1.447,1.447,0,0,1,1.5,5.356H4.1a3.687,3.687,0,0,1-.808-1.149A3.532,3.532,0,0,1,3,2.749,3.163,3.163,0,0,1,3.632.877,2.55,2.55,0,0,1,5.836,0,4.226,4.226,0,0,1,7.817.5,8.987,8.987,0,0,1,9.574,1.706a11.9,11.9,0,0,1,1.442,1.5,15.619,15.619,0,0,1,1.031,1.434,16.963,16.963,0,0,1,1.02-1.434,11.624,11.624,0,0,1,1.418-1.5A8.8,8.8,0,0,1,16.219.5,4.154,4.154,0,0,1,18.187,0a2.55,2.55,0,0,1,2.2.877,3.157,3.157,0,0,1,.633,1.873,3.533,3.533,0,0,1-.292,1.457,3.6,3.6,0,0,1-.786,1.126H22.5a1.427,1.427,0,0,1,1.066.451A1.491,1.491,0,0,1,24,6.85V11.4H22.5v9.883a1.494,1.494,0,0,1-.434,1.066A1.427,1.427,0,0,1,21,22.8ZM12.75,11.4v9.883H21V11.4Zm-9.727,0v9.883H11.25V11.4ZM12.75,6.85V9.883H22.5V6.85ZM1.5,6.85V9.883h9.75V6.85ZM18.187,1.516a3.833,3.833,0,0,0-2.706,1.316,17.6,17.6,0,0,0-2.1,2.5h2.531a4.867,4.867,0,0,0,2.461-.663,2.111,2.111,0,0,0,1.148-1.92,1.238,1.238,0,0,0-.317-.924A1.425,1.425,0,0,0,18.187,1.516Zm-12.352,0a1.462,1.462,0,0,0-1.019.3,1.2,1.2,0,0,0-.317.912A2.128,2.128,0,0,0,5.683,4.657a4.989,4.989,0,0,0,2.5.675h2.531a16.577,16.577,0,0,0-2.133-2.5A3.947,3.947,0,0,0,5.836,1.516Z" transform="translate(0 1)" fill="#959393"/>
+                    </svg>
+                    <span class="dropdown-text ms-2">Offers</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#0">
+                  <span>   
+                    <svg data-name="Icon/User" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <path data-name="Icon Color" d="M18.75,24H0V19.5a8.183,8.183,0,0,1,1.636-4.922,8.321,8.321,0,0,1,4.139-2.953,6.375,6.375,0,1,1,7.2,0,8.321,8.321,0,0,1,4.139,2.953A8.184,8.184,0,0,1,18.75,19.5V24ZM8.25,12.75A6.758,6.758,0,0,0,1.5,19.5v3H17.25v-3a6.758,6.758,0,0,0-6.75-6.75ZM9.375,1.5A4.875,4.875,0,1,0,14.25,6.375,4.88,4.88,0,0,0,9.375,1.5Z" transform="translate(3)" fill="#959393"/>
+                    </svg>
+                    <span class="dropdown-text ms-2">Users</span>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="fabrx-menu-category">
+            <small class="menu-category-title">User</small>
+            <ul class="list-unstyled menu-category pt-2">
+              <li>
+                <a href="#0" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24.001 24">
+                      <g data-name="Icon/Settings" transform="translate(0.001)">
+                        <path data-name="Icon Color" d="M13.631,24H10.179a1.675,1.675,0,0,1-1.65-1.421L8.2,20.337a9.332,9.332,0,0,1-1.952-1.093l-2.3.886a1.663,1.663,0,0,1-.6.112,1.68,1.68,0,0,1-1.429-.8L.239,16.668a1.655,1.655,0,0,1,.426-2.186l1.873-1.4A8.517,8.517,0,0,1,2.462,12a8.091,8.091,0,0,1,.075-1.062L.665,9.535A1.655,1.655,0,0,1,.239,7.349L1.916,4.577a1.672,1.672,0,0,1,2.029-.692l2.3.886A9.742,9.742,0,0,1,8.2,3.681l.332-2.26A1.675,1.675,0,0,1,10.183,0h3.451a1.675,1.675,0,0,1,1.65,1.421l.329,2.242a9.327,9.327,0,0,1,1.951,1.092l2.3-.886a1.67,1.67,0,0,1,2.029.692l1.677,2.771a1.653,1.653,0,0,1-.426,2.186l-1.873,1.4A8.539,8.539,0,0,1,21.351,12a8.1,8.1,0,0,1-.075,1.063l1.872,1.4a1.664,1.664,0,0,1,.664,1.372l.188.109,0,.007-.184-.112-.127-.078-1.268-.777-.019.031,1.284.758-.324-.2.327.189.127.078v.011l.18.106,0,.007-.176-.11-.13-.081.13.081a1.661,1.661,0,0,1-.238.794L21.9,19.422a1.67,1.67,0,0,1-2.029.692l-2.3-.887a9.752,9.752,0,0,1-1.951,1.092l-.333,2.26A1.674,1.674,0,0,1,13.631,24ZM6.537,17.156h0l.745.554a7.447,7.447,0,0,0,1.7.952l.893.357.077.526.061.418.321,2.19h3.132l.462-3.141.881-.362a7.847,7.847,0,0,0,1.717-.958l.746-.554.477.184.392.15,2.245.864,1.51-2.5-2.613-1.957.139-.968A6.523,6.523,0,0,0,19.5,12a6.808,6.808,0,0,0-.074-.941l-.131-.962.435-.326.347-.26L21.9,8.142l-1.51-2.5-3.113,1.2-.746-.554a7.486,7.486,0,0,0-1.7-.953l-.893-.357-.077-.525L13.8,4.036l-.321-2.19H10.343L9.88,4.988,9,5.349a7.914,7.914,0,0,0-1.717.959l-.745.554-.478-.184-.391-.151L3.423,5.664l-1.51,2.5,2.613,1.957-.139.968A6.529,6.529,0,0,0,4.316,12a6.947,6.947,0,0,0,.073.942l.131.962-.435.326-.347.26L1.913,15.857l1.51,2.5,3.113-1.2Zm5.37-1.279A3.877,3.877,0,1,1,15.838,12,3.909,3.909,0,0,1,11.907,15.877Zm0-5.908A2.031,2.031,0,1,0,13.986,12,2.057,2.057,0,0,0,11.907,9.969Z" fill="#959393"></path>
+                      </g>
+                    </svg>
+                    <span class="dropdown-text ms-2">Settings</span>
+                  </span>
+                  <svg data-name="Icon/Arrows/Chevron/Down" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24.091 24">
+                    <path data-name="Icon Color" d="M-2.182,24,0,21.818-9.818,12,0,2.182-2.182,0l-12,12Z" transform="translate(0.091 4.909) rotate(-90)" fill="#959393"></path>
+                  </svg>
+                </a>
+                <div id="collapseThree" class="collapse" data-bs-parent=".accordion1">
+                  <ul class="list-unstyled menu-category pt-2">
+                    <li>
+                      <a href="#0">
+                        <span>
+                          <svg data-name="Icon/Calendar" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                            <path data-name="Icon Color" d="M1.5,24A1.5,1.5,0,0,1,0,22.5V3.375a1.5,1.5,0,0,1,1.5-1.5H6V0H7.5V1.875h9V0H18V1.875h4.5a1.5,1.5,0,0,1,1.5,1.5V22.5A1.5,1.5,0,0,1,22.5,24Zm0-1.5h21V9H1.5Zm21-15V3.375H18V5.25H16.5V3.375h-9V5.25H6V3.375H1.5V7.5Zm-6,11.625v-1.5h3.75v1.5Zm-6.375,0v-1.5h3.75v1.5Zm-6.375,0v-1.5H7.5v1.5ZM16.5,13.5V12h3.75v1.5Zm-6.375,0V12h3.75v1.5Zm-6.375,0V12H7.5v1.5Z" fill="#959393"/>
+                          </svg>
+                          <span class="dropdown-text ms-2">Calendar</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#0">
+                        <span>
+                          <svg data-name="Icon/Trending" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                            <path data-name="Icon Color" d="M16.8,0l2.754,2.754L13.7,8.6,8.9,3.8,0,12.7l1.7,1.7L8.9,7.2,13.7,12l7.548-7.554L24,7.2V0Z" transform="translate(0 5)" fill="#959393"></path>
+                          </svg>
+                          <span class="dropdown-text ms-2">Performance</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#0">
+                        <span>
+                          <svg data-name="Icon/Gift" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                            <path data-name="Icon Color" d="M21,22.8H3.023a1.43,1.43,0,0,1-1.066-.45,1.494,1.494,0,0,1-.433-1.066V11.4H0V6.873A1.479,1.479,0,0,1,.434,5.8,1.447,1.447,0,0,1,1.5,5.356H4.1a3.687,3.687,0,0,1-.808-1.149A3.532,3.532,0,0,1,3,2.749,3.163,3.163,0,0,1,3.632.877,2.55,2.55,0,0,1,5.836,0,4.226,4.226,0,0,1,7.817.5,8.987,8.987,0,0,1,9.574,1.706a11.9,11.9,0,0,1,1.442,1.5,15.619,15.619,0,0,1,1.031,1.434,16.963,16.963,0,0,1,1.02-1.434,11.624,11.624,0,0,1,1.418-1.5A8.8,8.8,0,0,1,16.219.5,4.154,4.154,0,0,1,18.187,0a2.55,2.55,0,0,1,2.2.877,3.157,3.157,0,0,1,.633,1.873,3.533,3.533,0,0,1-.292,1.457,3.6,3.6,0,0,1-.786,1.126H22.5a1.427,1.427,0,0,1,1.066.451A1.491,1.491,0,0,1,24,6.85V11.4H22.5v9.883a1.494,1.494,0,0,1-.434,1.066A1.427,1.427,0,0,1,21,22.8ZM12.75,11.4v9.883H21V11.4Zm-9.727,0v9.883H11.25V11.4ZM12.75,6.85V9.883H22.5V6.85ZM1.5,6.85V9.883h9.75V6.85ZM18.187,1.516a3.833,3.833,0,0,0-2.706,1.316,17.6,17.6,0,0,0-2.1,2.5h2.531a4.867,4.867,0,0,0,2.461-.663,2.111,2.111,0,0,0,1.148-1.92,1.238,1.238,0,0,0-.317-.924A1.425,1.425,0,0,0,18.187,1.516Zm-12.352,0a1.462,1.462,0,0,0-1.019.3,1.2,1.2,0,0,0-.317.912A2.128,2.128,0,0,0,5.683,4.657a4.989,4.989,0,0,0,2.5.675h2.531a16.577,16.577,0,0,0-2.133-2.5A3.947,3.947,0,0,0,5.836,1.516Z" transform="translate(0 1)" fill="#959393"/>
+                          </svg>
+                          <span class="dropdown-text ms-2">Offers</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#0">
+                        <span>   
+                          <svg data-name="Icon/User" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                            <path data-name="Icon Color" d="M18.75,24H0V19.5a8.183,8.183,0,0,1,1.636-4.922,8.321,8.321,0,0,1,4.139-2.953,6.375,6.375,0,1,1,7.2,0,8.321,8.321,0,0,1,4.139,2.953A8.184,8.184,0,0,1,18.75,19.5V24ZM8.25,12.75A6.758,6.758,0,0,0,1.5,19.5v3H17.25v-3a6.758,6.758,0,0,0-6.75-6.75ZM9.375,1.5A4.875,4.875,0,1,0,14.25,6.375,4.88,4.88,0,0,0,9.375,1.5Z" transform="translate(3)" fill="#959393"/>
+                          </svg>
+                          <span class="dropdown-text ms-2">Users</span>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#0" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <span>
+                    <svg id="Icon_Edit" data-name="Icon/Edit" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <path data-name="Icon Color" d="M6.7,24h0L0,24V17.3L14.219,3.122,17.342,0,24,6.7,21.4,9.329ZM1.5,19.448V22.5H4.627ZM14.671,4.777h0L1.768,17.643,6.4,22.157,19.26,9.329,14.671,4.777ZM17.3,2.107h0L15.762,3.686l4.552,4.589L21.893,6.7,17.3,2.107Z" fill="#959393"></path>
+                    </svg>
+                    <span class="dropdown-text ms-2">Notes</span>
+                  </span>
+                  <svg data-name="Icon/Arrows/Chevron/Down" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24.091 24">
+                    <path data-name="Icon Color" d="M-2.182,24,0,21.818-9.818,12,0,2.182-2.182,0l-12,12Z" transform="translate(0.091 4.909) rotate(-90)" fill="#959393"></path>
+                  </svg>
+                </a>
+                <div id="collapseTwo" class="collapse" data-bs-parent=".accordion1">
+                  <ul class="list-unstyled menu-category pt-2">
+                    <li>
+                      <a href="#0">
+                        <span>
+                          <svg data-name="Icon/Calendar" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                            <path data-name="Icon Color" d="M1.5,24A1.5,1.5,0,0,1,0,22.5V3.375a1.5,1.5,0,0,1,1.5-1.5H6V0H7.5V1.875h9V0H18V1.875h4.5a1.5,1.5,0,0,1,1.5,1.5V22.5A1.5,1.5,0,0,1,22.5,24Zm0-1.5h21V9H1.5Zm21-15V3.375H18V5.25H16.5V3.375h-9V5.25H6V3.375H1.5V7.5Zm-6,11.625v-1.5h3.75v1.5Zm-6.375,0v-1.5h3.75v1.5Zm-6.375,0v-1.5H7.5v1.5ZM16.5,13.5V12h3.75v1.5Zm-6.375,0V12h3.75v1.5Zm-6.375,0V12H7.5v1.5Z" fill="#959393"/>
+                          </svg>
+                          <span class="dropdown-text ms-2">Calendar</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#0">
+                        <span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                            <g data-name="Icon/Email" transform="translate(0)">
+                              <path data-name="Icon Color" d="M22.125,17H2.625a2.49,2.49,0,0,1-1.781-.869A2.628,2.628,0,0,1,0,14.3V1.835a.223.223,0,0,1,.023-.1.576.576,0,0,1,0-.326.894.894,0,0,1,.164-.3.342.342,0,0,0,.047-.06A.182.182,0,0,1,.305.99a2.189,2.189,0,0,1,1-.736A3.606,3.606,0,0,1,2.625,0h19.5a2.045,2.045,0,0,1,1.207.326,1.557,1.557,0,0,1,.6.978.637.637,0,0,1,.058.205.806.806,0,0,1-.012.229.223.223,0,0,1,.023.1V14.3a3.832,3.832,0,0,1-.469,1.835A1.515,1.515,0,0,1,22.125,17ZM1.5,3.236V14.3a1.176,1.176,0,0,0,.41.736,1.123,1.123,0,0,0,.715.423h19.5c.2,0,.317-.142.34-.423s.035-.528.035-.736V3.236L12.492,11.471a.94.94,0,0,1-.234.145.721.721,0,0,1-.516,0,.954.954,0,0,1-.235-.145Zm.773-1.69A2.934,2.934,0,0,0,1.9,1.57L12,9.877,22.125,1.545Z" transform="translate(0 4)" fill="#959393"/>
+                            </g>
+                          </svg>
+                          <span class="dropdown-text ms-2">Messages</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#0">
+                        <span>
+                          <svg data-name="Icon/Gift" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                            <path data-name="Icon Color" d="M21,22.8H3.023a1.43,1.43,0,0,1-1.066-.45,1.494,1.494,0,0,1-.433-1.066V11.4H0V6.873A1.479,1.479,0,0,1,.434,5.8,1.447,1.447,0,0,1,1.5,5.356H4.1a3.687,3.687,0,0,1-.808-1.149A3.532,3.532,0,0,1,3,2.749,3.163,3.163,0,0,1,3.632.877,2.55,2.55,0,0,1,5.836,0,4.226,4.226,0,0,1,7.817.5,8.987,8.987,0,0,1,9.574,1.706a11.9,11.9,0,0,1,1.442,1.5,15.619,15.619,0,0,1,1.031,1.434,16.963,16.963,0,0,1,1.02-1.434,11.624,11.624,0,0,1,1.418-1.5A8.8,8.8,0,0,1,16.219.5,4.154,4.154,0,0,1,18.187,0a2.55,2.55,0,0,1,2.2.877,3.157,3.157,0,0,1,.633,1.873,3.533,3.533,0,0,1-.292,1.457,3.6,3.6,0,0,1-.786,1.126H22.5a1.427,1.427,0,0,1,1.066.451A1.491,1.491,0,0,1,24,6.85V11.4H22.5v9.883a1.494,1.494,0,0,1-.434,1.066A1.427,1.427,0,0,1,21,22.8ZM12.75,11.4v9.883H21V11.4Zm-9.727,0v9.883H11.25V11.4ZM12.75,6.85V9.883H22.5V6.85ZM1.5,6.85V9.883h9.75V6.85ZM18.187,1.516a3.833,3.833,0,0,0-2.706,1.316,17.6,17.6,0,0,0-2.1,2.5h2.531a4.867,4.867,0,0,0,2.461-.663,2.111,2.111,0,0,0,1.148-1.92,1.238,1.238,0,0,0-.317-.924A1.425,1.425,0,0,0,18.187,1.516Zm-12.352,0a1.462,1.462,0,0,0-1.019.3,1.2,1.2,0,0,0-.317.912A2.128,2.128,0,0,0,5.683,4.657a4.989,4.989,0,0,0,2.5.675h2.531a16.577,16.577,0,0,0-2.133-2.5A3.947,3.947,0,0,0,5.836,1.516Z" transform="translate(0 1)" fill="#959393"/>
+                          </svg>
+                          <span class="dropdown-text ms-2">Offers</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#0">
+                        <span>   
+                          <svg data-name="Icon/User" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                            <path data-name="Icon Color" d="M18.75,24H0V19.5a8.183,8.183,0,0,1,1.636-4.922,8.321,8.321,0,0,1,4.139-2.953,6.375,6.375,0,1,1,7.2,0,8.321,8.321,0,0,1,4.139,2.953A8.184,8.184,0,0,1,18.75,19.5V24ZM8.25,12.75A6.758,6.758,0,0,0,1.5,19.5v3H17.25v-3a6.758,6.758,0,0,0-6.75-6.75ZM9.375,1.5A4.875,4.875,0,1,0,14.25,6.375,4.88,4.88,0,0,0,9.375,1.5Z" transform="translate(3)" fill="#959393"/>
+                          </svg>
+                          <span class="dropdown-text ms-2">Users</span>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#0">
+                  <span>
+                    <svg data-name="Icon/Download Cloud" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <path data-name="Icon Color" d="M7.678,19.211,8.8,18.238,11.237,20.9V11.983h1.5v9.065l2.471-2.471,1.048,1.048-4.3,4.307Zm-2.81-3.106a4.875,4.875,0,0,1-1.5-9.512A3.951,3.951,0,0,1,7.3,3a4.2,4.2,0,0,1,.675.074,6.165,6.165,0,0,1,11.5,3.106v.188A4.876,4.876,0,0,1,19.1,16.1H15.729v-1.5H19.1a3.371,3.371,0,0,0,0-6.742h-1.35L17.9,7a6.824,6.824,0,0,0,.074-.823A4.682,4.682,0,0,0,13.3,1.5,4.749,4.749,0,0,0,9.025,4.231l-.262.637-.638-.225a2.861,2.861,0,0,0-.823-.15A2.427,2.427,0,0,0,4.868,6.926v.188l.037.675L4.231,7.9A3.41,3.41,0,0,0,1.5,11.234a3.356,3.356,0,0,0,3.371,3.371H8.24v1.5Z" fill="#959393"/>
+                    </svg>
+                    <span class="dropdown-text ms-2">Downloads</span>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="fabrx-aside-footer">
+            <a href="#0" class="font-size-12"><img src="../assets/images/icons/signout-2.svg" alt="Sign out" class="me-2" width="20"> Sign out</a>
+          </div>
+        </div>
+        <div class="fabrx-aside-footer">
+            <a href="#0"><img src="../assets/images/brand-icons/brand-icon-3.svg" alt="Dash"></a>
+          </div>
+      </aside>
+    </div>
+    <div class="col-md p-2 p-md-4">
+      <div class="ps-0 px-lg-5 pt-5">
+        <div class="row pb-4">
+          <div class="col-5">
+            <h4 class="text-white">Performance</h4>
+          </div>
+          <div class="col-7">
+            <div class="fabrx-header-links text-end white-icon">
+              <a href="#0" class="me-2 me-md-3 ms-2 ms-md-3 fabrx-noti-dot dnd">
+                <svg data-name="Icon/Notification" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path data-name="Icon Color" d="M11.25,24a3.4,3.4,0,0,1-3.3-2.625H0v-1.5a3,3,0,0,0,3-3V10.5A8.15,8.15,0,0,1,4.706,5.484,8.47,8.47,0,0,1,9,2.55v-.3a2.25,2.25,0,1,1,4.5,0v.3a8.471,8.471,0,0,1,4.294,2.934A8.15,8.15,0,0,1,19.5,10.5v6.375a3,3,0,0,0,3,3v1.5H14.55A3.4,3.4,0,0,1,11.25,24ZM9.525,21.375a1.885,1.885,0,0,0,3.451,0ZM11.25,3.75A6.758,6.758,0,0,0,4.5,10.5v6.375a4.465,4.465,0,0,1-1.163,3H19.163a4.466,4.466,0,0,1-1.163-3V10.5A6.758,6.758,0,0,0,11.25,3.75Zm0-2.25a.751.751,0,0,0-.75.75h.75a4.983,4.983,0,0,1,.75.038V2.25A.751.751,0,0,0,11.25,1.5Z" transform="translate(1)" fill="#3f3b3b"></path>
+                </svg>
+              </a>
+              <a href="#0" class="me-2 me-md-3 ms-0 ms-md-4 aside-toggle d-inline-block d-xl-none">
+                <svg data-name="Icon/Hamburger" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path data-name="Icon Color" d="M1.033,14a1.2,1.2,0,0,1-.409-.069.947.947,0,0,1-.337-.207,1.2,1.2,0,0,1-.216-.333,1.046,1.046,0,0,1-.072-.4A1.072,1.072,0,0,1,.072,12.6a.892.892,0,0,1,.216-.321.947.947,0,0,1,.337-.207A1.2,1.2,0,0,1,1.033,12H22.967a1.206,1.206,0,0,1,.409.069.935.935,0,0,1,.336.207.9.9,0,0,1,.217.321,1.072,1.072,0,0,1,.072.391,1.046,1.046,0,0,1-.072.4,1.206,1.206,0,0,1-.217.333.935.935,0,0,1-.336.207,1.206,1.206,0,0,1-.409.069Zm0-6a1.2,1.2,0,0,1-.409-.069.934.934,0,0,1-.337-.207,1.189,1.189,0,0,1-.216-.333A1.046,1.046,0,0,1,0,6.989,1.068,1.068,0,0,1,.072,6.6a.9.9,0,0,1,.216-.322.947.947,0,0,1,.337-.207A1.2,1.2,0,0,1,1.033,6H22.967a1.206,1.206,0,0,1,.409.068.935.935,0,0,1,.336.207.9.9,0,0,1,.217.322A1.068,1.068,0,0,1,24,6.989a1.046,1.046,0,0,1-.072.4,1.193,1.193,0,0,1-.217.333.923.923,0,0,1-.336.207A1.206,1.206,0,0,1,22.967,8Zm0-6a1.2,1.2,0,0,1-.409-.068.947.947,0,0,1-.337-.207,1.193,1.193,0,0,1-.216-.334A1.039,1.039,0,0,1,0,.988,1.068,1.068,0,0,1,.072.6.892.892,0,0,1,.288.276.934.934,0,0,1,.625.069,1.2,1.2,0,0,1,1.033,0H22.967a1.206,1.206,0,0,1,.409.069.923.923,0,0,1,.336.207A.9.9,0,0,1,23.928.6,1.068,1.068,0,0,1,24,.988a1.039,1.039,0,0,1-.072.4,1.2,1.2,0,0,1-.217.334.935.935,0,0,1-.336.207A1.206,1.206,0,0,1,22.967,2Z" transform="translate(0 5)" fill="#fff"></path>
+                </svg>
+              </a>
+              <a href="#0" class="me-2 me-md-3 ms-0 ms-md-4">
+                <svg data-name="Icon/Search" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path data-name="Icon Color" d="M21.048,21.91a.738.738,0,0,1-.531-.207l-4.959-5.123a9.258,9.258,0,0,1-6.133,2.271,9.431,9.431,0,1,1,7.193-3.293l4.957,5.087a.8.8,0,0,1-.007,1.067A.736.736,0,0,1,21.048,21.91ZM9.426,1.514a7.931,7.931,0,1,0,7.912,7.912A7.921,7.921,0,0,0,9.426,1.514Z" transform="translate(1 1)" fill="#3f3b3b"></path>
+                </svg>
+              </a>
+              <a href="#0" class="ms-0 ms-md-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24.001" height="24" viewBox="0 0 24.001 24">
+                  <g data-name="Icon/Settings" transform="translate(0.001)">
+                    <path data-name="Icon Color" d="M13.631,24H10.179a1.675,1.675,0,0,1-1.65-1.421L8.2,20.337a9.332,9.332,0,0,1-1.952-1.093l-2.3.886a1.663,1.663,0,0,1-.6.112,1.68,1.68,0,0,1-1.429-.8L.239,16.668a1.655,1.655,0,0,1,.426-2.186l1.873-1.4A8.517,8.517,0,0,1,2.462,12a8.091,8.091,0,0,1,.075-1.062L.665,9.535A1.655,1.655,0,0,1,.239,7.349L1.916,4.577a1.672,1.672,0,0,1,2.029-.692l2.3.886A9.742,9.742,0,0,1,8.2,3.681l.332-2.26A1.675,1.675,0,0,1,10.183,0h3.451a1.675,1.675,0,0,1,1.65,1.421l.329,2.242a9.327,9.327,0,0,1,1.951,1.092l2.3-.886a1.67,1.67,0,0,1,2.029.692l1.677,2.771a1.653,1.653,0,0,1-.426,2.186l-1.873,1.4A8.539,8.539,0,0,1,21.351,12a8.1,8.1,0,0,1-.075,1.063l1.872,1.4a1.664,1.664,0,0,1,.664,1.372l.188.109,0,.007-.184-.112-.127-.078-1.268-.777-.019.031,1.284.758-.324-.2.327.189.127.078v.011l.18.106,0,.007-.176-.11-.13-.081.13.081a1.661,1.661,0,0,1-.238.794L21.9,19.422a1.67,1.67,0,0,1-2.029.692l-2.3-.887a9.752,9.752,0,0,1-1.951,1.092l-.333,2.26A1.674,1.674,0,0,1,13.631,24ZM6.537,17.156h0l.745.554a7.447,7.447,0,0,0,1.7.952l.893.357.077.526.061.418.321,2.19h3.132l.462-3.141.881-.362a7.847,7.847,0,0,0,1.717-.958l.746-.554.477.184.392.15,2.245.864,1.51-2.5-2.613-1.957.139-.968A6.523,6.523,0,0,0,19.5,12a6.808,6.808,0,0,0-.074-.941l-.131-.962.435-.326.347-.26L21.9,8.142l-1.51-2.5-3.113,1.2-.746-.554a7.486,7.486,0,0,0-1.7-.953l-.893-.357-.077-.525L13.8,4.036l-.321-2.19H10.343L9.88,4.988,9,5.349a7.914,7.914,0,0,0-1.717.959l-.745.554-.478-.184-.391-.151L3.423,5.664l-1.51,2.5,2.613,1.957-.139.968A6.529,6.529,0,0,0,4.316,12a6.947,6.947,0,0,0,.073.942l.131.962-.435.326-.347.26L1.913,15.857l1.51,2.5,3.113-1.2Zm5.37-1.279A3.877,3.877,0,1,1,15.838,12,3.909,3.909,0,0,1,11.907,15.877Zm0-5.908A2.031,2.031,0,1,0,13.986,12,2.057,2.057,0,0,0,11.907,9.969Z" fill="#3f3b3b"></path>
+                  </g>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3 px-2 px-md-0">
+          <!-- Fabrx User Retention Chart -->
+          <div class="col-md-12 mb-3 mb-sm-4">
+            <div class="card bg-dark-100">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-4">
+                  <h5 class="font-weight-regular text-white">User Retention</h5>
+                </div>
+                <div id="FabrxAreaChartTwo"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-12 mb-3 mb-sm-4 mt-2">
+            <div class="card bg-dark-100 p-0">
+              <div class="card-header p-4 border-bottom">
+                <h5 class="font-weight-regular text-white mb-0">Latest Users</h5>
+              </div>
+              <div>
+                <div class="card-body p-4 border-bottom">
+                  <div class="align-items-center justify-content-between d-flex">
+                    <div class="float-start me-2">
+                      <div class="fabrx-avatar fabrx-status online"><img src="../assets/images/avatars/avatar-26.png" alt="Nina Herald"></div>
+                      <div class="avatar-name">
+                        <h6 class="d-block font-size-14 mb-0 text-white">Nina Herald</h6>
+                        <small class="d-block text-secondary">UX Researcher</small>
+                      </div>
+                    </div>
+                    <div class="float-end">
+                      <div class="dropdown">
+                        <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="Action7">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                            <path data-name="Icon Color" d="M13.889,2.889a1.445,1.445,0,1,1,1.445-1.445A1.446,1.446,0,0,1,13.889,2.889Zm-6.222,0A1.445,1.445,0,1,1,9.111,1.444,1.446,1.446,0,0,1,7.667,2.889Zm-6.223,0A1.445,1.445,0,1,1,2.889,1.444,1.446,1.446,0,0,1,1.444,2.889Z" transform="translate(9.778 0.444) rotate(90)" fill="#959393"></path>
+                          </svg>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action7">
+                          <a class="dropdown-item" href="#0">Action</a>
+                          <a class="dropdown-item" href="#0">Another action</a>
+                          <a class="dropdown-item" href="#0">Something else here</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body p-4 border-bottom">
+                  <div class="align-items-center justify-content-between d-flex">
+                    <div class="float-start me-2">
+                      <div class="fabrx-avatar fabrx-status dnd"><img src="../assets/images/avatars/avatar-27.png" alt="Nina Herald"></div>
+                      <div class="avatar-name">
+                        <h6 class="d-block font-size-14 mb-0 text-white">Nina Herald</h6>
+                        <small class="d-block text-secondary">UX Researcher</small>
+                      </div>
+                    </div>
+                    <div class="float-end">
+                      <div class="dropdown">
+                        <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="Action8">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                            <path data-name="Icon Color" d="M13.889,2.889a1.445,1.445,0,1,1,1.445-1.445A1.446,1.446,0,0,1,13.889,2.889Zm-6.222,0A1.445,1.445,0,1,1,9.111,1.444,1.446,1.446,0,0,1,7.667,2.889Zm-6.223,0A1.445,1.445,0,1,1,2.889,1.444,1.446,1.446,0,0,1,1.444,2.889Z" transform="translate(9.778 0.444) rotate(90)" fill="#959393"></path>
+                          </svg>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action8">
+                          <a class="dropdown-item" href="#0">Action</a>
+                          <a class="dropdown-item" href="#0">Another action</a>
+                          <a class="dropdown-item" href="#0">Something else here</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body p-4 border-bottom">
+                  <div class="align-items-center justify-content-between d-flex">
+                    <div class="float-start me-2">
+                      <div class="fabrx-avatar fabrx-status online"><img src="../assets/images/avatars/avatar-28.png" alt="Nina Herald"></div>
+                      <div class="avatar-name">
+                        <h6 class="d-block font-size-14 mb-0 text-white">Nina Herald</h6>
+                        <small class="d-block text-secondary">UX Researcher</small>
+                      </div>
+                    </div>
+                    <div class="float-end">
+                      <div class="dropdown">
+                        <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="Action9">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                            <path data-name="Icon Color" d="M13.889,2.889a1.445,1.445,0,1,1,1.445-1.445A1.446,1.446,0,0,1,13.889,2.889Zm-6.222,0A1.445,1.445,0,1,1,9.111,1.444,1.446,1.446,0,0,1,7.667,2.889Zm-6.223,0A1.445,1.445,0,1,1,2.889,1.444,1.446,1.446,0,0,1,1.444,2.889Z" transform="translate(9.778 0.444) rotate(90)" fill="#959393"></path>
+                          </svg>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action9">
+                          <a class="dropdown-item" href="#0">Action</a>
+                          <a class="dropdown-item" href="#0">Another action</a>
+                          <a class="dropdown-item" href="#0">Something else here</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body p-4 border-bottom">
+                  <div class="align-items-center justify-content-between d-flex">
+                    <div class="float-start me-2">
+                      <div class="fabrx-avatar fabrx-status offline"><img src="../assets/images/avatars/avatar-29.png" alt="Nina Herald"></div>
+                      <div class="avatar-name">
+                        <h6 class="d-block font-size-14 mb-0 text-white">Nina Herald</h6>
+                        <small class="d-block text-secondary">UX Researcher</small>
+                      </div>
+                    </div>
+                    <div class="float-end">
+                      <div class="dropdown">
+                        <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="Action10">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                            <path data-name="Icon Color" d="M13.889,2.889a1.445,1.445,0,1,1,1.445-1.445A1.446,1.446,0,0,1,13.889,2.889Zm-6.222,0A1.445,1.445,0,1,1,9.111,1.444,1.446,1.446,0,0,1,7.667,2.889Zm-6.223,0A1.445,1.445,0,1,1,2.889,1.444,1.446,1.446,0,0,1,1.444,2.889Z" transform="translate(9.778 0.444) rotate(90)" fill="#959393"></path>
+                          </svg>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action10">
+                          <a class="dropdown-item" href="#0">Action</a>
+                          <a class="dropdown-item" href="#0">Another action</a>
+                          <a class="dropdown-item" href="#0">Something else here</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body p-4">
+                  <div class="align-items-center justify-content-between d-flex">
+                    <div class="float-start me-2">
+                      <div class="fabrx-avatar fabrx-status online"><img src="../assets/images/avatars/avatar-27.png" alt="Nina Herald"></div>
+                      <div class="avatar-name">
+                        <h6 class="d-block font-size-14 mb-0 text-white">Nina Herald</h6>
+                        <small class="d-block text-secondary">UX Researcher</small>
+                      </div>
+                    </div>
+                    <div class="float-end">
+                      <div class="dropdown">
+                        <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="Action11">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                            <path data-name="Icon Color" d="M13.889,2.889a1.445,1.445,0,1,1,1.445-1.445A1.446,1.446,0,0,1,13.889,2.889Zm-6.222,0A1.445,1.445,0,1,1,9.111,1.444,1.446,1.446,0,0,1,7.667,2.889Zm-6.223,0A1.445,1.445,0,1,1,2.889,1.444,1.446,1.446,0,0,1,1.444,2.889Z" transform="translate(9.778 0.444) rotate(90)" fill="#959393"></path>
+                          </svg>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action11">
+                          <a class="dropdown-item" href="#0">Action</a>
+                          <a class="dropdown-item" href="#0">Another action</a>
+                          <a class="dropdown-item" href="#0">Something else here</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Fabrx Market Analysis Chart -->
+          <div class="col-lg-7 col-md-12 mb-3 mb-sm-4 mt-2">
+            <div class="card bg-dark-100">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-4">
+                  <h5 class="font-weight-regular text-white">Market Analysis</h5>
+                  <div class="dropdown text-end mb-md-2 ms-auto">
+                    <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle text-secondary" id="Action8one"><small>This week</small></a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action8one">
+                      <a class="dropdown-item" href="#0">Action</a>
+                      <a class="dropdown-item" href="#0">Another action</a>
+                      <a class="dropdown-item" href="#0">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="FabrxPointsChartTwo"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Fabrx Scripts -->
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/html5.min.js"></script>
+<script src="../assets/js/lodash.min.js"></script>
+<script src="../assets/js/highcharts.min.js"></script>
+<script src="../assets/js/highcharts-more.min.js"></script>
+<script src="../assets/js/swiper-bundle.min.js"></script>
+<script src="../assets/js/progressbar.min.js"></script>
+<script src="../assets/js/flatpickr.min.js"></script>
+<script src="../assets/js/purecounter.min.js"></script>
+<script src="../assets/js/simplebar.min.js"></script>
+<script src="../assets/js/sticky.min.js"></script>
+<script src="../assets/js/smooth-scroll.polyfills.min.js"></script>
+<script src="../assets/js/fabrx-scripts.js"></script>
+<script>
+//Fabrx User Retention Chart Script
+Highcharts.chart('FabrxAreaChartTwo', {
+  chart: {
+    type: 'areaspline',
+    backgroundColor: null,
+  },
+  title: {
+    text: '',
+  },
+  credits: {
+    enabled: false,
+  },
+  xAxis: {
+    lineColor: '#3F3B3B',
+    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    labels: {
+      style: {
+        color: '#959393',
+        fontSize: '12px',
+        fontFamily: "'Roboto', sans-serif",
+      },
+    },
+  },
+  yAxis: {
+    gridLineColor: '#3F3B3B',
+    lineWidth: 1,
+    lineColor: '#3F3B3B',
+    title: {
+      text: '',
+    },
+    labels: {
+      style: {
+        color: '#959393',
+        fontSize: '12px',
+        fontFamily: "'Roboto', sans-serif",
+      },
+    },
+  },
+  legend: {
+    itemStyle: {
+      color: '#959393',
+      fontSize: '12px',
+      fontWeight: 'normal',
+      fontFamily: "'Roboto', sans-serif",
+    },
+    itemHoverStyle: {
+      color: '#959393'
+    },
+    margin: 30,
+    padding: 0,
+    symbolWidth: 9,
+    symbolHeight: 9,
+    itemDistance: 30,
+    symbolPadding: 10,
+  },
+  tooltip: {
+    pointFormat: '{series.name} had stockpiled <b>{point.y:,.0f}</b><br/>warheads in {point.x}',
+  },
+  plotOptions: {
+    column: {
+      pointPadding: 0,
+      borderWidth: 0,
+    },
+    areaspline: {
+      pointStart: 0,
+      marker: {
+        enabled: false,
+        symbol: 'circle',
+        radius: 2,
+        states: {
+          hover: {
+            enabled: true,
+          },
+        }
+      }
+    }
+  },
+  series: [{
+    name: 'Legend',
+    color: '#006EFF',
+    data: [0, 450, 699, 950, 1150, 1850, 760, 1540, 1150, 420, 1740, 2100],
+  },
+  {
+    name: 'Legend',
+    color: '#97C3FF',
+    data: [0, 250, 899, 1150, 1350, 1650, 76, 86, 96, 1420, 74, 84],
+  },]
+});
+
+//Fabrx Market Analysis Chart Script
+Highcharts.chart('FabrxPointsChartTwo', {
+  chart: {
+    type: 'line',
+    backgroundColor: null,
+  },
+  title: {
+    text: '',
+  },
+  credits: {
+    enabled: false,
+  },
+  xAxis: {
+    lineColor: '#3F3B3B',
+    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    labels: {
+      style: {
+        color: '#959393',
+        fontSize: '12px',
+        fontFamily: "'Roboto', sans-serif",
+      },
+    },
+  },
+  yAxis: {
+    gridLineColor: '#3F3B3B',
+    lineWidth: 1,
+    lineColor: '#3F3B3B',
+    title: {
+      text: '',
+    },
+    labels: {
+      style: {
+        color: '#959393',
+        fontSize: '12px',
+        fontFamily: "'Roboto', sans-serif",
+      },
+    },
+  },
+  legend: {
+    enabled: false,
+  },
+  plotOptions: {
+    series: {
+      lineWidth: 1,
+    },
+  },
+  series: [{
+    name: 'Legend',
+    color: '#27B264',
+    data: [0, 980, 550, 1500, 1000, 1950, 1300, 2450],
+  },
+  {
+    name: 'Legend',
+    color: '#C54E4E',
+    data: [1300, 500, 1650, 1450, 1580, 1180, 2100, 1000],
+  }]
+});
+</script>
+</body>
+</html>

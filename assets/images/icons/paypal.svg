@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon/brand/paypal</title>
+    <g id="Icon/brand/paypal" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10,13 L12.5,13 C15,13 17.5,10.5 17.5,8 C17.5,5 15.6,3 12.5,3 L7,3 C6.5,3 6,3.5 6,4 L4,18 C4,18.5 4.5,19 5,19 L7.8,19 L9,14 C9.1,13.4 9.4,13 10,13 Z M17.5,7.2 C19.2,8.2 20,10 20,12 C20,14.5 17.5,16.5 15,16.5 L12.4,16.5 L11.8,20.1 C11.7035264,20.5731232 11.2827608,20.9097357 10.8,20.9 L8.1,20.9 C7.94809545,20.9030761 7.80303324,20.8369149 7.70576638,20.7201947 C7.60849952,20.6034745 7.56958172,20.4488596 7.6,20.3 L7.8,18.9" id="Icon-Color" stroke="#212121" stroke-width="1.5"></path>
+    </g>
+</svg>

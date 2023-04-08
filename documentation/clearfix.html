@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Fabrx">
+<meta name="keywords" content="Fabrx">
+<meta name="author" content="Fabrx">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Fabrx - Clearfix Documentation</title>
+<link href="assets/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<!-- Fabrx External CSS -->
+<link href="assets/css/loading-bar.min.css" rel="stylesheet" type="text/css" media="all">
+<link href="assets/css/swiper-bundle.min.css" rel="stylesheet" type="text/css" media="all">
+<link href="assets/css/flatpickr.min.css" rel="stylesheet" type="text/css" media="all">
+<link href="assets/css/bootstrap-slider.min.css" rel="stylesheet" type="text/css" media="all">
+<link href="assets/css/dropzone.min.css" rel="stylesheet" type="text/css" media="all">
+<link href="assets/css/simplebar.min.css" rel="stylesheet" type="text/css" media="all">
+<link href="assets/css/prism.css" rel="stylesheet" type="text/css" media="all">
+<link href="assets/css/fabrx-docs.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body style="background-color: #ffffff;">
+
+<!-- Fabrx section, Py 0, Fabrx Documentation -->
+<section class="fabrx-section py-0 fabrx-documentation">
+	<!-- Fabrx Header, Bg White, Px 3, Px Md 4, Py 3, Shadow 40, Position Fixed -->
+	<header class="fabrx-header bg-white px-3 px-md-4 py-3 shadow-40 position-fixed">
+		<nav class="navbar navbar-expand-lg has-header-inner">
+			<a class="navbar-brand" href="https://fabrx.co">
+				<svg width="156px" height="22px" viewBox="0 0 156 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					<title>Group Copy 3</title>
+					<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						<g id="Group-Copy-3" fill="#000000">
+							<path d="M2.33852218,12.3531265 C3.63005232,12.3531265 4.67704437,13.4044139 4.67704437,14.7012426 C4.67704437,15.9980713 3.63005232,17.0493587 2.33852218,17.0493587 C1.04699204,17.0493587 4.55300217e-13,15.9980713 4.55300217e-13,14.7012426 C4.55300217e-13,13.4044139 1.04699204,12.3531265 2.33852218,12.3531265 Z M14.4884441,12.3531265 C15.7799742,12.3531265 16.8269663,13.4044139 16.8269663,14.7012426 C16.8269663,15.9980713 15.7799742,17.0493587 14.4884441,17.0493587 C13.196914,17.0493587 12.1499219,15.9980713 12.1499219,14.7012426 C12.1499219,13.4044139 13.196914,12.3531265 14.4884441,12.3531265 Z M2.33852218,6.25324262 C3.63005232,6.25324262 4.67704437,7.30453002 4.67704437,8.60135874 C4.67704437,9.89818746 3.63005232,10.9494749 2.33852218,10.9494749 C1.04699204,10.9494749 4.55300217e-13,9.89818746 4.55300217e-13,8.60135874 C4.55300217e-13,7.30453002 1.04699204,6.25324262 2.33852218,6.25324262 Z M8.41348315,6.25324262 C9.70501329,6.25324262 10.7520053,7.30453002 10.7520053,8.60135874 C10.7520053,9.89818746 9.70501329,10.9494749 8.41348315,10.9494749 C7.12195301,10.9494749 6.07496096,9.89818746 6.07496096,8.60135874 C6.07496096,7.30453002 7.12195301,6.25324262 8.41348315,6.25324262 Z M2.33852218,0.15335874 C3.63005232,0.15335874 4.67704437,1.20464614 4.67704437,2.50147486 C4.67704437,3.79830359 3.63005232,4.84959098 2.33852218,4.84959098 C1.04699204,4.84959098 4.55300217e-13,3.79830359 4.55300217e-13,2.50147486 C4.55300217e-13,1.20464614 1.04699204,0.15335874 2.33852218,0.15335874 Z M14.4884441,0.15335874 C15.7799742,0.15335874 16.8269663,1.20464614 16.8269663,2.50147486 C16.8269663,3.79830359 15.7799742,4.84959098 14.4884441,4.84959098 C13.196914,4.84959098 12.1499219,3.79830359 12.1499219,2.50147486 C12.1499219,1.20464614 13.196914,0.15335874 14.4884441,0.15335874 Z M8.41348315,0.15335874 C9.70501329,0.15335874 10.7520053,1.20464614 10.7520053,2.50147486 C10.7520053,3.79830359 9.70501329,4.84959098 8.41348315,4.84959098 C7.12195301,4.84959098 6.07496096,3.79830359 6.07496096,2.50147486 C6.07496096,1.20464614 7.12195301,0.15335874 8.41348315,0.15335874 Z" id="Combined-Shape-Copy-2"></path>
+							<path d="M30.8563173,17.0493587 L30.8563173,7.47336787 L33.2483764,7.47336787 L33.2483764,4.95337028 L30.8563173,4.95337028 L30.8563173,4.14224605 C30.8563173,3.32324683 31.1857156,2.84287229 32.1660677,2.84287229 C32.5660514,2.84287229 32.9738778,2.92949721 33.2405336,3.01612212 L33.8287449,0.496124527 C33.4130756,0.370124647 32.495466,0.165374842 31.468057,0.165374842 C29.2014829,0.165374842 27.5152773,1.44899862 27.5152773,4.07924611 L27.5152773,4.95337028 L25.8133861,4.95337028 L25.8133861,7.47336787 L27.5152773,7.47336787 L27.5152773,17.0493587 L30.8563173,17.0493587 Z M37.9153826,17.2777335 C39.6957021,17.2777335 40.8485961,16.4981093 41.4368074,15.3719853 L41.5309212,15.3719853 L41.5309212,17.0493587 L44.6994192,17.0493587 L44.6994192,8.89086652 C44.6994192,6.00861927 42.268146,4.79587043 39.5859026,4.79587043 C36.699746,4.79587043 34.8017844,6.1818691 34.3390582,8.386867 L37.429128,8.63886676 C37.6565697,7.83561753 38.370266,7.24499309 39.570217,7.24499309 C40.7074254,7.24499309 41.3583792,7.81986754 41.3583792,8.8121166 L41.3583792,8.85936655 C41.3583792,9.63899081 40.5348835,9.74136571 38.4408514,9.94611551 C36.0566351,10.1666153 33.9155461,10.9698645 33.9155461,13.670987 C33.9155461,16.0649847 35.6174373,17.2777335 37.9153826,17.2777335 Z M38.8722063,14.9624857 C37.8447973,14.9624857 37.1075725,14.4821112 37.1075725,13.5607371 C37.1075725,12.615738 37.8840114,12.1511134 39.0604339,11.9857386 C39.7898159,11.8833637 40.981924,11.7101138 41.3819077,11.4423641 L41.3819077,12.7259879 C41.3819077,13.9938617 40.338813,14.9624857 38.8722063,14.9624857 Z M53.8525212,17.2462336 C56.5975071,17.2462336 58.7385961,15.0648606 58.7385961,11.0171145 C58.7385961,6.85911846 56.5033933,4.79587043 53.860364,4.79587043 C51.8447601,4.79587043 50.8800936,6.00074428 50.433053,6.98511834 L50.3310964,6.98511834 L50.3310964,0.921374121 L46.9900564,0.921374121 L46.9900564,17.0493587 L50.2840395,17.0493587 L50.2840395,15.1121106 L50.433053,15.1121106 C50.8957792,16.1201096 51.9075026,17.2462336 53.8525212,17.2462336 Z M52.7937409,14.5766111 C51.1859634,14.5766111 50.2605111,13.1591125 50.2605111,11.0013645 C50.2605111,8.84361657 51.1702778,7.46549288 52.7937409,7.46549288 C54.4485753,7.46549288 55.3269707,8.90661651 55.3269707,11.0013645 C55.3269707,13.1118625 54.4328896,14.5766111 52.7937409,14.5766111 Z M63.9310767,17.0493587 L63.9310767,10.2059903 C63.9310767,8.71761669 65.0133854,7.69386766 66.487835,7.69386766 C66.9505612,7.69386766 67.5858293,7.77261759 67.899542,7.87499249 L67.899542,4.89824533 C67.601515,4.8273704 67.1858457,4.78012044 66.8486045,4.78012044 C65.49964,4.78012044 64.3938029,5.56761969 63.9546051,7.06386826 L63.8291201,7.06386826 L63.8291201,4.95337028 L60.5900367,4.95337028 L60.5900367,17.0493587 L63.9310767,17.0493587 Z M72.2920509,17.0493587 L74.6292103,12.8677377 L77.0055838,17.0493587 L80.4172091,17.0493587 L76.8330418,11.0013645 L80.3230953,4.95337028 L76.8957844,4.95337028 L74.6292103,9.18224124 L72.417536,4.95337028 L68.9666966,4.95337028 L72.417536,11.0013645 L68.8412115,17.0493587 L72.2920509,17.0493587 Z M91.1237161,17.2462336 C93.0687347,17.2462336 94.080458,16.1201096 94.5431842,15.1121106 L94.6843549,15.1121106 L94.6843549,17.0493587 L97.978338,17.0493587 L97.978338,0.921374121 L94.6451408,0.921374121 L94.6451408,6.98511834 L94.5431842,6.98511834 C94.0961437,6.00074428 93.1314772,4.79587043 91.1158733,4.79587043 C88.472844,4.79587043 86.2376412,6.85911846 86.2376412,11.0171145 C86.2376412,15.0648606 88.3787302,17.2462336 91.1237161,17.2462336 Z M92.1824964,14.5766111 C90.5433476,14.5766111 89.6492665,13.1118625 89.6492665,11.0013645 C89.6492665,8.90661651 90.527662,7.46549288 92.1824964,7.46549288 C93.8059594,7.46549288 94.7157262,8.84361657 94.7157262,11.0013645 C94.7157262,13.1591125 93.7902738,14.5766111 92.1824964,14.5766111 Z M105.837376,17.2856085 C108.817647,17.2856085 110.825408,15.8287349 111.295977,13.584362 L108.205907,13.3796122 C107.868666,14.3009864 107.005956,14.7813609 105.892276,14.7813609 C104.221756,14.7813609 103.162976,13.670987 103.162976,11.8676137 L103.162976,11.8597387 L111.366562,11.8597387 L111.366562,10.9383646 C111.366562,6.82761849 108.888232,4.79587043 105.704048,4.79587043 C102.159095,4.79587043 99.8611499,7.32374302 99.8611499,11.0564895 C99.8611499,14.8916108 102.127724,17.2856085 105.837376,17.2856085 Z M108.221593,9.78074067 L103.162976,9.78074067 C103.233561,8.40261699 104.276656,7.30011804 105.758948,7.30011804 C107.209869,7.30011804 108.21375,8.33961705 108.221593,9.78074067 Z M118.11192,17.2856085 C121.233361,17.2856085 123.468564,15.686985 123.476406,13.3008623 C123.468564,11.552614 122.331355,10.50524 119.994196,10.0248654 L117.813893,9.58386586 C116.69237,9.33974109 116.276701,8.95386646 116.284543,8.37111702 C116.276701,7.64661771 117.092354,7.17411816 118.127605,7.17411816 C119.288342,7.17411816 119.97851,7.81199255 120.143209,8.59161681 L123.201908,8.40261699 C122.903881,6.17399411 121.115719,4.79587043 118.072706,4.79587043 C114.990479,4.79587043 112.959189,6.22911906 112.967032,8.56011684 C112.959189,10.3713651 114.096398,11.544739 116.449243,12.0172385 L118.535432,12.4346131 C119.586369,12.6472379 120.064781,13.0331126 120.080467,13.639487 C120.064781,14.3561113 119.288342,14.8679858 118.119763,14.8679858 C116.927654,14.8679858 116.13553,14.3561113 115.931617,13.3717372 L112.645476,13.5449871 C112.959189,15.8602349 114.919893,17.2856085 118.11192,17.2856085 Z M126.896409,3.39412176 C127.892447,3.39412176 128.7081,2.63024749 128.7081,1.69312339 C128.7081,0.763874272 127.892447,0 126.896409,0 C125.908214,0 125.092561,0.763874272 125.092561,1.69312339 C125.092561,2.63024749 125.908214,3.39412176 126.896409,3.39412176 Z M128.559086,17.0493587 L128.559086,4.95337028 L125.218046,4.95337028 L125.218046,17.0493587 L128.559086,17.0493587 Z M136.284789,21.7586042 C139.727786,21.7586042 142.174744,20.1836058 142.174744,17.1674836 L142.174744,4.95337028 L138.857233,4.95337028 L138.857233,6.98511834 L138.731748,6.98511834 C138.284707,6.00074428 137.304355,4.79587043 135.288751,4.79587043 C132.645722,4.79587043 130.410519,6.85911846 130.410519,10.9777395 C130.410519,15.0018607 132.582979,16.8761089 135.296594,16.8761089 C137.218084,16.8761089 138.29255,15.9074848 138.731748,14.9073608 L138.872918,14.9073608 L138.872918,17.1202337 C138.872918,18.7031072 137.814138,19.3488565 136.363217,19.3488565 C134.888768,19.3488565 134.1437,18.7031072 133.869201,18.0494828 L130.779132,18.4668574 C131.179115,20.2938556 133.037863,21.7586042 136.284789,21.7586042 Z M136.355374,14.3561113 C134.716226,14.3561113 133.822144,13.0488626 133.822144,10.9619895 C133.822144,8.90661651 134.70054,7.46549288 136.355374,7.46549288 C137.978837,7.46549288 138.888604,8.84361657 138.888604,10.9619895 C138.888604,13.0961125 137.963152,14.3561113 136.355374,14.3561113 Z M147.814266,17.0493587 L147.814266,10.0563654 C147.822108,8.4971169 148.747561,7.58361777 150.096525,7.58361777 C151.437647,7.58361777 152.245457,8.46561693 152.237614,9.94611551 L152.237614,17.0493587 L155.578654,17.0493587 L155.578654,9.34761609 C155.578654,6.52836877 153.931663,4.79587043 151.421961,4.79587043 C149.633799,4.79587043 148.339734,5.67786959 147.79858,7.08749324 L147.657409,7.08749324 L147.657409,4.95337028 L144.473226,4.95337028 L144.473226,17.0493587 L147.814266,17.0493587 Z" id="fabrxdesign" fill-rule="nonzero"></path>
+						</g>
+					</g>
+				</svg>
+			</a>
+			<div class="fabrx-header-links ms-auto">
+				<a href="https://fabrx.co/fabrx-bootstrap-ui-kit-pro/" class="btn btn-primary">BUY NOW</a>
+			</div>
+			<div class="text-end d-block d-xl-none ms-3">
+        <a href="#0" class="header-aside-toggle">
+          <svg data-name="Icon/Hamburger" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path data-name="Icon Color" d="M1.033,14a1.2,1.2,0,0,1-.409-.069.947.947,0,0,1-.337-.207,1.2,1.2,0,0,1-.216-.333,1.046,1.046,0,0,1-.072-.4A1.072,1.072,0,0,1,.072,12.6a.892.892,0,0,1,.216-.321.947.947,0,0,1,.337-.207A1.2,1.2,0,0,1,1.033,12H22.967a1.206,1.206,0,0,1,.409.069.935.935,0,0,1,.336.207.9.9,0,0,1,.217.321,1.072,1.072,0,0,1,.072.391,1.046,1.046,0,0,1-.072.4,1.206,1.206,0,0,1-.217.333.935.935,0,0,1-.336.207,1.206,1.206,0,0,1-.409.069Zm0-6a1.2,1.2,0,0,1-.409-.069.934.934,0,0,1-.337-.207,1.189,1.189,0,0,1-.216-.333A1.046,1.046,0,0,1,0,6.989,1.068,1.068,0,0,1,.072,6.6a.9.9,0,0,1,.216-.322.947.947,0,0,1,.337-.207A1.2,1.2,0,0,1,1.033,6H22.967a1.206,1.206,0,0,1,.409.068.935.935,0,0,1,.336.207.9.9,0,0,1,.217.322A1.068,1.068,0,0,1,24,6.989a1.046,1.046,0,0,1-.072.4,1.193,1.193,0,0,1-.217.333.923.923,0,0,1-.336.207A1.206,1.206,0,0,1,22.967,8Zm0-6a1.2,1.2,0,0,1-.409-.068.947.947,0,0,1-.337-.207,1.193,1.193,0,0,1-.216-.334A1.039,1.039,0,0,1,0,.988,1.068,1.068,0,0,1,.072.6.892.892,0,0,1,.288.276.934.934,0,0,1,.625.069,1.2,1.2,0,0,1,1.033,0H22.967a1.206,1.206,0,0,1,.409.069.923.923,0,0,1,.336.207A.9.9,0,0,1,23.928.6,1.068,1.068,0,0,1,24,.988a1.039,1.039,0,0,1-.072.4,1.2,1.2,0,0,1-.217.334.935.935,0,0,1-.336.207A1.206,1.206,0,0,1,22.967,2Z" transform="translate(0 5)" fill="#3F3B3B"></path>
+          </svg>
+        </a>
+      </div>
+		</nav>
+	</header>
+
+	<!-- Row, G 0, Align Items Center, Has Height -->
+	<div class="row g-0 align-items-center has-height">
+		<!-- Fabrx Aside, Fabrx Aside Lg, Position Fixed, Shadow 20 -->
+		<aside class="fabrx-aside fabrx-aside-lg position-fixed shadow-20">
+			<div class="fabrx-aside-body fabrx-scroll accordion2" data-simplebar>
+				<div class="fabrx-menu-category pt-3">
+					<ul class="list-unstyled menu-category menu-scroll">
+						<li>
+							<a href="JavaScript:void(0)" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+								<span>
+									<svg width="18px" height="18px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+										<g>
+											<g>
+												<path d="M503.401,228.884l-43.253-39.411V58.79c0-8.315-6.741-15.057-15.057-15.057H340.976c-8.315,0-15.057,6.741-15.057,15.057
+													v8.374l-52.236-47.597c-10.083-9.189-25.288-9.188-35.367-0.001L8.598,228.885c-8.076,7.36-10.745,18.7-6.799,28.889
+													c3.947,10.189,13.557,16.772,24.484,16.772h36.689v209.721c0,8.315,6.741,15.057,15.057,15.057h125.913
+													c8.315,0,15.057-6.741,15.057-15.057V356.931H293v127.337c0,8.315,6.741,15.057,15.057,15.057h125.908
+													c8.315,0,15.057-6.741,15.056-15.057V274.547h36.697c10.926,0,20.537-6.584,24.484-16.772
+													C514.147,247.585,511.479,236.245,503.401,228.884z M433.965,244.433c-8.315,0-15.057,6.741-15.057,15.057v209.721h-95.793
+													V341.874c0-8.315-6.742-15.057-15.057-15.057H203.942c-8.315,0-15.057,6.741-15.057,15.057v127.337h-95.8V259.49
+													c0-8.315-6.741-15.057-15.057-15.057H36.245l219.756-200.24l74.836,68.191c4.408,4.016,10.771,5.051,16.224,2.644
+													c5.454-2.41,8.973-7.812,8.973-13.774V73.847h74.002v122.276c0,4.237,1.784,8.276,4.916,11.13l40.803,37.18H433.965z"/>
+											</g>
+										</g>
+									</svg>
+								<span class="dropdown-text ms-2"><strong>Getting Started</strong></span>
+							</span>
+								<svg class="ms-auto icon-rotate" data-name="Icon/Arrows/Chevron/Down" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24.091 24">
+									<path data-name="Icon Color" d="M-2.182,24,0,21.818-9.818,12,0,2.182-2.182,0l-12,12Z" transform="translate(0.091 4.909) rotate(-90)" fill="#3F3B3B"></path>
+								</svg>
+							</a>
+							<div id="collapseOne" class="collapse" data-bs-parent=".accordion2">
+								<ul class="list-unstyled menu-category">
+									<li>
+										<a href="documentation.html">
+											<span class="dropdown-text">Introduction</span>
+										</a>
+									</li>
+									<li>
+										<a href="contents.html">
+											<span class="dropdown-text">Contents</span>
+										</a>
+									</li>
+									<li>
+										<a href="browsers-devices.html">
+											<span class="dropdown-text">Browsers &amp; devices</span>
+										</a>
+									</li>
+									<li>
+										<a href="javascript.html">
+											<span class="dropdown-text">JavaScript</span>
+										</a>
+									</li>
+									<li>
+										<a href="build-tools.html">
+											<span class="dropdown-text">Build tools</span>
+										</a>
+									</li>
+									<li>
+										<a href="webpack.html">
+											<span class="dropdown-text">Webpack</span>
+										</a>
+									</li>
+									<li>
+										<a href="accessibility.html">
+											<span class="dropdown-text">Accessibility</span>
+										</a>
+									</li>
+									<li>
+										<a href="rfs.html">
+											<span class="dropdown-text">RFS</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="JavaScript:void(0)" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="false" aria-controls="collapseOne1">
+								<span>
+									<svg enable-background="new 0 0 512 512" height="18" viewBox="0 0 512 512" width="18" xmlns="http://www.w3.org/2000/svg" fill="#3F3B3B"><g><path d="m137.552 0-79.117 79.117v432.883h395.131v-512zm8.173 34.253v53.037h-53.037zm277.84 447.747h-335.13v-364.71h87.29v-87.29h247.841v452z"/><path d="m162.648 195.738-44.506 81.402 36.238 19.813c-.025.903-.038 1.801-.038 2.691s.013 1.788.038 2.691l-36.238 19.813 44.506 81.402 36.243-19.815c3.441 2.34 7.02 4.464 10.721 6.363v41.301h92.775v-41.301c3.702-1.899 7.28-4.022 10.721-6.363l36.243 19.815 44.506-81.402-36.238-19.813c.025-.903.038-1.801.038-2.691s-.013-1.788-.038-2.691l36.238-19.813-44.506-81.402-36.243 19.816c-3.44-2.34-7.019-4.464-10.721-6.363v-41.3h-92.775v41.3c-3.701 1.899-7.28 4.022-10.721 6.363zm47.217 49.096c6.039-5.09 12.83-9.121 20.184-11.981l9.563-3.719v-31.244h32.775v31.243l9.563 3.719c7.354 2.86 14.146 6.891 20.185 11.981l7.853 6.618 27.433-14.999 15.723 28.757-27.418 14.991 1.312 10.165c.418 3.235.621 6.271.621 9.279s-.203 6.043-.621 9.279l-1.312 10.165 27.418 14.991-15.723 28.757-27.433-14.999-7.853 6.618c-6.038 5.089-12.829 9.12-20.185 11.98l-9.563 3.719v31.244h-32.775v-31.244l-9.563-3.719c-7.354-2.86-14.145-6.891-20.185-11.981l-7.852-6.617-27.433 14.999-15.723-28.757 27.418-14.991-1.312-10.165c-.418-3.236-.621-6.271-.621-9.279 0-3.009.203-6.044.621-9.279l1.312-10.165-27.418-14.991 15.723-28.757 27.433 14.999z"/><path d="m256 343.405c24.129 0 43.76-19.631 43.76-43.76s-19.631-43.76-43.76-43.76-43.76 19.631-43.76 43.76 19.631 43.76 43.76 43.76zm0-57.52c7.587 0 13.76 6.173 13.76 13.76s-6.173 13.76-13.76 13.76-13.76-6.173-13.76-13.76 6.173-13.76 13.76-13.76z"/></g></svg>
+								<span class="dropdown-text ms-2"><strong>Customize</strong></span>
+							</span>
+								<svg class="ms-auto icon-rotate" data-name="Icon/Arrows/Chevron/Down" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24.091 24">
+									<path data-name="Icon Color" d="M-2.182,24,0,21.818-9.818,12,0,2.182-2.182,0l-12,12Z" transform="translate(0.091 4.909) rotate(-90)" fill="#3F3B3B"></path>
+								</svg>
+							</a>
+							<div id="collapseOne1" class="collapse" data-bs-parent=".accordion2">
+								<ul class="list-unstyled menu-category">
+									<li>
+										<a href="sass.html">
+											<span class="dropdown-text">Sass</span>
+										</a>
+									</li>
+									<li>
+										<a href="options.html">
+											<span class="dropdown-text">Options</span>
+										</a>
+									</li>
+									<li>
+										<a href="colors.html">
+											<span class="dropdown-text">Color</span>
+										</a>
+									</li>
+									<li>
+										<a href="customize-components.html">
+											<span class="dropdown-text">Components</span>
+										</a>
+									</li>
+									<li>
+										<a href="css-variables.html">
+											<span class="dropdown-text">CSS variables</span>
+										</a>
+									</li>
+									<li>
+										<a href="optimize.html">
+											<span class="dropdown-text">Optimize</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="JavaScript:void(0)" data-bs-toggle="collapse" data-bs-target="#collapseOne2" aria-expanded="false" aria-controls="collapseOne2">
+								<span>
+									<svg height="18" viewBox="0 0 512 512" fill="#3F3B3B" width="18" xmlns="http://www.w3.org/2000/svg"><path d="m100 113c0-11.046875 8.953125-20 20-20h272c11.046875 0 20 8.953125 20 20s-8.953125 20-20 20h-272c-11.046875 0-20-8.953125-20-20zm312 80c0-11.046875-8.953125-20-20-20h-272c-11.046875 0-20 8.953125-20 20s8.953125 20 20 20h272c11.046875 0 20-8.953125 20-20zm-292 60c-11.046875 0-20 8.953125-20 20s8.953125 20 20 20h92c11.046875 0 20-8.953125 20-20s-8.953125-20-20-20zm374.441406 156.589844c23.378906 23.378906 23.378906 61.441406-.015625 84.835937-11.695312 11.695313-27.0625 17.546875-42.425781 17.546875s-30.730469-5.851562-42.425781-17.546875l-109.367188-109.570312c-2.4375-2.441407-4.199219-5.46875-5.117187-8.792969l-22.363282-80.722656c-1.945312-7.03125.085938-14.5625 5.308594-19.65625 5.21875-5.089844 12.796875-6.941406 19.777344-4.820313l78.726562 23.914063c3.152344.957031 6.019532 2.675781 8.34375 5.007812zm-162.210937-49.273438 73.515625 73.652344 28.289062-28.289062-73.925781-74.089844-39.128906-11.886719zm133.910156 77.542969-3.851563-3.863281-28.285156 28.285156 3.867188 3.875c7.785156 7.785156 20.472656 7.785156 28.269531-.015625 7.800781-7.796875 7.800781-20.484375 0-28.28125zm-34.140625-437.859375h-352c-44.113281 0-80 35.886719-80 80v352c0 44.113281 35.886719 80 80 80h245c11.046875 0 20-8.953125 20-20s-8.953125-20-20-20h-245c-22.054688 0-40-17.945312-40-40v-352c0-22.054688 17.945312-40 40-40h352c22.054688 0 40 17.945312 40 40v246c0 11.046875 8.953125 20 20 20s20-8.953125 20-20v-246c0-44.113281-35.886719-80-80-80zm0 0"/></svg>
+								<span class="dropdown-text ms-2"><strong>Contents</strong></span>
+							</span>
+								<svg class="ms-auto icon-rotate" data-name="Icon/Arrows/Chevron/Down" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24.091 24">
+									<path data-name="Icon Color" d="M-2.182,24,0,21.818-9.818,12,0,2.182-2.182,0l-12,12Z" transform="translate(0.091 4.909) rotate(-90)" fill="#3F3B3B"></path>
+								</svg>
+							</a>
+							<div id="collapseOne2" class="collapse" data-bs-parent=".accordion2">
+								<ul class="list-unstyled menu-category">
+									<li>
+										<a href="typography.html">
+											<span class="dropdown-text">Typography</span>
+										</a>
+									</li>
+									<li>
+										<a href="images.html">
+											<span class="dropdown-text">Images</span>
+										</a>
+									</li>
+									<li>
+										<a href="tables.html">
+											<span class="dropdown-text">Tables</span>
+										</a>
+									</li>
+									<li>
+										<a href="figures.html">
+											<span class="dropdown-text">Figures</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="JavaScript:void(0)" data-bs-toggle="collapse" data-bs-target="#collapseOne3" aria-expanded="false" aria-controls="collapseOne3">
+								<span>
+									<svg height="18" viewBox="-27 0 512 512" width="18" fill="#3F3B3B" xmlns="http://www.w3.org/2000/svg"><path d="m146 492c0 11.046875-8.953125 20-20 20h-46c-44.113281 0-80-35.886719-80-80v-352c0-44.113281 35.886719-80 80-80h245.890625c44.109375 0 80 35.886719 80 80v119c0 11.046875-8.957031 20-20 20-11.046875 0-20-8.953125-20-20v-119c0-22.054688-17.945313-40-40-40h-245.890625c-22.054688 0-40 17.945312-40 40v352c0 22.054688 17.945312 40 40 40h46c11.046875 0 20 8.953125 20 20zm179.886719-352c0-11.046875-8.953125-20-20-20h-206c-11.042969 0-20 8.953125-20 20s8.957031 20 20 20h206c11.046875 0 20-8.953125 20-20zm-79.886719 80c0-11.046875-8.953125-20-20-20h-126.113281c-11.042969 0-20 8.953125-20 20s8.957031 20 20 20h126.113281c11.046875 0 20-8.953125 20-20zm-146.113281 60c-11.042969 0-20 8.953125-20 20s8.957031 20 20 20h83.113281c11.046875 0 20-8.953125 20-20s-8.953125-20-20-20zm348.921875 217.121094c-7.695313 9.457031-19.050782 14.878906-31.15625 14.878906h-195.304688c-12.171875 0-23.5625-5.417969-31.25-14.863281-7.734375-9.503907-10.738281-21.851563-8.242187-33.875 6.460937-31.125 23.574219-59.445313 48.183593-79.746094 9.320313-7.6875 19.5625-14.085937 30.421876-19.085937-12.101563-13.746094-19.460938-31.757813-19.460938-51.464844 0-43.011719 34.988281-78 78-78s78 34.988281 78 78c0 19.707031-7.359375 37.71875-19.460938 51.464844 10.859376 5 21.101563 11.394531 30.421876 19.085937 24.117187 19.894531 41.03125 47.492187 47.78125 77.878906.15625.527344.289062 1.058594.402343 1.601563 2.507813 12.09375-.53125 24.53125-8.335937 34.125zm-166.808594-184.15625c0 20.953125 17.046875 38 38 38s38-17.046875 38-38-17.046875-38-38-38-38 17.046875-38 38zm135.988281 158.46875c-.003906-.011719-.007812-.027344-.007812-.039063-9.605469-46.253906-50.8125-79.828125-97.980469-79.828125s-88.378906 33.574219-97.980469 79.828125c-.089843.449219.21875.59375.21875.597657.007813 0 .042969.007812.109375.007812h195.304688c.011718-.011719.28125-.214844.335937-.566406zm0 0"/></svg>
+								<span class="dropdown-text ms-2"><strong>Forms</strong></span>
+							</span>
+								<svg class="ms-auto icon-rotate" data-name="Icon/Arrows/Chevron/Down" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24.091 24">
+									<path data-name="Icon Color" d="M-2.182,24,0,21.818-9.818,12,0,2.182-2.182,0l-12,12Z" transform="translate(0.091 4.909) rotate(-90)" fill="#3F3B3B"></path>
+								</svg>
+							</a>
+							<div id="collapseOne3" class="collapse" data-bs-parent=".accordion2">
+								<ul class="list-unstyled menu-category">
+									<li>
+										<a href="form-control.html">
+											<span class="dropdown-text">Form control</span>
+										</a>
+									</li>
+									<li>
+										<a href="select.html">
+											<span class="dropdown-text">Select</span>
+										</a>
+									</li>
+									<li>
+										<a href="checks.html">
+											<span class="dropdown-text">Checks</span>
+										</a>
+									</li>
+									<li>
+										<a href="file.html">
+											<span class="dropdown-text">File</span>
+										</a>
+									</li>
+									<li>
+										<a href="range.html">
+											<span class="dropdown-text">Range</span>
+										</a>
+									</li>
+									<li>
+										<a href="input-group.html">
+											<span class="dropdown-text">Input Group</span>
+										</a>
+									</li>
+									<li>
+										<a href="form-layout.html">
+											<span class="dropdown-text">Layout</span>
+										</a>
+									</li>
+									<li>
+										<a href="validation.html">
+											<span class="dropdown-text">Validation</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="JavaScript:void(0)" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+								<span>
+									<svg width="18px" height="18px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+											<title>layers</title>
+											<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+													<g transform="translate(-630.000000, -405.000000)" fill="#3f3b3b" fill-rule="nonzero">
+															<g transform="translate(618.000000, 396.000000)">
+																	<g>
+																			<g transform="translate(12.000000, 9.000000)">
+																					<g id="Group-2">
+																							<g>
+																									<g id="Group-6">
+																											<g>
+																													<path d="M21.8946462,15.5527864 C22.1239934,16.0114807 21.9677329,16.5621719 21.548733,16.8362552 L21.4474327,16.8944272 L11.4474327,21.8944272 C11.2061234,22.0150818 10.9281935,22.0323182 10.6764212,21.9461363 L10.5530055,21.8944272 L0.553005461,16.8944272 C0.0590269636,16.6474379 -0.141197383,16.0467649 0.105791866,15.5527864 C0.335139025,15.0940921 0.869448229,14.8886858 1.34011481,15.0594357 L1.44743265,15.1055728 L11.0002191,19.881 L20.5530055,15.1055728 C21.046984,14.8585836 21.647657,15.0588079 21.8946462,15.5527864 Z M21.8946462,10.5527864 C22.1239934,11.0114807 21.9677329,11.5621719 21.548733,11.8362552 L21.4474327,11.8944272 L11.4474327,16.8944272 C11.2061234,17.0150818 10.9281935,17.0323182 10.6764212,16.9461363 L10.5530055,16.8944272 L0.553005461,11.8944272 C0.0590269636,11.6474379 -0.141197383,11.0467649 0.105791866,10.5527864 C0.335139025,10.0940921 0.869448229,9.88868578 1.34011481,10.0594357 L1.44743265,10.1055728 L11.0002191,14.881 L20.5530055,10.1055728 C21.046984,9.85858356 21.647657,10.0588079 21.8946462,10.5527864 Z M10.5530055,0.105572809 C10.834533,-0.0351909363 11.1659052,-0.0351909363 11.4474327,0.105572809 L11.4474327,0.105572809 L21.4474327,5.10557281 C22.1844812,5.47409708 22.1844812,6.52590292 21.4474327,6.89442719 L21.4474327,6.89442719 L11.4474327,11.8944272 C11.1659052,12.0351909 10.834533,12.0351909 10.5530055,11.8944272 L10.5530055,11.8944272 L0.553005461,6.89442719 C-0.184043078,6.52590292 -0.184043078,5.47409708 0.553005461,5.10557281 L0.553005461,5.10557281 Z M11.0002191,2.118 L3.23621906,6 L11.0002191,9.881 L18.7632191,6 L11.0002191,2.118 Z"></path>
+																											</g>
+																									</g>
+																							</g>
+																					</g>
+																			</g>
+																	</g>
+															</g>
+													</g>
+											</g>
+									</svg>
+									<span class="dropdown-text ms-2"><strong>Components</strong></span>
+								</span>
+								<svg class="ms-auto icon-rotate" data-name="Icon/Arrows/Chevron/Down" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24.091 24">
+									<path data-name="Icon Color" d="M-2.182,24,0,21.818-9.818,12,0,2.182-2.182,0l-12,12Z" transform="translate(0.091 4.909) rotate(-90)" fill="#3F3B3B"></path>
+								</svg>
+							</a>
+							<div id="collapseTwo" class="collapse" data-bs-parent=".accordion2">
+								<ul class="list-unstyled menu-category accordion3">
+									<li>
+										<a href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#collapseTwoone" aria-expanded="false" aria-controls="collapseTwoone">
+											<span class="dropdown-text">Light</span>
+											<svg class="ms-auto icon-rotate" data-name="Icon/Arrows/Chevron/Down" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24.091 24">
+												<path data-name="Icon Color" d="M-2.182,24,0,21.818-9.818,12,0,2.182-2.182,0l-12,12Z" transform="translate(0.091 4.909) rotate(-90)" fill="#3F3B3B"></path>
+											</svg>
+										</a>
+										<div id="collapseTwoone" class="collapse" data-bs-parent=".accordion3">
+											<ul class="list-unstyled menu-category">
+												<li>
+													<a href="light-components-documentation.html#Avatar">
+														<span class="dropdown-text">Avatars</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-components-documentation.html#Badges">
+														<span class="dropdown-text">Badges</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-components-documentation.html#Breadcrumbs">
+														<span class="dropdown-text">Breadcrumbs</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-components-documentation.html#Buttons">
+														<span class="dropdown-text">Buttons</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-components-documentation.html#Cards">
+														<span class="dropdown-text">Cards</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-components-documentation.html#Chips">
+														<span class="dropdown-text">Chips</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-components-documentation.html#Comments">
+														<span class="dropdown-text">Comments</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-components-documentation.html#dropdownList">
+														<span class="dropdown-text">Dropdowns</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-components-documentation.html#formelement">
+														<span class="dropdown-text">Form Elements</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-components-documentation.html#Icons">
+														<span class="dropdown-text">Icons</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-components-documentation.html#Lists">
+														<span class="dropdown-text">Lists</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-components-documentation.html#Modals">
+														<span class="dropdown-text">Modals</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-components-documentation.html#Navigation">
+														<span class="dropdown-text">Navigation</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-components-documentation.html#Pagination">
+														<span class="dropdown-text">Pagination</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-components-documentation.html#PricingTables">
+														<span class="dropdown-text">Pricing Tables</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-components-documentation.html#TableRows">
+														<span class="dropdown-text">Table Rows</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-components-documentation.html#Images">
+														<span class="dropdown-text">Images</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-components-documentation.html#Tags">
+														<span class="dropdown-text">Tags</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-components-documentation.html#Various">
+														<span class="dropdown-text">Various</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-components-documentation.html#Tooltips">
+														<span class="dropdown-text">Tooltips</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-components-documentation.html#Vector">
+														<span class="dropdown-text">Vector</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-components-documentation.html#AlertsToasts">
+														<span class="dropdown-text">Alerts and Toasts</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<a href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
+											<span class="dropdown-text">Dark</span>
+											<svg class="ms-auto icon-rotate" data-name="Icon/Arrows/Chevron/Down" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24.091 24">
+												<path data-name="Icon Color" d="M-2.182,24,0,21.818-9.818,12,0,2.182-2.182,0l-12,12Z" transform="translate(0.091 4.909) rotate(-90)" fill="#3F3B3B"></path>
+											</svg>
+										</a>
+										<div id="collapseTwo2" class="collapse" data-bs-parent=".accordion3">
+											<ul class="list-unstyled menu-category">
+												<li>
+													<a href="dark-components-documentation.html#Avatar">
+														<span class="dropdown-text">Avatars</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-components-documentation.html#Badges">
+														<span class="dropdown-text">Badges</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-components-documentation.html#Breadcrumbs">
+														<span class="dropdown-text">Breadcrumbs</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-components-documentation.html#Buttons">
+														<span class="dropdown-text">Buttons</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-components-documentation.html#Cards">
+														<span class="dropdown-text">Cards</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-components-documentation.html#Chips">
+														<span class="dropdown-text">Chips</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-components-documentation.html#Comments">
+														<span class="dropdown-text">Comments</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-components-documentation.html#dropdownList">
+														<span class="dropdown-text">Dropdowns</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-components-documentation.html#formelement">
+														<span class="dropdown-text">Form Elements</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-components-documentation.html#Icons">
+														<span class="dropdown-text">Icons</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-components-documentation.html#Lists">
+														<span class="dropdown-text">Lists</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-components-documentation.html#Modals">
+														<span class="dropdown-text">Modals</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-components-documentation.html#Navigation">
+														<span class="dropdown-text">Navigation</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-components-documentation.html#Pagination">
+														<span class="dropdown-text">Pagination</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-components-documentation.html#PricingTables">
+														<span class="dropdown-text">Pricing Tables</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-components-documentation.html#TableRows">
+														<span class="dropdown-text">Table Rows</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-components-documentation.html#Images">
+														<span class="dropdown-text">Images</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-components-documentation.html#Tags">
+														<span class="dropdown-text">Tags</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-components-documentation.html#Various">
+														<span class="dropdown-text">Various</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-components-documentation.html#Tooltips">
+														<span class="dropdown-text">Tooltips</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-components-documentation.html#Vector">
+														<span class="dropdown-text">Vector</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-components-documentation.html#AlertsToasts">
+														<span class="dropdown-text">Alerts and Toasts</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="active">
+							<a href="JavaScript:void(0)" data-bs-toggle="collapse" data-bs-target="#collapseOne4" aria-expanded="true" aria-controls="collapseOne4">
+								<span>
+									<svg version="1.1" height="18" width="18" fill="#3F3B3B" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 330 330" style="enable-background:new 0 0 330 330;" xml:space="preserve">
+									<g>
+										<path d="M165,0C74.019,0,0,74.02,0,165.001C0,255.982,74.019,330,165,330s165-74.018,165-164.999C330,74.02,255.981,0,165,0z
+											 M165,300c-74.44,0-135-60.56-135-134.999C30,90.562,90.56,30,165,30s135,60.562,135,135.001C300,239.44,239.439,300,165,300z"/>
+										<path d="M164.998,70c-11.026,0-19.996,8.976-19.996,20.009c0,11.023,8.97,19.991,19.996,19.991
+											c11.026,0,19.996-8.968,19.996-19.991C184.994,78.976,176.024,70,164.998,70z"/>
+										<path d="M165,140c-8.284,0-15,6.716-15,15v90c0,8.284,6.716,15,15,15c8.284,0,15-6.716,15-15v-90C180,146.716,173.284,140,165,140z
+											"/>
+									</g>
+								</svg>
+								<span class="dropdown-text ms-2"><strong>Helpers</strong></span>
+							</span>
+								<svg class="ms-auto icon-rotate" data-name="Icon/Arrows/Chevron/Down" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24.091 24">
+									<path data-name="Icon Color" d="M-2.182,24,0,21.818-9.818,12,0,2.182-2.182,0l-12,12Z" transform="translate(0.091 4.909) rotate(-90)" fill="#3F3B3B"></path>
+								</svg>
+							</a>
+							<div id="collapseOne4" class="collapse show" data-bs-parent=".accordion2">
+								<ul class="list-unstyled menu-category">
+									<li class="active">
+										<a href="clearfix.html">
+											<span class="dropdown-text">Clearfix</span>
+										</a>
+									</li>
+									<li>
+										<a href="colored-links.html">
+											<span class="dropdown-text">Colored links</span>
+										</a>
+									</li>
+									<li>
+										<a href="embed.html">
+											<span class="dropdown-text">Embed</span>
+										</a>
+									</li>
+									<li>
+										<a href="position.html">
+											<span class="dropdown-text">Position</span>
+										</a>
+									</li>
+									<li>
+										<a href="visually-hidden.html">
+											<span class="dropdown-text">Visually hidden</span>
+										</a>
+									</li>
+									<li>
+										<a href="stretched-link.html">
+											<span class="dropdown-text">Stretched link</span>
+										</a>
+									</li>
+									<li>
+										<a href="text-truncation.html">
+											<span class="dropdown-text">Text truncation</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="JavaScript:void(0)" data-bs-toggle="collapse" data-bs-target="#collapseOne5" aria-expanded="false" aria-controls="collapseOne5">
+								<span>
+									<svg fill="#3F3B3B" enable-background="new 0 0 24 24" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><g><path d="m21.25 23h-18.5c-1.517 0-2.75-1.233-2.75-2.75v-16.5c0-1.517 1.233-2.75 2.75-2.75h18.5c1.517 0 2.75 1.233 2.75 2.75v16.5c0 1.517-1.233 2.75-2.75 2.75zm-18.5-20.5c-.689 0-1.25.561-1.25 1.25v16.5c0 .689.561 1.25 1.25 1.25h18.5c.689 0 1.25-.561 1.25-1.25v-16.5c0-.689-.561-1.25-1.25-1.25z"/></g><g><path d="m23.25 6h-22.5c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h22.5c.414 0 .75.336.75.75s-.336.75-.75.75z"/></g><g><path d="m12 16.5c-1.378 0-2.5-1.122-2.5-2.5s1.122-2.5 2.5-2.5 2.5 1.122 2.5 2.5-1.122 2.5-2.5 2.5zm0-3.5c-.551 0-1 .449-1 1s.449 1 1 1 1-.449 1-1-.449-1-1-1z"/></g><g><path d="m12.777 20h-1.554c-.559 0-1.053-.396-1.175-.942l-.153-.679c-.221-.105-.434-.229-.638-.37l-.66.208c-.545.168-1.138-.063-1.414-.553l-.772-1.334c-.279-.498-.185-1.106.222-1.489l.518-.475c-.009-.121-.014-.243-.014-.366s.005-.245.014-.366l-.511-.469c-.414-.389-.507-.998-.234-1.485l.782-1.352c.271-.482.864-.715 1.406-.546l.663.209c.205-.141.417-.265.638-.37l.153-.68c.124-.553.607-.941 1.175-.941h1.554c.568 0 1.051.388 1.175.942l.153.679c.221.105.434.229.638.37l.66-.208c.543-.169 1.138.063 1.414.553l.772 1.333c.279.498.185 1.106-.222 1.489l-.518.475c.009.122.014.244.014.366s-.005.245-.014.366l.511.469c.002.002.004.004.006.006.407.383.501.991.228 1.479l-.782 1.352c-.271.481-.867.711-1.406.546l-.663-.209c-.205.141-.417.265-.638.37l-.153.68c-.122.546-.617.942-1.175.942zm-1.317-1.5h1.08l.187-.826c.056-.248.233-.451.472-.539.329-.121.64-.302.925-.537.195-.162.459-.213.703-.137l.807.254.541-.935-.618-.567c-.183-.168-.271-.417-.235-.662.027-.18.042-.366.042-.553s-.016-.373-.042-.553c-.036-.246.052-.494.235-.662l.618-.567-.542-.935-.806.254c-.242.077-.506.025-.703-.137-.285-.235-.597-.416-.925-.537-.238-.088-.416-.291-.472-.539l-.187-.822h-1.08l-.187.826c-.056.248-.233.451-.472.539-.329.121-.64.302-.925.537-.196.162-.46.213-.703.137l-.807-.254-.541.935.618.567c.183.168.271.417.235.662-.026.178-.041.364-.041.551s.016.373.042.553c.036.246-.052.494-.235.662l-.618.567.542.935.806-.254c.243-.076.506-.025.703.137.285.235.597.416.925.537.238.088.416.291.472.539zm4.054-1.579c-.001.002-.002.004-.004.007zm-7.032-.007.003.006c-.001-.002-.002-.004-.003-.006zm7.033-5.834c.001.002.002.004.003.006zm-7.025-.008-.004.007c.002-.003.003-.005.004-.007z"/></g></svg>
+								<span class="dropdown-text ms-2"><strong>Utilities</strong></span>
+							</span>
+								<svg class="ms-auto icon-rotate" data-name="Icon/Arrows/Chevron/Down" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24.091 24">
+									<path data-name="Icon Color" d="M-2.182,24,0,21.818-9.818,12,0,2.182-2.182,0l-12,12Z" transform="translate(0.091 4.909) rotate(-90)" fill="#3F3B3B"></path>
+								</svg>
+							</a>
+							<div id="collapseOne5" class="collapse" data-bs-parent=".accordion2">
+								<ul class="list-unstyled menu-category">
+									<li>
+										<a href="api.html">
+											<span class="dropdown-text">API</span>
+										</a>
+									</li>
+									<li>
+										<a href="borders.html">
+											<span class="dropdown-text">Borders</span>
+										</a>
+									</li>
+									<li>
+										<a href="display2.html">
+											<span class="dropdown-text">Display</span>
+										</a>
+									</li>
+									<li>
+										<a href="flex.html">
+											<span class="dropdown-text">Flex</span>
+										</a>
+									</li>
+									<li>
+										<a href="float.html">
+											<span class="dropdown-text">Float</span>
+										</a>
+									</li>
+									<li>
+										<a href="interactions.html">
+											<span class="dropdown-text">Interactions</span>
+										</a>
+									</li>
+									<li>
+										<a href="overflow.html">
+											<span class="dropdown-text">Overflow</span>
+										</a>
+									</li>
+									<li>
+										<a href="utilities-position.html">
+											<span class="dropdown-text">Position</span>
+										</a>
+									</li>
+									<li>
+										<a href="shadows.html">
+											<span class="dropdown-text">Shadows</span>
+										</a>
+									</li>
+									<li>
+										<a href="sizing.html">
+											<span class="dropdown-text">Sizing</span>
+										</a>
+									</li>
+									<li>
+										<a href="spacing.html">
+											<span class="dropdown-text">Spacings</span>
+										</a>
+									</li>
+									<li>
+										<a href="text.html">
+											<span class="dropdown-text">Text</span>
+										</a>
+									</li>
+									<li>
+										<a href="vertical-alignment.html">
+											<span class="dropdown-text">Vertical alignment</span>
+										</a>
+									</li>
+									<li>
+										<a href="visibility.html">
+											<span class="dropdown-text">Visibility</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="JavaScript:void(0)" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+								<span>
+									<svg width="18px" height="17px" viewBox="0 0 22 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+										<title>layers</title>
+										<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.800000012">
+												<g transform="translate(-819.000000, -411.000000)" fill="#3f3b3b" fill-rule="nonzero">
+														<g transform="translate(618.000000, 396.000000)">
+																<g>
+																		<g transform="translate(12.000000, 9.000000)">
+																				<g id="Group-2-Copy" transform="translate(189.000000, 6.000000)">
+																						<g>
+																								<g>
+																										<g>
+																												<g id="widget">
+																														<path d="M21.0434783,0 L0.956521739,0 C0.428043478,0 0,0.428043478 0,0.956521739 L0,19.1304348 C0,19.658913 0.428043478,20.0869565 0.956521739,20.0869565 L21.0434783,20.0869565 C21.5719565,20.0869565 22,19.658913 22,19.1304348 L22,0.956521739 C22,0.428043478 21.5719565,0 21.0434783,0 Z M9.08695652,1.43478261 C9.61543478,1.43478261 10.0434783,1.86282609 10.0434783,2.39130435 C10.0434783,2.91978261 9.61543478,3.34782609 9.08695652,3.34782609 C8.55847826,3.34782609 8.13043478,2.91978261 8.13043478,2.39130435 C8.13043478,1.86282609 8.55847826,1.43478261 9.08695652,1.43478261 Z M5.73913043,1.43478261 C6.2676087,1.43478261 6.69565217,1.86282609 6.69565217,2.39130435 C6.69565217,2.91978261 6.2676087,3.34782609 5.73913043,3.34782609 C5.21065217,3.34782609 4.7826087,2.91978261 4.7826087,2.39130435 C4.7826087,1.86282609 5.21065217,1.43478261 5.73913043,1.43478261 Z M2.39130435,1.43478261 C2.91978261,1.43478261 3.34782609,1.86282609 3.34782609,2.39130435 C3.34782609,2.91978261 2.91978261,3.34782609 2.39130435,3.34782609 C1.86282609,3.34782609 1.43478261,2.91978261 1.43478261,2.39130435 C1.43478261,1.86282609 1.86282609,1.43478261 2.39130435,1.43478261 Z M20.5652174,19.1304348 L1.43478261,19.1304348 C1.17078261,19.1304348 0.956521739,18.9161739 0.956521739,18.6521739 L0.956521739,5.26086957 C0.956521739,4.99686957 1.17078261,4.7826087 1.43478261,4.7826087 L20.5652174,4.7826087 C20.8292174,4.7826087 21.0434783,4.99686957 21.0434783,5.26086957 L21.0434783,18.6521739 C21.0434783,18.9161739 20.8292174,19.1304348 20.5652174,19.1304348 Z M4,8 L18,8 C18.5522847,8 19,8.44771525 19,9 C19,9.55228475 18.5522847,10 18,10 L4,10 C3.44771525,10 3,9.55228475 3,9 C3,8.44771525 3.44771525,8 4,8 Z M4,12 L10,12 C10.5522847,12 11,12.4477153 11,13 C11,13.5522847 10.5522847,14 10,14 L4,14 C3.44771525,14 3,13.5522847 3,13 C3,12.4477153 3.44771525,12 4,12 Z" id="Shape"></path>
+																												</g>
+																										</g>
+																								</g>
+																						</g>
+																				</g>
+																		</g>
+																</g>
+														</g>
+												</g>
+										</g>
+									</svg>
+									<span class="dropdown-text ms-2"><strong>Wireframes</strong></span>
+								</span>
+								<svg class="ms-auto icon-rotate" data-name="Icon/Arrows/Chevron/Down" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24.091 24">
+									<path data-name="Icon Color" d="M-2.182,24,0,21.818-9.818,12,0,2.182-2.182,0l-12,12Z" transform="translate(0.091 4.909) rotate(-90)" fill="#3F3B3B"></path>
+								</svg>
+							</a>
+							<div id="collapseThree" class="collapse" data-bs-parent=".accordion2">
+								<ul class="list-unstyled menu-category accordion4">
+									<li>
+										<a href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#collapseTwo3" aria-expanded="false" aria-controls="collapseTwo3">
+											<span class="dropdown-text">Light</span>
+											<svg class="ms-auto icon-rotate" data-name="Icon/Arrows/Chevron/Down" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24.091 24">
+												<path data-name="Icon Color" d="M-2.182,24,0,21.818-9.818,12,0,2.182-2.182,0l-12,12Z" transform="translate(0.091 4.909) rotate(-90)" fill="#3F3B3B"></path>
+											</svg>
+										</a>
+										<div id="collapseTwo3" class="collapse" data-bs-parent=".accordion4">
+											<ul class="list-unstyled menu-category">
+												<li>
+													<a href="light-layouts-documentation.html#Heroes">
+														<span class="dropdown-text">Heroes</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-layouts-documentation.html#Features">
+														<span class="dropdown-text">Features</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-layouts-documentation.html#Actions">
+														<span class="dropdown-text">Actions</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-layouts-documentation.html#Grids">
+														<span class="dropdown-text">Grids</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-layouts-documentation.html#Pricing">
+														<span class="dropdown-text">Pricing</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-layouts-documentation.html#Galleries">
+														<span class="dropdown-text">Galleries</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-layouts-documentation.html#Testimonials">
+														<span class="dropdown-text">Testimonials</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-layouts-documentation.html#Forms">
+														<span class="dropdown-text">Forms</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-layouts-documentation.html#Comments">
+														<span class="dropdown-text">Comments</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-layouts-documentation.html#Texts">
+														<span class="dropdown-text">Texts</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-layouts-documentation.html#MenusVertical">
+														<span class="dropdown-text">Menus Vertical</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-layouts-documentation.html#MenusHorizontal">
+														<span class="dropdown-text">Menus Horizontal</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-layouts-documentation.html#Footers">
+														<span class="dropdown-text">Footers</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<a href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#collapseTwo4" aria-expanded="false" aria-controls="collapseTwo4">
+											<span class="dropdown-text">Dark</span>
+											<svg class="ms-auto icon-rotate" data-name="Icon/Arrows/Chevron/Down" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24.091 24">
+												<path data-name="Icon Color" d="M-2.182,24,0,21.818-9.818,12,0,2.182-2.182,0l-12,12Z" transform="translate(0.091 4.909) rotate(-90)" fill="#3F3B3B"></path>
+											</svg>
+										</a>
+										<div id="collapseTwo4" class="collapse" data-bs-parent=".accordion4">
+											<ul class="list-unstyled menu-category">
+												<li>
+													<a href="dark-layouts-documentation.html#Heroes">
+														<span class="dropdown-text">Heroes</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-layouts-documentation.html#Features">
+														<span class="dropdown-text">Features</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-layouts-documentation.html#Actions">
+														<span class="dropdown-text">Actions</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-layouts-documentation.html#Grids">
+														<span class="dropdown-text">Grids</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-layouts-documentation.html#Pricing">
+														<span class="dropdown-text">Pricing</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-layouts-documentation.html#Galleries">
+														<span class="dropdown-text">Galleries</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-layouts-documentation.html#Testimonials">
+														<span class="dropdown-text">Testimonials</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-layouts-documentation.html#Forms">
+														<span class="dropdown-text">Forms</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-layouts-documentation.html#Comments">
+														<span class="dropdown-text">Comments</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-layouts-documentation.html#Texts">
+														<span class="dropdown-text">Texts</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-layouts-documentation.html#MenusVertical">
+														<span class="dropdown-text">Menus Vertical</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-layouts-documentation.html#MenusHorizontal">
+														<span class="dropdown-text">Menus Horizontal</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-layouts-documentation.html#Footers">
+														<span class="dropdown-text">Footers</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="JavaScript:void(0)" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+								<span>
+									<svg data-name="Icon/Trending" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+			              <path data-name="Icon Color" d="M16.8,0l2.754,2.754L13.7,8.6,8.9,3.8,0,12.7l1.7,1.7L8.9,7.2,13.7,12l7.548-7.554L24,7.2V0Z" transform="translate(0 5)" fill="#3F3B3B"></path>
+			            </svg>
+									<span class="dropdown-text ms-2"><strong>Charts &amp; Tables</strong></span>
+								</span>
+								<svg class="ms-auto icon-rotate" data-name="Icon/Arrows/Chevron/Down" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24.091 24">
+									<path data-name="Icon Color" d="M-2.182,24,0,21.818-9.818,12,0,2.182-2.182,0l-12,12Z" transform="translate(0.091 4.909) rotate(-90)" fill="#3F3B3B"></path>
+								</svg>
+							</a>
+							<div id="collapseFour" class="collapse" data-bs-parent=".accordion2">
+								<ul class="list-unstyled menu-category accordion5">
+									<li>
+										<a href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#collapseThree4" aria-expanded="false" aria-controls="collapseThree4">
+											<span class="dropdown-text">Light</span>
+											<svg class="ms-auto icon-rotate" data-name="Icon/Arrows/Chevron/Down" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24.091 24">
+												<path data-name="Icon Color" d="M-2.182,24,0,21.818-9.818,12,0,2.182-2.182,0l-12,12Z" transform="translate(0.091 4.909) rotate(-90)" fill="#3F3B3B"></path>
+											</svg>
+										</a>
+										<div id="collapseThree4" class="collapse" data-bs-parent=".accordion5">
+											<ul class="list-unstyled menu-category">
+												<li>
+													<a href="light-charts-tables.html#Stackedcolumns">
+														<span class="dropdown-text">Stacked columns</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-charts-tables.html#Singlebar">
+														<span class="dropdown-text">Single bar</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-charts-tables.html#Stackedbar">
+														<span class="dropdown-text">Stacked bar</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-charts-tables.html#Multipledbar">
+														<span class="dropdown-text">Multiple bar</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-charts-tables.html#Singleline">
+														<span class="dropdown-text">Single line</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-charts-tables.html#Doubleline">
+														<span class="dropdown-text">Double line</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-charts-tables.html#Curvedline">
+														<span class="dropdown-text">Curved line</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-charts-tables.html#DotPlotsChart">
+														<span class="dropdown-text">Dot Plots Chart</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-charts-tables.html#Stackedarea">
+														<span class="dropdown-text">Stacked area</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-charts-tables.html#Areachart">
+														<span class="dropdown-text">Area chart</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-charts-tables.html#Piechart">
+														<span class="dropdown-text">Pie chart</span>
+													</a>
+												</li>
+												<li>
+													<a href="light-charts-tables.html#Tables">
+														<span class="dropdown-text">Tables</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<a href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#collapseThree5" aria-expanded="false" aria-controls="collapseThree5">
+											<span class="dropdown-text">Dark</span>
+											<svg class="ms-auto icon-rotate" data-name="Icon/Arrows/Chevron/Down" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24.091 24">
+												<path data-name="Icon Color" d="M-2.182,24,0,21.818-9.818,12,0,2.182-2.182,0l-12,12Z" transform="translate(0.091 4.909) rotate(-90)" fill="#3F3B3B"></path>
+											</svg>
+										</a>
+										<div id="collapseThree5" class="collapse" data-bs-parent=".accordion5">
+											<ul class="list-unstyled menu-category">
+												<li>
+													<a href="dark-charts-tables.html#Stackedcolumns">
+														<span class="dropdown-text">Stacked columns</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-charts-tables.html#Singlebar">
+														<span class="dropdown-text">Single bar</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-charts-tables.html#Stackedbar">
+														<span class="dropdown-text">Stacked bar</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-charts-tables.html#Multipledbar">
+														<span class="dropdown-text">Multiple bar</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-charts-tables.html#Singleline">
+														<span class="dropdown-text">Single line</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-charts-tables.html#Doubleline">
+														<span class="dropdown-text">Double line</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-charts-tables.html#Curvedline">
+														<span class="dropdown-text">Curved line</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-charts-tables.html#DotPlotsChart">
+														<span class="dropdown-text">Dot Plots Chart</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-charts-tables.html#Stackedarea">
+														<span class="dropdown-text">Stacked area</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-charts-tables.html#Areachart">
+														<span class="dropdown-text">Area chart</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-charts-tables.html#Piechart">
+														<span class="dropdown-text">Pie chart</span>
+													</a>
+												</li>
+												<li>
+													<a href="dark-charts-tables.html#Tables">
+														<span class="dropdown-text">Tables</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="../preview/preview-templates.html" target="_blank">
+								<span>
+									<svg width="18px" height="16px" viewBox="0 0 22 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+										<title>layers</title>
+										<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.800000012">
+											<g transform="translate(-984.000000, -411.000000)" fill="#3F3B3B" fill-rule="nonzero">
+													<g transform="translate(618.000000, 396.000000)">
+															<g>
+																	<g transform="translate(12.000000, 9.000000)">
+																			<g id="Group-2-Copy-2" transform="translate(354.000000, 6.000000)">
+																					<g>
+																							<g>
+																									<g>
+																											<path d="M21.3125,0 C21.692,0 22,0.3073125 22,0.6875 L22,0.6875 L22,18.5625 C22,18.9426875 21.692,19.25 21.3125,19.25 L21.3125,19.25 L0.6875,19.25 C0.308,19.25 0,18.9426875 0,18.5625 L0,18.5625 L0,0.6875 C0,0.3073125 0.308,0 0.6875,0 L0.6875,0 Z M20.625,1.375 L1.375,1.375 L1.375,14.840375 L5.7014375,10.5139375 C5.952375,10.2623125 6.35525,10.24375 6.6275,10.4713125 L6.6275,10.4713125 L13.1058125,15.9410625 L11.07425,12.5455 L15.2989375,7.7935 C15.5601875,7.49925 16.0655,7.49925 16.32675,7.7935 L16.32675,7.7935 L20.625,12.629375 L20.625,1.375 Z M9.96875,4.8125 C10.9179894,4.8125 11.6875,5.58201059 11.6875,6.53125 C11.6875,7.48048941 10.9179894,8.25 9.96875,8.25 C9.01951059,8.25 8.25,7.48048941 8.25,6.53125 C8.25,5.58201059 9.01951059,4.8125 9.96875,4.8125 Z"></path>
+																									</g>
+																							</g>
+																					</g>
+																			</g>
+																	</g>
+															</g>
+													</g>
+											</g>
+										</g>
+								  </svg>
+									<span class="dropdown-text ms-2"><strong>Templates</strong></span>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+								<span>
+									<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+										 viewBox="0 0 512 512" width="18" height="18" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+										<g>
+											<g>
+												<path d="M448.801,271H497c8.284,0,15-6.716,15-15V111.4c0-8.284-6.716-15-15-15H367.4V63.2c0-34.849-28.352-63.2-63.2-63.2
+													S241,28.352,241,63.2v33.2H111.4c-8.284,0-15,6.716-15,15V241H63.2C28.352,241,0,269.352,0,304.2s28.352,63.2,63.2,63.2h33.2V497
+													c0,8.284,6.716,15,15,15H256c8.284,0,15-6.716,15-15v-48.2c0-18.307,14.894-33.2,33.2-33.2c18.306,0,33.2,14.894,33.2,33.2V497
+													c0,8.284,6.716,15,15,15H497c8.284,0,15-6.716,15-15V352.4c0-8.284-6.716-15-15-15h-48.199c-18.308,0-33.201-14.894-33.201-33.2
+													C415.6,285.894,430.493,271,448.801,271z M448.801,367.4H482V482H367.4v-33.2c0-34.849-28.352-63.2-63.2-63.2
+													S241,413.951,241,448.8V482H126.4V352.4c0-8.284-6.716-15-15-15H63.2c-18.307,0-33.2-14.894-33.2-33.2
+													c0-18.306,14.894-33.2,33.2-33.2h48.2c8.284,0,15-6.716,15-15V126.4H256c8.284,0,15-6.716,15-15V63.2
+													c0-18.307,14.894-33.2,33.2-33.2c18.306,0,33.2,14.894,33.2,33.2v48.2c0,8.284,6.716,15,15,15H482V241h-33.199
+													c-34.85,0-63.201,28.352-63.201,63.2S413.951,367.4,448.801,367.4z" fill="#3f3b3b"/>
+											</g>
+										</g>
+									</svg>
+									<span class="dropdown-text ms-2"><strong>Plugins</strong></span>
+								</span>
+								<svg class="ms-auto icon-rotate" data-name="Icon/Arrows/Chevron/Down" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24.091 24">
+									<path data-name="Icon Color" d="M-2.182,24,0,21.818-9.818,12,0,2.182-2.182,0l-12,12Z" transform="translate(0.091 4.909) rotate(-90)" fill="#3F3B3B"></path>
+								</svg>
+							</a>
+							<div id="collapseSix" class="collapse" data-bs-parent=".accordion2">
+								<ul class="list-unstyled menu-category">
+									<li>
+										<a href="plugins.html#DatePickers">
+											<span class="dropdown-text">Date Pickers</span>
+										</a>
+									</li>
+									<li>
+										<a href="plugins.html#FileUpload">
+											<span class="dropdown-text">File Upload</span>
+										</a>
+									</li>
+									<li>
+										<a href="plugins.html#Progress">
+											<span class="dropdown-text">Progress</span>
+										</a>
+									</li>
+									<li>
+										<a href="plugins.html#Ratings">
+											<span class="dropdown-text">Ratings</span>
+										</a>
+									</li>
+									<li>
+										<a href="plugins.html#Sliders">
+											<span class="dropdown-text">Sliders</span>
+										</a>
+									</li>
+									<li>
+										<a href="plugins.html#Spinners">
+											<span class="dropdown-text">Spinners</span>
+										</a>
+									</li>
+									<li>
+										<a href="plugins.html#Masonry">
+											<span class="dropdown-text">Masonry</span>
+										</a>
+									</li>
+									<li>
+										<a href="plugins.html#Counter">
+											<span class="dropdown-text">CountUp</span>
+										</a>
+									</li>
+									<li>
+										<a href="plugins.html#Carousel">
+											<span class="dropdown-text">Carousel</span>
+										</a>
+									</li>
+									<li>
+										<a href="plugins.html#CustomScrollbar">
+											<span class="dropdown-text">Custom Scrollbar</span>
+										</a>
+									</li>
+									<li>
+										<a href="plugins.html#charts">
+											<span class="dropdown-text">Charts</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="JavaScript:void(0)" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+								<span>
+									<svg data-name="Icon/Options Horizontal 3 Dots" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+										<path data-name="Icon Color" d="M20.825,4.33A2.165,2.165,0,1,1,22.99,2.165,2.167,2.167,0,0,1,20.825,4.33Zm-9.33,0A2.165,2.165,0,1,1,13.66,2.165,2.167,2.167,0,0,1,11.495,4.33Zm-9.329,0A2.165,2.165,0,1,1,4.33,2.165,2.167,2.167,0,0,1,2.165,4.33Z" transform="translate(1 10)" fill="#3f3b3b"></path>
+									</svg>
+									<span class="dropdown-text ms-2"><strong>More</strong></span>
+								</span>
+								<svg class="ms-auto icon-rotate" data-name="Icon/Arrows/Chevron/Down" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24.091 24">
+									<path data-name="Icon Color" d="M-2.182,24,0,21.818-9.818,12,0,2.182-2.182,0l-12,12Z" transform="translate(0.091 4.909) rotate(-90)" fill="#3F3B3B"></path>
+								</svg>
+							</a>
+							<div id="collapseFive" class="collapse" data-bs-parent=".accordion2">
+								<ul class="list-unstyled menu-category">
+									<li>
+										<a href="license.html">
+											<span class="dropdown-text">License</span>
+										</a>
+									</li>
+									<li>
+										<a href="support.html">
+											<span class="dropdown-text">Support</span>
+										</a>
+									</li>
+									<li>
+										<a href="moreproducts.html">
+											<span class="dropdown-text">More Products</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</aside>
+		<div class="fabrx-docs-content p-3 p-md-5">
+			<h3>Clearfix</h3>
+			<p>Quickly and easily clear floated content within a container by adding a clearfix utility.</p>
+			
+			<hr class="my-5">
+			<p>Easily clear <code>float</code>s by adding <code>.clearfix</code> <strong>to the parent element</strong>. Can also be used as a mixin.</p>
+			<p>Use in HTML:</p>
+      <div class="bg-shade-100 code-box-copy p-3 mb-4">
+				<pre class="copy-clipboard"><code class="language-html">
+&lt;div class="clearfix"&gt;...&lt;/div&gt;
+				</code></pre>
+			</div>
+			<p>The mixin source code:</p>
+			<div class="bg-shade-100 code-box-copy p-3 mb-4">
+				<pre class="copy-clipboard"><code class="language-html">
+@mixin clearfix() {
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+				</code></pre>
+			</div>
+			<p>Use the mixin in SCSS:</p>
+			<div class="bg-shade-100 code-box-copy p-3 mb-4">
+				<pre class="copy-clipboard"><code class="language-html">
+.element {
+  @include clearfix;
+}
+				</code></pre>
+			</div>
+			<p>The following example shows how the clearfix can be used. Without the clearfix the wrapping div would not span around the buttons which would cause a broken layout.</p>
+			<div class="py-4">
+				<div class="bg-info clearfix">
+	        <button type="button" class="btn btn-secondary float-start m-1">Example Button floated left</button>
+	        <button type="button" class="btn btn-secondary float-end m-1">Example Button floated right</button>
+	      </div>
+	    </div>
+      <div class="bg-shade-100 code-box-copy p-3 mb-4">
+				<pre class="copy-clipboard"><code class="language-html">
+&lt;div class="bg-info clearfix"&gt;
+  &lt;button type="button" class="btn btn-secondary float-start m-1"&gt;Example Button floated left&lt;/button&gt;
+  &lt;button type="button" class="btn btn-secondary float-end m-1"&gt;Example Button floated right&lt;/button&gt;
+&lt;/div&gt;
+				</code></pre>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Fabrx Scripts -->
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/lodash.min.js"></script>
+<script src="assets/js/html5.min.js"></script>
+<script src="assets/js/highcharts.min.js"></script>
+<script src="assets/js/highcharts-more.min.js"></script>
+<script src="assets/js/solid-gauge.min.js"></script>
+<script src="assets/js/flatpickr.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/loading-bar.min.js"></script>
+<script src="assets/js/dropzone.min.js"></script>
+<script src="assets/js/simplebar.min.js"></script>
+<script src="assets/js/purecounter.min.js"></script>
+<script src="assets/js/masonry.min.js"></script>
+<script src="assets/js/sticky.min.js"></script>
+<script src="assets/js/bootstrap-slider.min.js"></script>
+<script src="assets/js/smooth-scroll.polyfills.min.js"></script>
+<script src="assets/js/prism.min.js"></script>
+<script src="assets/js/fabrx-scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<svg id="Group_56" data-name="Group 56" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="543" height="458" viewBox="0 0 543 458">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Background" width="543" height="458" fill="#ecf1f8"/>
+    </clipPath>
+  </defs>
+  <g id="Images_24px" data-name="Images/24px">
+    <rect id="Elevation" width="543" height="458" rx="24" fill="none"/>
+    <g id="Group_20" data-name="Group 20">
+      <rect id="Background-2" data-name="Background" width="543" height="458" fill="#212121"/>
+      <g id="Mask_Group_20" data-name="Mask Group 20" clip-path="url(#clip-path)">
+        <rect id="Gradient" width="543" height="180.757" transform="translate(0 277.243)" fill="none"/>
+        <rect id="Overlay" width="543" height="458" fill="none" opacity="0.2"/>
+      </g>
+    </g>
+  </g>
+  <g id="Vector_Plant_02_Dark" data-name="Vector/Plant 02/Dark" transform="translate(156 62)">
+    <rect id="Vector_Plant_02_Dark_background" data-name="Vector/Plant 02/Dark background" width="232" height="335" fill="none"/>
+    <g id="Vector_Plan_02_Dark" data-name="Vector/Plan 02/Dark" transform="translate(0.72)">
+      <path id="Leaves" d="M55.227,114.885C16.22,86.968,0,43.319,0,43.319s46.994,1.6,85.98,29.5S141.218,144.4,141.218,144.4,94.234,142.8,55.227,114.885Zm116.845-61c24.278-26.72,58.487-35.109,58.487-35.109s-5.158,34.9-29.414,61.616-58.487,35.13-58.487,35.13S147.816,80.59,172.072,53.88ZM94.68,38.853C73.626,23.711,64.845,0,64.845,0s25.376.864,46.473,16.017,29.9,38.853,29.9,38.853S115.735,54,94.68,38.853Z" fill="#fff"/>
+      <path id="Base" d="M27.861,319.117A18.39,18.39,0,0,1,9.475,301.9L2.714,193.5l-.587-9.552-.245-3.969-.608-9.552-.245-3.969-.587-9.552-.427-6.75A9.523,9.523,0,0,1,2.6,143.074a9.623,9.623,0,0,1,6.945-3.01H41.789V3.135A3.135,3.135,0,0,1,44.924,0h.935a3.135,3.135,0,0,1,3.135,3.135v136.93H81.239a9.623,9.623,0,0,1,6.967,3.039,9.519,9.519,0,0,1,2.557,7.128l-.416,6.75-.6,9.552L89.5,170.5l-.587,9.552-.256,3.97-.6,9.552L81.324,301.9a18.413,18.413,0,0,1-18.408,17.214Z" transform="translate(96.547 15.884)" fill="#121212"/>
+    </g>
+  </g>
+</svg>

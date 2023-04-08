@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Fabrx">
+<meta name="keywords" content="Fabrx">
+<meta name="author" content="Fabrx">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Fabrx - Tables Light</title>
+<link href="../assets/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<!-- Fabrx External CSS -->
+<link href="../assets/css/loading-bar.min.css" rel="stylesheet" type="text/css" media="all">
+<link href="../assets/vendor/flatpickr/dist/flatpickr.min.css" rel="stylesheet" type="text/css" media="all">
+<link href="../assets/css/fabrx-styles.min.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body>
+
+<!-- Fabrx Customize Sidebar -->
+<div class="customize-sidebar">
+  <div class="border-bottom border-gray-300 p-3 p-md-4 bg-white">
+    <div class="text-end">
+      <a href="javascript:void(0);" class="badge badge-primary circle customize-close">
+        <svg width="18" height="18" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <path d="M19.7396505,4.26034953 C20.0552257,4.57592471 20.0839143,5.06974834 19.8257164,5.41773233 L19.7396505,5.51742825 L13.257,12 L19.7396505,18.4825718 C20.0867832,18.8297045 20.0867832,19.3925178 19.7396505,19.7396505 C19.4240753,20.0552257 18.9302517,20.0839143 18.5822677,19.8257164 L18.4825718,19.7396505 L12,13.257 L5.51742825,19.7396505 C5.17029555,20.0867832 4.60748223,20.0867832 4.26034953,19.7396505 C3.94477434,19.4240753 3.91608569,18.9302517 4.17428357,18.5822677 L4.26034953,18.4825718 L10.743,12 L4.26034953,5.51742825 C3.91321682,5.17029555 3.91321682,4.60748223 4.26034953,4.26034953 C4.57592471,3.94477434 5.06974834,3.91608569 5.41773233,4.17428357 L5.51742825,4.26034953 L12,10.743 L18.4825718,4.26034953 C18.8297045,3.91321682 19.3925178,3.91321682 19.7396505,4.26034953 Z" fill="#ffffff"></path>
+          </g>
+        </svg>
+      </a>
+    </div>
+    <div class="px-2 px-md-4">
+      <h4 class="mb-0 font-weight-bold"><img src="../assets/images/icons/adjustments.svg" alt="Icon"> Customize</h4>
+      <p class="text-muted mb-0 lh-lg">Choose your style and settings</p>
+    </div>
+  </div>
+  <div class="customize-body" data-simplebar>
+    <div class="p-4 px-lg-5 border-bottom border-gray-300">
+      <h6 class="font-weight-semibold pb-3">Select Skin</h6>
+      <div class="d-flex fabrx-skins customizer-controls">
+        <div class="text-center pe-4">
+          <div class="form-check-lg badge bg-white circle xxl d-flex align-items-center justify-content-center">
+            <input class="form-check-input mx-0 rounded-circle" type="radio" name="FabrxSkins" id="LightMode" value="light-mode" checked="checked">
+          </div>
+          <label for="LightMode" class="text-gray-700 mt-2">Light mode</label>
+        </div>
+        <div class="text-center ps-4 dark-radio">
+          <div class="form-check-lg bg-gray-800 badge circle xxl d-flex align-items-center justify-content-center">
+            <input class="form-check-input mx-0 rounded-circle" type="radio" name="FabrxSkins" id="DarkMode" value="dark-mode">
+          </div>
+          <label for="DarkMode" class="text-gray-700 mt-2">Dark mode</label>
+        </div>
+      </div>
+    </div>
+    <div class="p-4 ps-lg-5 border-bottom border-gray-300">
+      <div class="d-flex align-items-center">
+        <h6 class="font-weight-semibold mb-0">RTL Mode</h6>
+        <div class="custom-control custom-switch custom-switch-lg ms-auto">
+          <input type="checkbox" class="custom-control-input" id="RTLMode" value="fabrx-rtl">
+          <label class="custom-control-label" for="RTLMode">&nbsp;</label>
+        </div>
+      </div>
+      <p class="text-gray-600 pt-2 mb-0">Switch layout direction</p>
+    </div>
+  </div>
+  <div class="p-4 px-lg-5 border-top border-gray-300 bg-white mt-auto">
+    <div class="row">
+      <div class="col-6 d-grid">
+        <a href="Javascript:void(0);" class="btn btn-lg btn-outline-dark" id="ResetCustomizer">Reset</a>
+      </div>
+      <div class="col-6 d-grid">
+        <a href="Javascript:void(0);" class="btn btn-lg btn-primary" id="CustomizerPreview">Preview</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Fabrx Customize Button, Position Fixed, P 2, P Md 3, Bottom 0, End 0, Z Index 10 -->
+<div class="position-fixed p-2 p-md-3 bottom-0 end-0 z-index-10">
+  <a href="javascript:void(0);" class="customize-btn badge badge-primary circle xl shadow"><svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path d="M9.59614123,4.14018119 C10.2075438,1.6199396 13.7924562,1.6199396 14.4038588,4.14018119 C14.4771527,4.44267767 14.6903653,4.69180757 14.9777167,4.81085792 C15.265068,4.92990827 15.5919974,4.90456048 15.8578028,4.74249541 C18.0723244,3.3934025 20.6072863,5.92775159 19.2585342,8.14314869 C19.0968482,8.40859979 19.0715615,8.73527802 19.1904716,9.02244876 C19.3093818,9.30961949 19.558208,9.52279454 19.8598188,9.59614123 C22.3800604,10.2075438 22.3800604,13.7924562 19.8596122,14.4039089 C19.5573223,14.4771527 19.3081924,14.6903653 19.1891421,14.9777167 C19.0700917,15.265068 19.0954395,15.5919974 19.2575046,15.8578028 C20.6065975,18.0723244 18.0722484,20.6072863 15.8568513,19.2585342 C15.5914002,19.0968482 15.264722,19.0715615 14.9775512,19.1904716 C14.6903805,19.3093818 14.4772055,19.558208 14.4038588,19.8598188 C13.7924562,22.3800604 10.2075438,22.3800604 9.59609113,19.8596122 C9.52284732,19.5573223 9.30963471,19.3081924 9.02228334,19.1891421 C8.73493198,19.0700917 8.4080026,19.0954395 8.14219722,19.2575046 C5.92767555,20.6065975 3.39271371,18.0722484 4.74146585,15.8568513 C4.90315184,15.5914002 4.92843848,15.264722 4.80952836,14.9775512 C4.69061823,14.6903805 4.44179204,14.4772055 4.14018119,14.4038588 C1.6199396,13.7924562 1.6199396,10.2075438 4.14038784,9.59609113 C4.44267767,9.52284732 4.69180757,9.30963471 4.81085792,9.02228334 C4.92990827,8.73493198 4.90456048,8.4080026 4.74249541,8.14219722 C3.3934025,5.92767555 5.92775159,3.39271371 8.14263487,4.74115317 C8.70858295,5.08524959 9.44004109,4.78211428 9.59614123,4.14018119 Z M12.9101396,4.37501445 C12.5899851,3.50378289 11.2844273,3.54340015 11.0537627,4.49421453 C10.6577145,6.12289084 8.79653305,6.89421293 7.36298714,6.02261687 L7.36298714,6.02261687 L7.26911143,5.97148934 C6.42125334,5.56266023 5.51134412,6.52109682 6.02335926,7.36156432 L6.02335926,7.36156432 L6.1189414,7.53330082 C6.44282572,8.17381945 6.47382709,8.92735295 6.1966337,9.59641354 C5.89424092,10.3262978 5.26144074,10.8678666 4.49381881,11.0538588 C3.5020604,11.2944562 3.5020604,12.7055438 4.49422209,12.9462392 C5.26135037,13.1327916 5.89337912,13.674265 6.19541571,14.4036904 C6.4974523,15.1331159 6.43322321,15.962892 6.02261687,16.6370129 L6.02261687,16.6370129 L5.97148934,16.7308886 C5.56266023,17.5787467 6.52109682,18.4886559 7.36156432,17.9766407 L7.36156432,17.9766407 L7.53330082,17.8810586 C8.17381945,17.5571743 8.92735295,17.5261729 9.59641354,17.8033663 C10.3262978,18.1057591 10.8678666,18.7385593 11.0538588,19.5061812 C11.2944562,20.4979396 12.7055438,20.4979396 12.9462392,19.5057779 C13.1327916,18.7386496 13.674265,18.1066209 14.4036904,17.8045843 C15.1331159,17.5025477 15.962892,17.5667768 16.6370129,17.9773831 L16.6370129,17.9773831 L16.7308886,18.0285107 C17.5787467,18.4373398 18.4886559,17.4789032 17.9766407,16.6384357 L17.9766407,16.6384357 L17.8810586,16.4666992 C17.5571743,15.8261806 17.5261729,15.072647 17.8033663,14.4035865 C18.1057591,13.6737022 18.7385593,13.1321334 19.5061812,12.9461412 C20.4979396,12.7055438 20.4979396,11.2944562 19.5057779,11.0537608 C18.7386496,10.8672084 18.1066209,10.325735 17.8045843,9.59630958 C17.5025477,8.86688412 17.5667768,8.03710801 17.9773831,7.36298714 L17.9773831,7.36298714 L18.0285107,7.26911143 C18.4373398,6.42125334 17.4789032,5.51134412 16.6384357,6.02335926 L16.6384357,6.02335926 L16.4666992,6.1189414 C15.8261806,6.44282572 15.072647,6.47382709 14.4035865,6.1966337 C13.6737022,5.89424092 13.1321334,5.26144074 12.9460911,4.49361216 L12.9460911,4.49361216 Z M12,8.25 C14.0710678,8.25 15.75,9.92893219 15.75,12 C15.75,14.0710678 14.0710678,15.75 12,15.75 C9.92893219,15.75 8.25,14.0710678 8.25,12 C8.25,9.92893219 9.92893219,8.25 12,8.25 Z M12,9.75 C10.7573593,9.75 9.75,10.7573593 9.75,12 C9.75,13.2426407 10.7573593,14.25 12,14.25 C13.2426407,14.25 14.25,13.2426407 14.25,12 C14.25,10.7573593 13.2426407,9.75 12,9.75 Z" fill="#ffffff"></path></g></svg></a>
+</div> 
+
+<!-- Fabrx Section, Fabrx Tables Light, Bg White -->
+<section class="fabrx-section fabrx-tables-light bg-white">
+  <!-- Fabrx Header, Fabrx Table Header, Px 3, Px Lg 5 -->
+  <header class="fabrx-header fabrx-table-header px-3 px-lg-5">
+    <nav class="navbar navbar-expand-md has-header-inner px-0 px-md-3">
+      <a class="navbar-brand h3 font-weight-bold" href="#0">Revenue</a>
+      <div class="fabrx-header-links ms-auto">
+        <a href="#0">
+          <svg id="Icon_Filter" data-name="Icon/Filter" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path data-name="Icon Color" d="M10,14a1,1,0,0,1,0-2h6a1,1,0,0,1,0,2ZM5,8A1,1,0,1,1,5,6H20a1,1,0,1,1,0,2ZM1,2A1,1,0,0,1,1,0H23a1,1,0,1,1,0,2Z" transform="translate(0 5)" fill="#3f3b3b"></path>
+          </svg>
+        </a>
+        <a href="#0" class="ms-2 ms-md-4 btn btn-primary">
+          <svg width="20px" height="20px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path d="M12,4 C12.391944,4 12.7158616,4.29125562 12.7671261,4.66914007 L12.7741935,4.77419355 L12.774,11.225 L19.2258065,11.2258065 C19.6533817,11.2258065 20,11.5724247 20,12 C20,12.391944 19.7087444,12.7158616 19.3308599,12.7671261 L19.2258065,12.7741935 L12.774,12.774 L12.7741935,19.2258065 C12.7741935,19.6533817 12.4275753,20 12,20 C11.608056,20 11.2841384,19.7087444 11.2328739,19.3308599 L11.2258065,19.2258065 L11.225,12.774 L4.77419355,12.7741935 C4.34661826,12.7741935 4,12.4275753 4,12 C4,11.608056 4.29125562,11.2841384 4.66914007,11.2328739 L4.77419355,11.2258065 L11.225,11.225 L11.2258065,4.77419355 C11.2258065,4.34661826 11.5724247,4 12,4 Z" fill="#212121"></path></g></svg>
+          <span class="ms-2">Add</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="overflow-hidden">
+    <!-- Table Responsive Md, Position Relative, Z Index 0 -->
+    <div class="table-responsive-md position-relative z-index-0">
+      <table class="table table-lg fabrx-table has-table">
+        <thead>
+          <tr>
+            <th>
+              <div class="d-flex align-items-center ps-lg-5 ps-2">
+                <div class="form-check form-check-rounded form-check-sm">
+                  <input type="checkbox" class="form-check-input" id="selectAll" onchange="checkAll(this)">
+                </div>
+                <span class="ps-3">Name</span>
+              </div>
+            </th>
+            <th>
+              <span>Date</span>
+              <a href="#0" class="ms-1">
+                <svg data-name="Icon/Arrows/Caret/Down" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path data-name="Icon Color" d="M5.844,3.437H.344A.344.344,0,0,1,.07,2.886L.1,2.851,2.851.1A.344.344,0,0,1,3.3.067L3.338.1,6.1,2.867l.018.022.027.042.014.029L6.176,3l.009.045,0,.023v.048l0,.023-.009.045-.015.042-.014.029L6.119,3.3a.354.354,0,0,1-.042.047l-.028.023L6.007,3.4l-.028.014-.042.015-.045.009-.023,0ZM3.095.83h0L1.174,2.75h3.84L3.095.83Z" transform="translate(8.594 7.219) rotate(180)" fill="#212121"></path></svg>
+              </a>
+            </th>
+            <th>
+              <span>Date</span>
+              <a href="#0" class="ms-1">
+                <svg data-name="Icon/Arrows/Caret/Down" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path data-name="Icon Color" d="M5.844,3.437H.344A.344.344,0,0,1,.07,2.886L.1,2.851,2.851.1A.344.344,0,0,1,3.3.067L3.338.1,6.1,2.867l.018.022.027.042.014.029L6.176,3l.009.045,0,.023v.048l0,.023-.009.045-.015.042-.014.029L6.119,3.3a.354.354,0,0,1-.042.047l-.028.023L6.007,3.4l-.028.014-.042.015-.045.009-.023,0ZM3.095.83h0L1.174,2.75h3.84L3.095.83Z" transform="translate(8.594 7.219) rotate(180)" fill="#212121"></path></svg>
+              </a>
+            </th>
+            <th>
+              <span>Date</span>
+              <a href="#0" class="ms-1">
+                <svg data-name="Icon/Arrows/Caret/Down" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path data-name="Icon Color" d="M5.844,3.437H.344A.344.344,0,0,1,.07,2.886L.1,2.851,2.851.1A.344.344,0,0,1,3.3.067L3.338.1,6.1,2.867l.018.022.027.042.014.029L6.176,3l.009.045,0,.023v.048l0,.023-.009.045-.015.042-.014.029L6.119,3.3a.354.354,0,0,1-.042.047l-.028.023L6.007,3.4l-.028.014-.042.015-.045.009-.023,0ZM3.095.83h0L1.174,2.75h3.84L3.095.83Z" transform="translate(8.594 7.219) rotate(180)" fill="#212121"></path></svg>
+              </a>
+            </th>
+            <th>
+              <span>Date</span>
+              <a href="#0" class="ms-1">
+                <svg data-name="Icon/Arrows/Caret/Down" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path data-name="Icon Color" d="M5.844,3.437H.344A.344.344,0,0,1,.07,2.886L.1,2.851,2.851.1A.344.344,0,0,1,3.3.067L3.338.1,6.1,2.867l.018.022.027.042.014.029L6.176,3l.009.045,0,.023v.048l0,.023-.009.045-.015.042-.014.029L6.119,3.3a.354.354,0,0,1-.042.047l-.028.023L6.007,3.4l-.028.014-.042.015-.045.009-.023,0ZM3.095.83h0L1.174,2.75h3.84L3.095.83Z" transform="translate(8.594 7.219) rotate(180)" fill="#212121"></path></svg>
+              </a>
+            </th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="d-flex align-items-center ps-lg-5 ps-2">
+                <div class="form-check form-check-rounded form-check-sm">
+                  <input type="checkbox" class="form-check-input" id="TableCheckbox" name="check">
+                </div>
+                <div class="ps-3">
+                  <strong class="d-block text-dark font-size-14 font-weight-semibold">Marilyn Medina</strong>
+                  <small class="text-secondary">Managing Director</small>
+                </div>
+              </div>
+            </td>
+            <td>25/8/2020</td>
+            <td><span class="fabrx-status status-no-border online me-2"></span> Online</td>
+            <td>Ibadan</td>
+            <td>$1,338.76</td>
+            <td>
+              <div class="dropdown">
+                <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="Action10">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g data-name="Cell 06" transform="translate(0 -0.308)"><g transform="translate(0 0.308)">
+                    <path data-name="Icon Color" d="M14,1.75A1.75,1.75,0,1,1,15.75,3.5,1.751,1.751,0,0,1,14,1.75Zm1.5,0A.25.25,0,1,0,15.75,1.5.25.25,0,0,0,15.5,1.75ZM7,1.75A1.75,1.75,0,1,1,8.75,3.5,1.751,1.751,0,0,1,7,1.75Zm1.5,0A.25.25,0,1,0,8.75,1.5.25.25,0,0,0,8.5,1.75ZM0,1.75A1.75,1.75,0,1,1,1.75,3.5,1.751,1.751,0,0,1,0,1.75Zm1.5,0A.25.25,0,1,0,1.75,1.5.25.25,0,0,0,1.5,1.75Z" transform="translate(3.25 10.25)" fill="#212121"></path></g></g>
+                  </svg>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action10">
+                  <a class="dropdown-item" href="#0">Action</a>
+                  <a class="dropdown-item" href="#0">Another action</a>
+                  <a class="dropdown-item" href="#0">Something else here</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="d-flex align-items-center ps-lg-5 ps-2">
+                <div class="form-check form-check-rounded form-check-sm">
+                  <input type="checkbox" class="form-check-input" id="TableCheckbox2" name="check">
+                </div>
+                <div class="ps-3">
+                  <strong class="d-block text-dark font-size-14 font-weight-semibold">Marilyn Medina</strong>
+                  <small class="text-secondary">Managing Director</small>
+                </div>
+              </div>
+            </td>
+            <td>25/8/2020</td>
+            <td><span class="fabrx-status status-no-border online me-2"></span> Online</td>
+            <td>Philadelphia</td>
+            <td>$1,338.76</td>
+            <td>
+              <div class="dropdown">
+                <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="Action11">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g data-name="Cell 06" transform="translate(0 -0.308)"><g transform="translate(0 0.308)">
+                    <path data-name="Icon Color" d="M14,1.75A1.75,1.75,0,1,1,15.75,3.5,1.751,1.751,0,0,1,14,1.75Zm1.5,0A.25.25,0,1,0,15.75,1.5.25.25,0,0,0,15.5,1.75ZM7,1.75A1.75,1.75,0,1,1,8.75,3.5,1.751,1.751,0,0,1,7,1.75Zm1.5,0A.25.25,0,1,0,8.75,1.5.25.25,0,0,0,8.5,1.75ZM0,1.75A1.75,1.75,0,1,1,1.75,3.5,1.751,1.751,0,0,1,0,1.75Zm1.5,0A.25.25,0,1,0,1.75,1.5.25.25,0,0,0,1.5,1.75Z" transform="translate(3.25 10.25)" fill="#212121"></path></g></g>
+                  </svg>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action11">
+                  <a class="dropdown-item" href="#0">Action</a>
+                  <a class="dropdown-item" href="#0">Another action</a>
+                  <a class="dropdown-item" href="#0">Something else here</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="d-flex align-items-center ps-lg-5 ps-2">
+                <div class="form-check form-check-rounded form-check-sm">
+                  <input type="checkbox" class="form-check-input" id="TableCheckbox3" name="check">
+                </div>
+                <div class="ps-3">
+                  <strong class="d-block text-dark font-size-14 font-weight-semibold">Marilyn Medina</strong>
+                  <small class="text-secondary">Managing Director</small>
+                </div>
+              </div>
+            </td>
+            <td>25/8/2020</td>
+            <td><span class="fabrx-status status-no-border away me-2"></span> Away</td>
+            <td>Indianapolis</td>
+            <td>$1,338.76</td>
+            <td>
+              <div class="dropdown">
+                <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="Action12">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g data-name="Cell 06" transform="translate(0 -0.308)"><g transform="translate(0 0.308)">
+                    <path data-name="Icon Color" d="M14,1.75A1.75,1.75,0,1,1,15.75,3.5,1.751,1.751,0,0,1,14,1.75Zm1.5,0A.25.25,0,1,0,15.75,1.5.25.25,0,0,0,15.5,1.75ZM7,1.75A1.75,1.75,0,1,1,8.75,3.5,1.751,1.751,0,0,1,7,1.75Zm1.5,0A.25.25,0,1,0,8.75,1.5.25.25,0,0,0,8.5,1.75ZM0,1.75A1.75,1.75,0,1,1,1.75,3.5,1.751,1.751,0,0,1,0,1.75Zm1.5,0A.25.25,0,1,0,1.75,1.5.25.25,0,0,0,1.5,1.75Z" transform="translate(3.25 10.25)" fill="#212121"></path></g></g>
+                  </svg>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action12">
+                  <a class="dropdown-item" href="#0">Action</a>
+                  <a class="dropdown-item" href="#0">Another action</a>
+                  <a class="dropdown-item" href="#0">Something else here</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="d-flex align-items-center ps-lg-5 ps-2">
+                <div class="form-check form-check-rounded form-check-sm">
+                  <input type="checkbox" class="form-check-input" id="TableCheckbox4" name="check">
+                </div>
+                <div class="ps-3">
+                  <strong class="d-block text-dark font-size-14 font-weight-semibold">Marilyn Medina</strong>
+                  <small class="text-secondary">Managing Director</small>
+                </div>
+              </div>
+            </td>
+            <td>25/8/2020</td>
+            <td><span class="fabrx-status status-no-border me-2"></span> Offline</td>
+            <td>Albuquerque</td>
+            <td>$1,338.76</td>
+            <td>
+              <div class="dropdown">
+                <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="Action13">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g data-name="Cell 06" transform="translate(0 -0.308)"><g transform="translate(0 0.308)">
+                    <path data-name="Icon Color" d="M14,1.75A1.75,1.75,0,1,1,15.75,3.5,1.751,1.751,0,0,1,14,1.75Zm1.5,0A.25.25,0,1,0,15.75,1.5.25.25,0,0,0,15.5,1.75ZM7,1.75A1.75,1.75,0,1,1,8.75,3.5,1.751,1.751,0,0,1,7,1.75Zm1.5,0A.25.25,0,1,0,8.75,1.5.25.25,0,0,0,8.5,1.75ZM0,1.75A1.75,1.75,0,1,1,1.75,3.5,1.751,1.751,0,0,1,0,1.75Zm1.5,0A.25.25,0,1,0,1.75,1.5.25.25,0,0,0,1.5,1.75Z" transform="translate(3.25 10.25)" fill="#212121"></path></g></g>
+                  </svg>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action13">
+                  <a class="dropdown-item" href="#0">Action</a>
+                  <a class="dropdown-item" href="#0">Another action</a>
+                  <a class="dropdown-item" href="#0">Something else here</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="d-flex align-items-center ps-lg-5 ps-2">
+                <div class="form-check form-check-rounded form-check-sm">
+                  <input type="checkbox" class="form-check-input" id="TableCheckbox5" name="check">
+                </div>
+                <div class="ps-3">
+                  <strong class="d-block text-dark font-size-14 font-weight-semibold">Marilyn Medina</strong>
+                  <small class="text-secondary">Managing Director</small>
+                </div>
+              </div>
+            </td>
+            <td>25/8/2020</td>
+            <td><span class="fabrx-status status-no-border dnd me-2"></span> Busy</td>
+            <td>Naples</td>
+            <td>$1,338.76</td>
+            <td>
+              <div class="dropdown">
+                <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="Action14">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g data-name="Cell 06" transform="translate(0 -0.308)"><g transform="translate(0 0.308)">
+                    <path data-name="Icon Color" d="M14,1.75A1.75,1.75,0,1,1,15.75,3.5,1.751,1.751,0,0,1,14,1.75Zm1.5,0A.25.25,0,1,0,15.75,1.5.25.25,0,0,0,15.5,1.75ZM7,1.75A1.75,1.75,0,1,1,8.75,3.5,1.751,1.751,0,0,1,7,1.75Zm1.5,0A.25.25,0,1,0,8.75,1.5.25.25,0,0,0,8.5,1.75ZM0,1.75A1.75,1.75,0,1,1,1.75,3.5,1.751,1.751,0,0,1,0,1.75Zm1.5,0A.25.25,0,1,0,1.75,1.5.25.25,0,0,0,1.5,1.75Z" transform="translate(3.25 10.25)" fill="#212121"></path></g></g>
+                  </svg>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action14">
+                  <a class="dropdown-item" href="#0">Action</a>
+                  <a class="dropdown-item" href="#0">Another action</a>
+                  <a class="dropdown-item" href="#0">Something else here</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="d-flex align-items-center ps-lg-5 ps-2">
+                <div class="form-check form-check-rounded form-check-sm">
+                  <input type="checkbox" class="form-check-input" id="TableCheckbox6" name="check">
+                </div>
+                <div class="ps-3">
+                  <strong class="d-block text-dark font-size-14 font-weight-semibold">Marilyn Medina</strong>
+                  <small class="text-secondary">Managing Director</small>
+                </div>
+              </div>
+            </td>
+            <td>25/8/2020</td>
+            <td><span class="fabrx-status status-no-border me-2"></span> Offline</td>
+            <td>Lyon</td>
+            <td>$1,338.76</td>
+            <td>
+              <div class="dropdown">
+                <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="Action15">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g data-name="Cell 06" transform="translate(0 -0.308)"><g transform="translate(0 0.308)">
+                    <path data-name="Icon Color" d="M14,1.75A1.75,1.75,0,1,1,15.75,3.5,1.751,1.751,0,0,1,14,1.75Zm1.5,0A.25.25,0,1,0,15.75,1.5.25.25,0,0,0,15.5,1.75ZM7,1.75A1.75,1.75,0,1,1,8.75,3.5,1.751,1.751,0,0,1,7,1.75Zm1.5,0A.25.25,0,1,0,8.75,1.5.25.25,0,0,0,8.5,1.75ZM0,1.75A1.75,1.75,0,1,1,1.75,3.5,1.751,1.751,0,0,1,0,1.75Zm1.5,0A.25.25,0,1,0,1.75,1.5.25.25,0,0,0,1.5,1.75Z" transform="translate(3.25 10.25)" fill="#212121"></path></g></g>
+                  </svg>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action15">
+                  <a class="dropdown-item" href="#0">Action</a>
+                  <a class="dropdown-item" href="#0">Another action</a>
+                  <a class="dropdown-item" href="#0">Something else here</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="d-flex align-items-center ps-lg-5 ps-2">
+                <div class="form-check form-check-rounded form-check-sm">
+                  <input type="checkbox" class="form-check-input" id="TableCheckbox7" name="check">
+                </div>
+                <div class="ps-3">
+                  <strong class="d-block text-dark font-size-14 font-weight-semibold">Marilyn Medina</strong>
+                  <small class="text-secondary">Managing Director</small>
+                </div>
+              </div>
+            </td>
+            <td>25/8/2020</td>
+            <td><span class="fabrx-status status-no-border me-2"></span> Offline</td>
+            <td>San Antonio</td>
+            <td>$1,338.76</td>
+            <td>
+              <div class="dropdown">
+                <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="Action16">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g data-name="Cell 06" transform="translate(0 -0.308)"><g transform="translate(0 0.308)">
+                    <path data-name="Icon Color" d="M14,1.75A1.75,1.75,0,1,1,15.75,3.5,1.751,1.751,0,0,1,14,1.75Zm1.5,0A.25.25,0,1,0,15.75,1.5.25.25,0,0,0,15.5,1.75ZM7,1.75A1.75,1.75,0,1,1,8.75,3.5,1.751,1.751,0,0,1,7,1.75Zm1.5,0A.25.25,0,1,0,8.75,1.5.25.25,0,0,0,8.5,1.75ZM0,1.75A1.75,1.75,0,1,1,1.75,3.5,1.751,1.751,0,0,1,0,1.75Zm1.5,0A.25.25,0,1,0,1.75,1.5.25.25,0,0,0,1.5,1.75Z" transform="translate(3.25 10.25)" fill="#212121"></path></g></g>
+                  </svg>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action16">
+                  <a class="dropdown-item" href="#0">Action</a>
+                  <a class="dropdown-item" href="#0">Another action</a>
+                  <a class="dropdown-item" href="#0">Something else here</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="d-flex align-items-center ps-lg-5 ps-2">
+                <div class="form-check form-check-rounded form-check-sm">
+                  <input type="checkbox" class="form-check-input" id="TableCheckbox8" name="check">
+                </div>
+                <div class="ps-3">
+                  <strong class="d-block text-dark font-size-14 font-weight-semibold">Marilyn Medina</strong>
+                  <small class="text-secondary">Managing Director</small>
+                </div>
+              </div>
+            </td>
+            <td>25/8/2020</td>
+            <td><span class="fabrx-status status-no-border me-2"></span> Offline</td>
+            <td>Newport</td>
+            <td>$1,338.76</td>
+            <td>
+              <div class="dropdown">
+                <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="Action17">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g data-name="Cell 06" transform="translate(0 -0.308)"><g transform="translate(0 0.308)">
+                    <path data-name="Icon Color" d="M14,1.75A1.75,1.75,0,1,1,15.75,3.5,1.751,1.751,0,0,1,14,1.75Zm1.5,0A.25.25,0,1,0,15.75,1.5.25.25,0,0,0,15.5,1.75ZM7,1.75A1.75,1.75,0,1,1,8.75,3.5,1.751,1.751,0,0,1,7,1.75Zm1.5,0A.25.25,0,1,0,8.75,1.5.25.25,0,0,0,8.5,1.75ZM0,1.75A1.75,1.75,0,1,1,1.75,3.5,1.751,1.751,0,0,1,0,1.75Zm1.5,0A.25.25,0,1,0,1.75,1.5.25.25,0,0,0,1.5,1.75Z" transform="translate(3.25 10.25)" fill="#212121"></path></g></g>
+                  </svg>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action17">
+                  <a class="dropdown-item" href="#0">Action</a>
+                  <a class="dropdown-item" href="#0">Another action</a>
+                  <a class="dropdown-item" href="#0">Something else here</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <!-- Fabrx Table Footer, My 3, My Md 3, Mx 0, Mx Md 3, Px 3, Px Lg 5 -->
+  <div class="fabrx-tables-footer my-3 my-md-5 mx-0 mx-md-3 px-3 px-lg-5">
+    <nav aria-label="Page navigation" class="d-flex align-items-center justify-content-end flex-wrap">
+      <small class="mb-3 text-secondary">Showing 21 to 30 of 332</small>
+      <ul class="pagination ms-3 ms-xl-4">
+        <li class="page-item"><a class="page-link primary-page-item" href="#0">First</a></li>
+        <li class="page-item active"><a class="page-link" href="#0">1</a></li>
+        <li class="page-item"><a class="page-link" href="#0">2</a></li>
+        <li class="page-item"><a class="page-link" href="#0">3</a></li>
+        <li class="page-item"><a class="page-link" href="#0">4</a></li>
+        <li class="page-item"><a class="page-link primary-page-item" href="#0">Last</a></li>
+      </ul>
+    </nav>
+  </div>
+</section>
+
+<!-- Fabrx Section, Fabrx Tables Light, Bg White, Mt Lg 5 -->
+<section class="fabrx-section fabrx-tables-light bg-white mt-lg-5">
+  <!-- Fabrx Header, Px 3, Px Lg 5 -->
+  <header class="fabrx-header px-3 px-lg-5">
+    <nav class="navbar navbar-expand-sm has-header-inner px-0 px-md-3">
+      <a class="navbar-brand h3 font-weight-bold" href="#0">Top Freelancers</a>
+      <button class="navbar-toggler pe-0" type="button" data-bs-toggle="collapse" data-bs-target="#menu-2" aria-controls="menu-2" aria-expanded="false" aria-label="Toggle navigation">
+        <svg data-name="Icon 01" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path data-name="Icon Color" d="M.75,9.5a.751.751,0,0,1-.1-1.494L.75,8h16a.75.75,0,0,1,.1,1.493l-.1.007Zm0-8A.75.75,0,0,1,.648.007L.75,0h16a.75.75,0,0,1,.1,1.493l-.1.007Z" transform="translate(3.25 7.25)" fill="#212121"></path></svg>
+      </button>
+      <div class="collapse navbar-collapse" id="menu-2">
+        <div class="fabrx-header-links ms-auto dropdown pt-3 pt-md-0">
+          <a href="#" class="fabrx-noti-dot" role="button" id="table-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <path d="M12,2.25 C13.2913325,2.25 14.3747803,3.14005988 14.6703298,4.3401659 L14.707,4.519 L14.8267478,4.58443973 C17.0493251,5.84267394 18.5161953,8.12478427 18.7312785,10.7113836 L18.75,11 L18.7445651,13.9098733 C18.8685644,14.9342704 19.4716598,15.8389135 20.3695651,16.3473733 C21.0096775,16.7098518 20.7932066,17.6583391 20.1019409,17.7438163 L20,17.75 L15.7497545,17.75 L15.75,18 C15.75,20.0710678 14.0710678,21.75 12,21.75 C9.99574083,21.75 8.35872626,20.1776389 8.25519801,18.1991586 L8.25,18 L8.24975454,17.75 L4,17.75 C3.22935205,17.75 2.95984098,16.7271127 3.63043491,16.3473733 C4.46847982,15.8728108 5.04971261,15.0531286 5.21988292,14.1863504 L5.25,14 L5.25082481,10.9648356 C5.37623928,8.29288968 6.86836093,5.88911892 9.17325243,4.58442931 L9.292,4.519 L9.29430618,4.50568402 C9.51745197,3.27626633 10.5579476,2.33160608 11.8324777,2.25501879 L12,2.25 Z M14.2497545,17.75 L9.74975454,17.75 L9.75,18 C9.75,19.2426407 10.7573593,20.25 12,20.25 C13.190864,20.25 14.1656449,19.3248384 14.2448092,18.1540488 L14.25,18 L14.2497545,17.75 Z M12,3.75 C11.3527913,3.75 10.8204661,4.24187466 10.7564536,4.87219476 L10.7472666,5.06537851 L10.7431534,5.10177056 L10.7232093,5.19937971 L10.6910613,5.29193385 L10.647603,5.37853936 L10.6190424,5.42363688 L10.5593257,5.49994581 L10.5303301,5.53033009 L10.4893965,5.56857279 L10.4096805,5.62832799 L10.3206038,5.67802155 C8.30855316,6.62942345 6.96027223,8.57530135 6.76713119,10.7483046 L6.75,11 L6.74456509,14.0901267 C6.65395021,14.8387246 6.38828098,15.5435662 5.98122509,16.1541501 L5.913,16.25 L18.09,16.25 L18.0836393,16.2401884 C17.6834186,15.6616937 17.4079254,14.9866375 17.2852087,14.2483806 L17.25,14 L17.2508248,11.0351644 C17.1424598,8.72645539 15.7688334,6.66601583 13.6793962,5.67802155 C13.4499834,5.56954327 13.2932865,5.35383801 13.2576969,5.10731617 L13.25,5 C13.25,4.30964406 12.6903559,3.75 12,3.75 Z" fill="#212121"></path>
+              </g>
+            </svg>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="table-dropdown">
+            <a href="#0" class="dropdown-item"><span class="dropdown-text">Busan</span></a>
+            <a href="#0" class="dropdown-item active"><span class="dropdown-text">Leeds</span></a>
+            <a href="#0" class="dropdown-item"><span class="dropdown-text">Fairbanks</span></a>
+            <a href="#0" class="dropdown-item"><span class="dropdown-text">Salt Lake City</span></a>
+            <a href="#0" class="dropdown-item"><span class="dropdown-text">Guatemala City</span></a>
+            <a href="#0" class="dropdown-item"><span class="dropdown-text">Lyon</span></a>
+          </div>
+          <a href="#0" class="ms-3 ms-lg-5">
+            <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <path d="M16.5,2.25 C18.2949254,2.25 19.75,3.70507456 19.75,5.5 C19.75,6.14455111 19.5623679,6.74527839 19.2387447,7.25054083 L20,7.25 C20.9664983,7.25 21.75,8.03350169 21.75,9 L21.75,9 L21.75,11 C21.75,11.9664983 20.9664983,12.75 20,12.75 L20,12.75 L19.75,12.7495469 L19.75,19 C19.75,20.4625318 18.6082954,21.6584043 17.1675223,21.7449812 L17,21.75 L7,21.75 C5.53746816,21.75 4.34159572,20.6082954 4.25501879,19.1675223 L4.25,19 L4.25,12.7495469 L4,12.75 C3.0818266,12.75 2.32880766,12.0428897 2.2558012,11.1435272 L2.25,11 L2.25,9 C2.25,8.03350169 3.03350169,7.25 4,7.25 L4,7.25 L4.76125528,7.25054083 C4.4376321,6.74527839 4.25,6.14455111 4.25,5.5 C4.25,3.70507456 5.70507456,2.25 7.48693491,2.25011381 C9.26450764,2.21914357 10.8447406,3.45911631 11.8734773,5.47349566 L11.999,5.732 L12.0101339,5.70933115 C12.9954168,3.63611217 14.5441695,2.31818788 16.2968795,2.25204802 L16.5,2.25 Z M11.25,12.7495469 L5.75,12.7495469 L5.75,19 C5.75,19.6472087 6.24187466,20.1795339 6.87219476,20.2435464 L7,20.25 L11.25,20.2495469 L11.25,12.7495469 Z M18.25,12.7495469 L12.75,12.7495469 L12.75,20.2495469 L17,20.25 C17.6472087,20.25 18.1795339,19.7581253 18.2435464,19.1278052 L18.25,19 L18.25,12.7495469 Z M11.25,8.74954689 L4,8.75 C3.86192881,8.75 3.75,8.86192881 3.75,9 L3.75,9 L3.75,11 C3.75,11.1380712 3.86192881,11.25 4,11.25 L4,11.25 L11.25,11.2495469 L11.25,8.74954689 Z M20,8.75 L12.75,8.74954689 L12.75,11.2495469 L20,11.25 C20.1183467,11.25 20.2174868,11.1677666 20.2433973,11.0573227 L20.25,11 L20.25,9 C20.25,8.86192881 20.1380712,8.75 20,8.75 L20,8.75 Z M7.5,3.75 C6.53350169,3.75 5.75,4.53350169 5.75,5.5 C5.75,6.4181734 6.45711027,7.17119234 7.35647279,7.2441988 L7.5,7.25 L11.0003441,7.2492704 C10.2416608,5.05076028 8.88363848,3.72599359 7.5,3.75 Z M16.4869349,3.74988619 C15.1148206,3.72598016 13.7581575,5.0507587 12.9996345,7.24927021 L16.5,7.25 C17.4664983,7.25 18.25,6.46649831 18.25,5.5 C18.25,4.53350169 17.4664983,3.75 16.4869349,3.74988619 Z" fill="#212121"></path>
+              </g>
+            </svg>
+          </a>
+          <a href="#0" class="ms-3 ms-lg-5">
+            <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <path d="M9.59614123,4.14018119 C10.2075438,1.6199396 13.7924562,1.6199396 14.4038588,4.14018119 C14.4771527,4.44267767 14.6903653,4.69180757 14.9777167,4.81085792 C15.265068,4.92990827 15.5919974,4.90456048 15.8578028,4.74249541 C18.0723244,3.3934025 20.6072863,5.92775159 19.2585342,8.14314869 C19.0968482,8.40859979 19.0715615,8.73527802 19.1904716,9.02244876 C19.3093818,9.30961949 19.558208,9.52279454 19.8598188,9.59614123 C22.3800604,10.2075438 22.3800604,13.7924562 19.8596122,14.4039089 C19.5573223,14.4771527 19.3081924,14.6903653 19.1891421,14.9777167 C19.0700917,15.265068 19.0954395,15.5919974 19.2575046,15.8578028 C20.6065975,18.0723244 18.0722484,20.6072863 15.8568513,19.2585342 C15.5914002,19.0968482 15.264722,19.0715615 14.9775512,19.1904716 C14.6903805,19.3093818 14.4772055,19.558208 14.4038588,19.8598188 C13.7924562,22.3800604 10.2075438,22.3800604 9.59609113,19.8596122 C9.52284732,19.5573223 9.30963471,19.3081924 9.02228334,19.1891421 C8.73493198,19.0700917 8.4080026,19.0954395 8.14219722,19.2575046 C5.92767555,20.6065975 3.39271371,18.0722484 4.74146585,15.8568513 C4.90315184,15.5914002 4.92843848,15.264722 4.80952836,14.9775512 C4.69061823,14.6903805 4.44179204,14.4772055 4.14018119,14.4038588 C1.6199396,13.7924562 1.6199396,10.2075438 4.14038784,9.59609113 C4.44267767,9.52284732 4.69180757,9.30963471 4.81085792,9.02228334 C4.92990827,8.73493198 4.90456048,8.4080026 4.74249541,8.14219722 C3.3934025,5.92767555 5.92775159,3.39271371 8.14263487,4.74115317 C8.70858295,5.08524959 9.44004109,4.78211428 9.59614123,4.14018119 Z M12.9101396,4.37501445 C12.5899851,3.50378289 11.2844273,3.54340015 11.0537627,4.49421453 C10.6577145,6.12289084 8.79653305,6.89421293 7.36298714,6.02261687 L7.36298714,6.02261687 L7.26911143,5.97148934 C6.42125334,5.56266023 5.51134412,6.52109682 6.02335926,7.36156432 L6.02335926,7.36156432 L6.1189414,7.53330082 C6.44282572,8.17381945 6.47382709,8.92735295 6.1966337,9.59641354 C5.89424092,10.3262978 5.26144074,10.8678666 4.49381881,11.0538588 C3.5020604,11.2944562 3.5020604,12.7055438 4.49422209,12.9462392 C5.26135037,13.1327916 5.89337912,13.674265 6.19541571,14.4036904 C6.4974523,15.1331159 6.43322321,15.962892 6.02261687,16.6370129 L6.02261687,16.6370129 L5.97148934,16.7308886 C5.56266023,17.5787467 6.52109682,18.4886559 7.36156432,17.9766407 L7.36156432,17.9766407 L7.53330082,17.8810586 C8.17381945,17.5571743 8.92735295,17.5261729 9.59641354,17.8033663 C10.3262978,18.1057591 10.8678666,18.7385593 11.0538588,19.5061812 C11.2944562,20.4979396 12.7055438,20.4979396 12.9462392,19.5057779 C13.1327916,18.7386496 13.674265,18.1066209 14.4036904,17.8045843 C15.1331159,17.5025477 15.962892,17.5667768 16.6370129,17.9773831 L16.6370129,17.9773831 L16.7308886,18.0285107 C17.5787467,18.4373398 18.4886559,17.4789032 17.9766407,16.6384357 L17.9766407,16.6384357 L17.8810586,16.4666992 C17.5571743,15.8261806 17.5261729,15.072647 17.8033663,14.4035865 C18.1057591,13.6737022 18.7385593,13.1321334 19.5061812,12.9461412 C20.4979396,12.7055438 20.4979396,11.2944562 19.5057779,11.0537608 C18.7386496,10.8672084 18.1066209,10.325735 17.8045843,9.59630958 C17.5025477,8.86688412 17.5667768,8.03710801 17.9773831,7.36298714 L17.9773831,7.36298714 L18.0285107,7.26911143 C18.4373398,6.42125334 17.4789032,5.51134412 16.6384357,6.02335926 L16.6384357,6.02335926 L16.4666992,6.1189414 C15.8261806,6.44282572 15.072647,6.47382709 14.4035865,6.1966337 C13.6737022,5.89424092 13.1321334,5.26144074 12.9460911,4.49361216 L12.9460911,4.49361216 Z M12,8.25 C14.0710678,8.25 15.75,9.92893219 15.75,12 C15.75,14.0710678 14.0710678,15.75 12,15.75 C9.92893219,15.75 8.25,14.0710678 8.25,12 C8.25,9.92893219 9.92893219,8.25 12,8.25 Z M12,9.75 C10.7573593,9.75 9.75,10.7573593 9.75,12 C9.75,13.2426407 10.7573593,14.25 12,14.25 C13.2426407,14.25 14.25,13.2426407 14.25,12 C14.25,10.7573593 13.2426407,9.75 12,9.75 Z" fill="#212121"></path>
+              </g>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  <!-- Table Responsive Md, Position Relative, Z Index 0 -->
+  <div class="table-responsive-md position-relative z-index-0">
+    <table class="table table-lg fabrx-table">
+      <thead>
+        <tr>
+          <th>
+            <div class="d-flex align-items-center ps-lg-5 ps-2">
+              <span>Name</span>
+            </div>
+          </th>
+          <th>
+            <span>Date</span>
+            <a href="#0" class="ms-1">
+              <svg data-name="Icon/Arrows/Caret/Down" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path data-name="Icon Color" d="M5.844,3.437H.344A.344.344,0,0,1,.07,2.886L.1,2.851,2.851.1A.344.344,0,0,1,3.3.067L3.338.1,6.1,2.867l.018.022.027.042.014.029L6.176,3l.009.045,0,.023v.048l0,.023-.009.045-.015.042-.014.029L6.119,3.3a.354.354,0,0,1-.042.047l-.028.023L6.007,3.4l-.028.014-.042.015-.045.009-.023,0ZM3.095.83h0L1.174,2.75h3.84L3.095.83Z" transform="translate(8.594 7.219) rotate(180)" fill="#212121"></path></svg>
+            </a>
+          </th>
+          <th>
+            <span>Date</span>
+            <a href="#0" class="ms-1">
+              <svg data-name="Icon/Arrows/Caret/Down" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path data-name="Icon Color" d="M5.844,3.437H.344A.344.344,0,0,1,.07,2.886L.1,2.851,2.851.1A.344.344,0,0,1,3.3.067L3.338.1,6.1,2.867l.018.022.027.042.014.029L6.176,3l.009.045,0,.023v.048l0,.023-.009.045-.015.042-.014.029L6.119,3.3a.354.354,0,0,1-.042.047l-.028.023L6.007,3.4l-.028.014-.042.015-.045.009-.023,0ZM3.095.83h0L1.174,2.75h3.84L3.095.83Z" transform="translate(8.594 7.219) rotate(180)" fill="#212121"></path></svg>
+            </a>
+          </th>
+          <th>
+            <span>Date</span>
+            <a href="#0" class="ms-1">
+              <svg data-name="Icon/Arrows/Caret/Down" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path data-name="Icon Color" d="M5.844,3.437H.344A.344.344,0,0,1,.07,2.886L.1,2.851,2.851.1A.344.344,0,0,1,3.3.067L3.338.1,6.1,2.867l.018.022.027.042.014.029L6.176,3l.009.045,0,.023v.048l0,.023-.009.045-.015.042-.014.029L6.119,3.3a.354.354,0,0,1-.042.047l-.028.023L6.007,3.4l-.028.014-.042.015-.045.009-.023,0ZM3.095.83h0L1.174,2.75h3.84L3.095.83Z" transform="translate(8.594 7.219) rotate(180)" fill="#212121"></path></svg>
+            </a>
+          </th>
+          <th>
+            <span>Date</span>
+            <a href="#0" class="ms-1">
+              <svg data-name="Icon/Arrows/Caret/Down" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path data-name="Icon Color" d="M5.844,3.437H.344A.344.344,0,0,1,.07,2.886L.1,2.851,2.851.1A.344.344,0,0,1,3.3.067L3.338.1,6.1,2.867l.018.022.027.042.014.029L6.176,3l.009.045,0,.023v.048l0,.023-.009.045-.015.042-.014.029L6.119,3.3a.354.354,0,0,1-.042.047l-.028.023L6.007,3.4l-.028.014-.042.015-.045.009-.023,0ZM3.095.83h0L1.174,2.75h3.84L3.095.83Z" transform="translate(8.594 7.219) rotate(180)" fill="#212121"></path></svg>
+            </a>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="d-flex align-items-center ps-lg-5 ps-2">
+              <a href="#0" class="fabrx-avatar fabrx-status online md"><img src="../assets/images/avatars/avatar-17.png" alt="Avatar"></a>
+              <div class="ps-3">
+                <strong class="d-block text-dark font-size-14 font-weight-medium">Teng Jiang</strong>
+                <small class="text-secondary">Managing Director</small>
+              </div>
+            </div>
+          </td>
+          <td>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><g data-name="Icon"><path data-name="Icon Color" d="M.2,7.568.147,7.52A.5.5,0,0,1,.1,6.869l.049-.056,4-4A.5.5,0,0,1,4.8,2.765l.056.049L7.167,5.126,11.293,1H7.834a.5.5,0,0,1-.5-.433l0-.068A.5.5,0,0,1,7.765,0l.068,0H12.5a.5.5,0,0,1,.165.028h0l.007,0,.005,0h0a.5.5,0,0,1,.268.247h0l0,.008,0,0,0,0A.5.5,0,0,1,13,.432v0a.5.5,0,0,1,0,.058V5.167a.5.5,0,0,1-1,.068l0-.068V1.708L7.521,6.187a.5.5,0,0,1-.651.049l-.056-.049L4.5,3.874.854,7.52A.5.5,0,0,1,.2,7.568Z" transform="translate(1.5 4.167)" fill="#212121"></path></g>
+          </svg>
+          <span class="ps-1">85%</span></td>
+          <td>
+            <div class="fabrx-table-star">
+              <svg class="vertical-none" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24">
+                <g data-name="Icon/Star Fill" transform="translate(0)">
+                  <path data-name="Icon Color" d="M17.434,23.738,12.109,20.25a.169.169,0,0,0-.187,0L6.6,23.738A2.066,2.066,0,0,1,5.659,24a1.6,1.6,0,0,1-1.313-.638,1.526,1.526,0,0,1-.3-1.425l1.5-6.563c0-.075,0-.149-.076-.187L.559,10.762a1.786,1.786,0,0,1-.488-1.8A1.655,1.655,0,0,1,1.534,7.837L7.871,7.35c.075,0,.112-.038.15-.113l2.363-6.151A1.743,1.743,0,0,1,12,0a1.656,1.656,0,0,1,1.575,1.087l2.363,6.151c.038.075.076.113.15.113l6.338.487a1.667,1.667,0,0,1,.975,2.925l-4.912,4.425a.286.286,0,0,0-.076.187l1.538,6.563a1.762,1.762,0,0,1-.3,1.425A1.649,1.649,0,0,1,18.334,24,1.8,1.8,0,0,1,17.434,23.738Z" fill="#FF9138"></path>
+                </g>
+              </svg>
+              <span class="text-warning font-weight-semibold small">5.4</span>
+            </div>
+          </td>
+          <td>$85 / Hour</td>
+          <td>
+            <a href="#0" class="btn btn-primary btn-sm">Button</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="d-flex align-items-center ps-lg-5 ps-2">
+              <a href="#0" class="fabrx-avatar fabrx-status online md"><img src="../assets/images/avatars/avatar-18.png" alt="Avatar"></a>
+              <div class="ps-3">
+                <strong class="d-block text-dark font-size-14 font-weight-medium">Kip Collison</strong>
+                <small class="text-secondary">Managing Director</small>
+              </div>
+            </div>
+          </td>
+          <td>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><g data-name="Icon"><path data-name="Icon Color" d="M.2,7.568.147,7.52A.5.5,0,0,1,.1,6.869l.049-.056,4-4A.5.5,0,0,1,4.8,2.765l.056.049L7.167,5.126,11.293,1H7.834a.5.5,0,0,1-.5-.433l0-.068A.5.5,0,0,1,7.765,0l.068,0H12.5a.5.5,0,0,1,.165.028h0l.007,0,.005,0h0a.5.5,0,0,1,.268.247h0l0,.008,0,0,0,0A.5.5,0,0,1,13,.432v0a.5.5,0,0,1,0,.058V5.167a.5.5,0,0,1-1,.068l0-.068V1.708L7.521,6.187a.5.5,0,0,1-.651.049l-.056-.049L4.5,3.874.854,7.52A.5.5,0,0,1,.2,7.568Z" transform="translate(1.5 4.167)" fill="#212121"></path></g>
+          </svg>
+          <span class="ps-1">85%</span></td>
+          <td>
+            <div class="fabrx-table-star">
+              <svg class="vertical-none" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24">
+                <g data-name="Icon/Star Fill" transform="translate(0)">
+                  <path data-name="Icon Color" d="M17.434,23.738,12.109,20.25a.169.169,0,0,0-.187,0L6.6,23.738A2.066,2.066,0,0,1,5.659,24a1.6,1.6,0,0,1-1.313-.638,1.526,1.526,0,0,1-.3-1.425l1.5-6.563c0-.075,0-.149-.076-.187L.559,10.762a1.786,1.786,0,0,1-.488-1.8A1.655,1.655,0,0,1,1.534,7.837L7.871,7.35c.075,0,.112-.038.15-.113l2.363-6.151A1.743,1.743,0,0,1,12,0a1.656,1.656,0,0,1,1.575,1.087l2.363,6.151c.038.075.076.113.15.113l6.338.487a1.667,1.667,0,0,1,.975,2.925l-4.912,4.425a.286.286,0,0,0-.076.187l1.538,6.563a1.762,1.762,0,0,1-.3,1.425A1.649,1.649,0,0,1,18.334,24,1.8,1.8,0,0,1,17.434,23.738Z" fill="#FF9138"></path>
+                </g>
+              </svg>
+              <span class="text-warning font-weight-semibold small">5.4</span>
+            </div>
+          </td>
+          <td>$85 / Hour</td>
+          <td>
+            <a href="#0" class="btn btn-primary btn-sm">Button</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="d-flex align-items-center ps-lg-5 ps-2">
+              <a href="#0" class="fabrx-avatar fabrx-status dnd md"><img src="../assets/images/avatars/avatar-19.png" alt="Avatar"></a>
+              <div class="ps-3">
+                <strong class="d-block text-dark font-size-14 font-weight-medium">Maria Trofimova</strong>
+                <small class="text-secondary">Managing Director</small>
+              </div>
+            </div>
+          </td>
+          <td>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><g data-name="Icon"><path data-name="Icon Color" d="M.2,7.568.147,7.52A.5.5,0,0,1,.1,6.869l.049-.056,4-4A.5.5,0,0,1,4.8,2.765l.056.049L7.167,5.126,11.293,1H7.834a.5.5,0,0,1-.5-.433l0-.068A.5.5,0,0,1,7.765,0l.068,0H12.5a.5.5,0,0,1,.165.028h0l.007,0,.005,0h0a.5.5,0,0,1,.268.247h0l0,.008,0,0,0,0A.5.5,0,0,1,13,.432v0a.5.5,0,0,1,0,.058V5.167a.5.5,0,0,1-1,.068l0-.068V1.708L7.521,6.187a.5.5,0,0,1-.651.049l-.056-.049L4.5,3.874.854,7.52A.5.5,0,0,1,.2,7.568Z" transform="translate(1.5 4.167)" fill="#212121"></path></g>
+          </svg>
+          <span class="ps-1">85%</span></td>
+          <td>
+            <div class="fabrx-table-star">
+              <svg class="vertical-none" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24">
+                <g data-name="Icon/Star Fill" transform="translate(0)">
+                  <path data-name="Icon Color" d="M17.434,23.738,12.109,20.25a.169.169,0,0,0-.187,0L6.6,23.738A2.066,2.066,0,0,1,5.659,24a1.6,1.6,0,0,1-1.313-.638,1.526,1.526,0,0,1-.3-1.425l1.5-6.563c0-.075,0-.149-.076-.187L.559,10.762a1.786,1.786,0,0,1-.488-1.8A1.655,1.655,0,0,1,1.534,7.837L7.871,7.35c.075,0,.112-.038.15-.113l2.363-6.151A1.743,1.743,0,0,1,12,0a1.656,1.656,0,0,1,1.575,1.087l2.363,6.151c.038.075.076.113.15.113l6.338.487a1.667,1.667,0,0,1,.975,2.925l-4.912,4.425a.286.286,0,0,0-.076.187l1.538,6.563a1.762,1.762,0,0,1-.3,1.425A1.649,1.649,0,0,1,18.334,24,1.8,1.8,0,0,1,17.434,23.738Z" fill="#FF9138"></path>
+                </g>
+              </svg>
+              <span class="text-warning font-weight-semibold small">5.4</span>
+            </div>
+          </td>
+          <td>$85 / Hour</td>
+          <td>
+            <a href="#0" class="btn btn-primary btn-sm">Button</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="d-flex align-items-center ps-lg-5 ps-2">
+              <a href="#0" class="fabrx-avatar fabrx-status dnd md"><img src="../assets/images/avatars/avatar-20.png" alt="Avatar"></a>
+              <div class="ps-3">
+                <strong class="d-block text-dark font-size-14 font-weight-medium">Ezequiel Dengra</strong>
+                <small class="text-secondary">Managing Director</small>
+              </div>
+            </div>
+          </td>
+          <td>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><g data-name="Icon"><path data-name="Icon Color" d="M.2,7.568.147,7.52A.5.5,0,0,1,.1,6.869l.049-.056,4-4A.5.5,0,0,1,4.8,2.765l.056.049L7.167,5.126,11.293,1H7.834a.5.5,0,0,1-.5-.433l0-.068A.5.5,0,0,1,7.765,0l.068,0H12.5a.5.5,0,0,1,.165.028h0l.007,0,.005,0h0a.5.5,0,0,1,.268.247h0l0,.008,0,0,0,0A.5.5,0,0,1,13,.432v0a.5.5,0,0,1,0,.058V5.167a.5.5,0,0,1-1,.068l0-.068V1.708L7.521,6.187a.5.5,0,0,1-.651.049l-.056-.049L4.5,3.874.854,7.52A.5.5,0,0,1,.2,7.568Z" transform="translate(1.5 4.167)" fill="#212121"></path></g>
+          </svg>
+          <span class="ps-1">85%</span></td>
+          <td>
+            <div class="fabrx-table-star">
+              <svg class="vertical-none" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24">
+                <g data-name="Icon/Star Fill" transform="translate(0)">
+                  <path data-name="Icon Color" d="M17.434,23.738,12.109,20.25a.169.169,0,0,0-.187,0L6.6,23.738A2.066,2.066,0,0,1,5.659,24a1.6,1.6,0,0,1-1.313-.638,1.526,1.526,0,0,1-.3-1.425l1.5-6.563c0-.075,0-.149-.076-.187L.559,10.762a1.786,1.786,0,0,1-.488-1.8A1.655,1.655,0,0,1,1.534,7.837L7.871,7.35c.075,0,.112-.038.15-.113l2.363-6.151A1.743,1.743,0,0,1,12,0a1.656,1.656,0,0,1,1.575,1.087l2.363,6.151c.038.075.076.113.15.113l6.338.487a1.667,1.667,0,0,1,.975,2.925l-4.912,4.425a.286.286,0,0,0-.076.187l1.538,6.563a1.762,1.762,0,0,1-.3,1.425A1.649,1.649,0,0,1,18.334,24,1.8,1.8,0,0,1,17.434,23.738Z" fill="#FF9138"></path>
+                </g>
+              </svg>
+              <span class="text-warning font-weight-semibold small">5.4</span>
+            </div>
+          </td>
+          <td>$85 / Hour</td>
+          <td>
+            <a href="#0" class="btn btn-primary btn-sm">Button</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="d-flex align-items-center ps-lg-5 ps-2">
+              <a href="#0" class="fabrx-avatar fabrx-status dnd md"><img src="../assets/images/avatars/avatar-21.png" alt="Avatar"></a>
+              <div class="ps-3">
+                <strong class="d-block text-dark font-size-14 font-weight-medium">Uruewa Himona</strong>
+                <small class="text-secondary">Managing Director</small>
+              </div>
+            </div>
+          </td>
+          <td>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><g data-name="Icon"><path data-name="Icon Color" d="M.2,7.568.147,7.52A.5.5,0,0,1,.1,6.869l.049-.056,4-4A.5.5,0,0,1,4.8,2.765l.056.049L7.167,5.126,11.293,1H7.834a.5.5,0,0,1-.5-.433l0-.068A.5.5,0,0,1,7.765,0l.068,0H12.5a.5.5,0,0,1,.165.028h0l.007,0,.005,0h0a.5.5,0,0,1,.268.247h0l0,.008,0,0,0,0A.5.5,0,0,1,13,.432v0a.5.5,0,0,1,0,.058V5.167a.5.5,0,0,1-1,.068l0-.068V1.708L7.521,6.187a.5.5,0,0,1-.651.049l-.056-.049L4.5,3.874.854,7.52A.5.5,0,0,1,.2,7.568Z" transform="translate(1.5 4.167)" fill="#212121"></path></g>
+          </svg>
+          <span class="ps-1">85%</span></td>
+          <td>
+            <div class="fabrx-table-star">
+              <svg class="vertical-none" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24">
+                <g data-name="Icon/Star Fill" transform="translate(0)">
+                  <path data-name="Icon Color" d="M17.434,23.738,12.109,20.25a.169.169,0,0,0-.187,0L6.6,23.738A2.066,2.066,0,0,1,5.659,24a1.6,1.6,0,0,1-1.313-.638,1.526,1.526,0,0,1-.3-1.425l1.5-6.563c0-.075,0-.149-.076-.187L.559,10.762a1.786,1.786,0,0,1-.488-1.8A1.655,1.655,0,0,1,1.534,7.837L7.871,7.35c.075,0,.112-.038.15-.113l2.363-6.151A1.743,1.743,0,0,1,12,0a1.656,1.656,0,0,1,1.575,1.087l2.363,6.151c.038.075.076.113.15.113l6.338.487a1.667,1.667,0,0,1,.975,2.925l-4.912,4.425a.286.286,0,0,0-.076.187l1.538,6.563a1.762,1.762,0,0,1-.3,1.425A1.649,1.649,0,0,1,18.334,24,1.8,1.8,0,0,1,17.434,23.738Z" fill="#FF9138"></path>
+                </g>
+              </svg>
+              <span class="text-warning font-weight-semibold small">5.4</span>
+            </div>
+          </td>
+          <td>$85 / Hour</td>
+          <td>
+            <a href="#0" class="btn btn-primary btn-sm">Button</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="d-flex align-items-center ps-lg-5 ps-2">
+              <a href="#0" class="fabrx-avatar fabrx-status away md"><img src="../assets/images/avatars/avatar-22.png" alt="Avatar"></a>
+              <div class="ps-3">
+                <strong class="d-block text-dark font-size-14 font-weight-medium">Vương Mộng Nhi</strong>
+                <small class="text-secondary">Managing Director</small>
+              </div>
+            </div>
+          </td>
+          <td>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><g data-name="Icon"><path data-name="Icon Color" d="M.2,7.568.147,7.52A.5.5,0,0,1,.1,6.869l.049-.056,4-4A.5.5,0,0,1,4.8,2.765l.056.049L7.167,5.126,11.293,1H7.834a.5.5,0,0,1-.5-.433l0-.068A.5.5,0,0,1,7.765,0l.068,0H12.5a.5.5,0,0,1,.165.028h0l.007,0,.005,0h0a.5.5,0,0,1,.268.247h0l0,.008,0,0,0,0A.5.5,0,0,1,13,.432v0a.5.5,0,0,1,0,.058V5.167a.5.5,0,0,1-1,.068l0-.068V1.708L7.521,6.187a.5.5,0,0,1-.651.049l-.056-.049L4.5,3.874.854,7.52A.5.5,0,0,1,.2,7.568Z" transform="translate(1.5 4.167)" fill="#212121"></path></g>
+          </svg>
+          <span class="ps-1">85%</span></td>
+          <td>
+            <div class="fabrx-table-star">
+              <svg class="vertical-none" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24">
+                <g data-name="Icon/Star Fill" transform="translate(0)">
+                  <path data-name="Icon Color" d="M17.434,23.738,12.109,20.25a.169.169,0,0,0-.187,0L6.6,23.738A2.066,2.066,0,0,1,5.659,24a1.6,1.6,0,0,1-1.313-.638,1.526,1.526,0,0,1-.3-1.425l1.5-6.563c0-.075,0-.149-.076-.187L.559,10.762a1.786,1.786,0,0,1-.488-1.8A1.655,1.655,0,0,1,1.534,7.837L7.871,7.35c.075,0,.112-.038.15-.113l2.363-6.151A1.743,1.743,0,0,1,12,0a1.656,1.656,0,0,1,1.575,1.087l2.363,6.151c.038.075.076.113.15.113l6.338.487a1.667,1.667,0,0,1,.975,2.925l-4.912,4.425a.286.286,0,0,0-.076.187l1.538,6.563a1.762,1.762,0,0,1-.3,1.425A1.649,1.649,0,0,1,18.334,24,1.8,1.8,0,0,1,17.434,23.738Z" fill="#FF9138"></path>
+                </g>
+              </svg>
+              <span class="text-warning font-weight-semibold small">5.4</span>
+            </div>
+          </td>
+          <td>$85 / Hour</td>
+          <td>
+            <a href="#0" class="btn btn-primary btn-sm">Button</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="d-flex align-items-center ps-lg-5 ps-2">
+              <a href="#0" class="fabrx-avatar fabrx-status away md"><img src="../assets/images/avatars/avatar-23.png" alt="Avatar"></a>
+              <div class="ps-3">
+                <strong class="d-block text-dark font-size-14 font-weight-medium">Nayah Tantoh</strong>
+                <small class="text-secondary">Managing Director</small>
+              </div>
+            </div>
+          </td>
+          <td>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><g data-name="Icon"><path data-name="Icon Color" d="M.2,7.568.147,7.52A.5.5,0,0,1,.1,6.869l.049-.056,4-4A.5.5,0,0,1,4.8,2.765l.056.049L7.167,5.126,11.293,1H7.834a.5.5,0,0,1-.5-.433l0-.068A.5.5,0,0,1,7.765,0l.068,0H12.5a.5.5,0,0,1,.165.028h0l.007,0,.005,0h0a.5.5,0,0,1,.268.247h0l0,.008,0,0,0,0A.5.5,0,0,1,13,.432v0a.5.5,0,0,1,0,.058V5.167a.5.5,0,0,1-1,.068l0-.068V1.708L7.521,6.187a.5.5,0,0,1-.651.049l-.056-.049L4.5,3.874.854,7.52A.5.5,0,0,1,.2,7.568Z" transform="translate(1.5 4.167)" fill="#212121"></path></g>
+          </svg>
+          <span class="ps-1">85%</span></td>
+          <td>
+            <div class="fabrx-table-star">
+              <svg class="vertical-none" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24">
+                <g data-name="Icon/Star Fill" transform="translate(0)">
+                  <path data-name="Icon Color" d="M17.434,23.738,12.109,20.25a.169.169,0,0,0-.187,0L6.6,23.738A2.066,2.066,0,0,1,5.659,24a1.6,1.6,0,0,1-1.313-.638,1.526,1.526,0,0,1-.3-1.425l1.5-6.563c0-.075,0-.149-.076-.187L.559,10.762a1.786,1.786,0,0,1-.488-1.8A1.655,1.655,0,0,1,1.534,7.837L7.871,7.35c.075,0,.112-.038.15-.113l2.363-6.151A1.743,1.743,0,0,1,12,0a1.656,1.656,0,0,1,1.575,1.087l2.363,6.151c.038.075.076.113.15.113l6.338.487a1.667,1.667,0,0,1,.975,2.925l-4.912,4.425a.286.286,0,0,0-.076.187l1.538,6.563a1.762,1.762,0,0,1-.3,1.425A1.649,1.649,0,0,1,18.334,24,1.8,1.8,0,0,1,17.434,23.738Z" fill="#FF9138"></path>
+                </g>
+              </svg>
+              <span class="text-warning font-weight-semibold small">5.4</span>
+            </div>
+          </td>
+          <td>$85 / Hour</td>
+          <td>
+            <a href="#0" class="btn btn-primary btn-sm">Button</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="d-flex align-items-center ps-lg-5 ps-2">
+              <a href="#0" class="fabrx-avatar fabrx-status md"><img src="../assets/images/avatars/avatar-24.png" alt="Avatar"></a>
+              <div class="ps-3">
+                <strong class="d-block text-dark font-size-14 font-weight-medium">Florieke Krebber</strong>
+                <small class="text-secondary">Managing Director</small>
+              </div>
+            </div>
+          </td>
+          <td>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><g data-name="Icon"><path data-name="Icon Color" d="M.2,7.568.147,7.52A.5.5,0,0,1,.1,6.869l.049-.056,4-4A.5.5,0,0,1,4.8,2.765l.056.049L7.167,5.126,11.293,1H7.834a.5.5,0,0,1-.5-.433l0-.068A.5.5,0,0,1,7.765,0l.068,0H12.5a.5.5,0,0,1,.165.028h0l.007,0,.005,0h0a.5.5,0,0,1,.268.247h0l0,.008,0,0,0,0A.5.5,0,0,1,13,.432v0a.5.5,0,0,1,0,.058V5.167a.5.5,0,0,1-1,.068l0-.068V1.708L7.521,6.187a.5.5,0,0,1-.651.049l-.056-.049L4.5,3.874.854,7.52A.5.5,0,0,1,.2,7.568Z" transform="translate(1.5 4.167)" fill="#212121"></path></g>
+          </svg>
+          <span class="ps-1">85%</span></td>
+          <td>
+            <div class="fabrx-table-star">
+              <svg class="vertical-none" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24">
+                <g data-name="Icon/Star Fill" transform="translate(0)">
+                  <path data-name="Icon Color" d="M17.434,23.738,12.109,20.25a.169.169,0,0,0-.187,0L6.6,23.738A2.066,2.066,0,0,1,5.659,24a1.6,1.6,0,0,1-1.313-.638,1.526,1.526,0,0,1-.3-1.425l1.5-6.563c0-.075,0-.149-.076-.187L.559,10.762a1.786,1.786,0,0,1-.488-1.8A1.655,1.655,0,0,1,1.534,7.837L7.871,7.35c.075,0,.112-.038.15-.113l2.363-6.151A1.743,1.743,0,0,1,12,0a1.656,1.656,0,0,1,1.575,1.087l2.363,6.151c.038.075.076.113.15.113l6.338.487a1.667,1.667,0,0,1,.975,2.925l-4.912,4.425a.286.286,0,0,0-.076.187l1.538,6.563a1.762,1.762,0,0,1-.3,1.425A1.649,1.649,0,0,1,18.334,24,1.8,1.8,0,0,1,17.434,23.738Z" fill="#FF9138"></path>
+                </g>
+              </svg>
+              <span class="text-warning font-weight-semibold small">5.4</span>
+            </div>
+          </td>
+          <td>$85 / Hour</td>
+          <td>
+            <a href="#0" class="btn btn-primary btn-sm">Button</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <!-- Fabrx Table Footer, My 3, My Md 3, Mx 0, Mx Md 3, Px 3, Px Lg 5 -->
+  <div class="fabrx-tables-footer my-3 my-md-5 mx-0 mx-md-3 px-3 px-lg-5">
+    <nav aria-label="Page navigation" class="d-flex align-items-center justify-content-end flex-wrap">
+      <small class="mb-3 text-secondary">Showing 21 to 30 of 332</small>
+      <ul class="pagination ms-3 ms-xl-4">
+        <li class="page-item"><a class="page-link primary-page-item" href="#0">First</a></li>
+        <li class="page-item active"><a class="page-link" href="#0">1</a></li>
+        <li class="page-item"><a class="page-link" href="#0">2</a></li>
+        <li class="page-item"><a class="page-link" href="#0">3</a></li>
+        <li class="page-item"><a class="page-link" href="#0">4</a></li>
+        <li class="page-item"><a class="page-link primary-page-item" href="#0">Last</a></li>
+      </ul>
+    </nav>
+  </div>
+</section>
+
+<!-- Fabrx Section, Fabrx Tables Light, Bg White, Mt Lg 5 -->
+<section class="fabrx-section fabrx-tables-light bg-white mt-lg-5">
+  <!-- Fabrx Header, Px 3, Px Lg 5 -->
+  <header class="fabrx-header px-3 px-lg-5">
+    <nav class="navbar navbar-expand-md has-header-inner px-0 px-md-3">
+      <a class="navbar-brand h3 font-weight-bold" href="#0">Compact Data</a>
+      <button class="navbar-toggler pe-0" type="button" data-bs-toggle="collapse" data-bs-target="#menu-3" aria-controls="menu-3" aria-expanded="false" aria-label="Toggle navigation">
+        <svg data-name="Icon 01" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path data-name="Icon Color" d="M.75,9.5a.751.751,0,0,1-.1-1.494L.75,8h16a.75.75,0,0,1,.1,1.493l-.1.007Zm0-8A.75.75,0,0,1,.648.007L.75,0h16a.75.75,0,0,1,.1,1.493l-.1.007Z" transform="translate(3.25 7.25)" fill="#212121"></path></svg>
+      </button>
+      <div class="collapse navbar-collapse" id="menu-3">
+        <div class="fabrx-header-links ms-auto pt-3 pt-md-0">
+          <a href="#0" class="btn btn-outline-primary">
+            <span class="me-3 me-md-4">Date Range</span>
+            <svg width="16px" height="16px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path d="M16,2.25 C16.3796958,2.25 16.693491,2.53215388 16.7431534,2.89822944 L16.75,3 L16.75,4.25 L18,4.25 C19.4625318,4.25 20.6584043,5.3917046 20.7449812,6.83247767 L20.75,7 L20.75,19 C20.75,20.5187831 19.5187831,21.75 18,21.75 L18,21.75 L6,21.75 C4.48121694,21.75 3.25,20.5187831 3.25,19 L3.25,19 L3.25,7 C3.25,5.48121694 4.48121694,4.25 6,4.25 L6,4.25 L7.25,4.25 L7.25,3 C7.25,2.58578644 7.58578644,2.25 8,2.25 C8.37969577,2.25 8.69349096,2.53215388 8.74315338,2.89822944 L8.75,3 L8.75,4.25 L15.25,4.25 L15.25,3 C15.25,2.58578644 15.5857864,2.25 16,2.25 Z M19.25,11.75 L4.75,11.75 L4.75,19 C4.75,19.6472087 5.24187466,20.1795339 5.87219476,20.2435464 L6,20.25 L18,20.25 C18.6903559,20.25 19.25,19.6903559 19.25,19 L19.25,19 L19.25,11.75 Z M10,14.25 C10.4142136,14.25 10.75,14.5857864 10.75,15 L10.75,15 L10.75,17 C10.75,17.4142136 10.4142136,17.75 10,17.75 L10,17.75 L8,17.75 C7.58578644,17.75 7.25,17.4142136 7.25,17 L7.25,17 L7.25,15 C7.25,14.5857864 7.58578644,14.25 8,14.25 L8,14.25 Z M9.25,15.75 L8.75,15.75 L8.75,16.25 L9.25,16.25 L9.25,15.75 Z M7.25,5.75 L6,5.75 C5.30964406,5.75 4.75,6.30964406 4.75,7 L4.75,7 L4.75,10.25 L19.25,10.25 L19.25,7 C19.25,6.35279131 18.7581253,5.8204661 18.1278052,5.75645361 L18,5.75 L16.75,5.75 L16.75,7 C16.75,7.41421356 16.4142136,7.75 16,7.75 C15.6203042,7.75 15.306509,7.46784612 15.2568466,7.10177056 L15.25,7 L15.25,5.75 L8.75,5.75 L8.75,7 C8.75,7.41421356 8.41421356,7.75 8,7.75 C7.62030423,7.75 7.30650904,7.46784612 7.25684662,7.10177056 L7.25,7 L7.25,5.75 Z" fill="#212121"></path></g>
+            </svg>
+          </a>
+          <a href="#0" class="ms-1 ms-sm-4 ms-lg-4 btn btn-primary">Filter</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  <div class="overflow-hidden">
+    <!-- Table Responsive Md, Position Relative, Z Index 0 -->
+    <div class="table-responsive-md position-relative z-index-0">
+      <table class="table table-striped fabrx-table">
+        <thead>
+          <tr>
+            <th>
+              <div class="d-flex align-items-center ps-lg-5 ps-2">
+                <span>Name</span>
+              </div>
+            </th>
+            <th>
+              <span>Date</span>
+              <a href="#0" class="ms-1">
+                <svg data-name="Icon/Arrows/Caret/Down" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path data-name="Icon Color" d="M5.844,3.437H.344A.344.344,0,0,1,.07,2.886L.1,2.851,2.851.1A.344.344,0,0,1,3.3.067L3.338.1,6.1,2.867l.018.022.027.042.014.029L6.176,3l.009.045,0,.023v.048l0,.023-.009.045-.015.042-.014.029L6.119,3.3a.354.354,0,0,1-.042.047l-.028.023L6.007,3.4l-.028.014-.042.015-.045.009-.023,0ZM3.095.83h0L1.174,2.75h3.84L3.095.83Z" transform="translate(8.594 7.219) rotate(180)" fill="#212121"></path></svg>
+              </a>
+            </th>
+            <th>
+              <span>Date</span>
+              <a href="#0" class="ms-1">
+                <svg data-name="Icon/Arrows/Caret/Down" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path data-name="Icon Color" d="M5.844,3.437H.344A.344.344,0,0,1,.07,2.886L.1,2.851,2.851.1A.344.344,0,0,1,3.3.067L3.338.1,6.1,2.867l.018.022.027.042.014.029L6.176,3l.009.045,0,.023v.048l0,.023-.009.045-.015.042-.014.029L6.119,3.3a.354.354,0,0,1-.042.047l-.028.023L6.007,3.4l-.028.014-.042.015-.045.009-.023,0ZM3.095.83h0L1.174,2.75h3.84L3.095.83Z" transform="translate(8.594 7.219) rotate(180)" fill="#212121"></path></svg>
+              </a>
+            </th>
+            <th>
+              <span>Date</span>
+              <a href="#0" class="ms-1">
+                <svg data-name="Icon/Arrows/Caret/Down" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path data-name="Icon Color" d="M5.844,3.437H.344A.344.344,0,0,1,.07,2.886L.1,2.851,2.851.1A.344.344,0,0,1,3.3.067L3.338.1,6.1,2.867l.018.022.027.042.014.029L6.176,3l.009.045,0,.023v.048l0,.023-.009.045-.015.042-.014.029L6.119,3.3a.354.354,0,0,1-.042.047l-.028.023L6.007,3.4l-.028.014-.042.015-.045.009-.023,0ZM3.095.83h0L1.174,2.75h3.84L3.095.83Z" transform="translate(8.594 7.219) rotate(180)" fill="#212121"></path></svg>
+              </a>
+            </th>
+            <th>
+              <span>Date</span>
+              <a href="#0" class="ms-1">
+                <svg data-name="Icon/Arrows/Caret/Down" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path data-name="Icon Color" d="M5.844,3.437H.344A.344.344,0,0,1,.07,2.886L.1,2.851,2.851.1A.344.344,0,0,1,3.3.067L3.338.1,6.1,2.867l.018.022.027.042.014.029L6.176,3l.009.045,0,.023v.048l0,.023-.009.045-.015.042-.014.029L6.119,3.3a.354.354,0,0,1-.042.047l-.028.023L6.007,3.4l-.028.014-.042.015-.045.009-.023,0ZM3.095.83h0L1.174,2.75h3.84L3.095.83Z" transform="translate(8.594 7.219) rotate(180)" fill="#212121"></path></svg>
+              </a>
+            </th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <span class="font-size-14 text-gray-800 ps-lg-5 ps-2">Lubosek Hnilo</span>
+            </td>
+            <td>25/8/2020</td>
+            <td>Online</td>
+            <td>Kampala</td>
+            <td>$911.35</td>
+            <td>
+              <div class="dropdown">
+                <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="Action21">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g data-name="Cell 06" transform="translate(0 -0.308)"><g transform="translate(0 0.308)">
+                    <path data-name="Icon Color" d="M14,1.75A1.75,1.75,0,1,1,15.75,3.5,1.751,1.751,0,0,1,14,1.75Zm1.5,0A.25.25,0,1,0,15.75,1.5.25.25,0,0,0,15.5,1.75ZM7,1.75A1.75,1.75,0,1,1,8.75,3.5,1.751,1.751,0,0,1,7,1.75Zm1.5,0A.25.25,0,1,0,8.75,1.5.25.25,0,0,0,8.5,1.75ZM0,1.75A1.75,1.75,0,1,1,1.75,3.5,1.751,1.751,0,0,1,0,1.75Zm1.5,0A.25.25,0,1,0,1.75,1.5.25.25,0,0,0,1.5,1.75Z" transform="translate(3.25 10.25)" fill="#212121"></path></g></g>
+                  </svg>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action21">
+                  <a class="dropdown-item" href="#0">Action</a>
+                  <a class="dropdown-item" href="#0">Another action</a>
+                  <a class="dropdown-item" href="#0">Something else here</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="font-size-14 text-gray-800 ps-lg-5 ps-2">Nout Golstein</span>
+            </td>
+            <td>25/8/2020</td>
+            <td>Online</td>
+            <td>Santiago</td>
+            <td>$911.35</td>
+            <td>
+              <div class="dropdown">
+                <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="Action22">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g data-name="Cell 06" transform="translate(0 -0.308)"><g transform="translate(0 0.308)">
+                    <path data-name="Icon Color" d="M14,1.75A1.75,1.75,0,1,1,15.75,3.5,1.751,1.751,0,0,1,14,1.75Zm1.5,0A.25.25,0,1,0,15.75,1.5.25.25,0,0,0,15.5,1.75ZM7,1.75A1.75,1.75,0,1,1,8.75,3.5,1.751,1.751,0,0,1,7,1.75Zm1.5,0A.25.25,0,1,0,8.75,1.5.25.25,0,0,0,8.5,1.75ZM0,1.75A1.75,1.75,0,1,1,1.75,3.5,1.751,1.751,0,0,1,0,1.75Zm1.5,0A.25.25,0,1,0,1.75,1.5.25.25,0,0,0,1.5,1.75Z" transform="translate(3.25 10.25)" fill="#212121"></path></g></g>
+                  </svg>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action22">
+                  <a class="dropdown-item" href="#0">Action</a>
+                  <a class="dropdown-item" href="#0">Another action</a>
+                  <a class="dropdown-item" href="#0">Something else here</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="font-size-14 text-gray-800 ps-lg-5 ps-2">Martina Brito</span>
+            </td>
+            <td>25/8/2020</td>
+            <td>Online</td>
+            <td>Panama City</td>
+            <td>$911.35</td>
+            <td>
+              <div class="dropdown">
+                <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="Action23">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g data-name="Cell 06" transform="translate(0 -0.308)"><g transform="translate(0 0.308)">
+                    <path data-name="Icon Color" d="M14,1.75A1.75,1.75,0,1,1,15.75,3.5,1.751,1.751,0,0,1,14,1.75Zm1.5,0A.25.25,0,1,0,15.75,1.5.25.25,0,0,0,15.5,1.75ZM7,1.75A1.75,1.75,0,1,1,8.75,3.5,1.751,1.751,0,0,1,7,1.75Zm1.5,0A.25.25,0,1,0,8.75,1.5.25.25,0,0,0,8.5,1.75ZM0,1.75A1.75,1.75,0,1,1,1.75,3.5,1.751,1.751,0,0,1,0,1.75Zm1.5,0A.25.25,0,1,0,1.75,1.5.25.25,0,0,0,1.5,1.75Z" transform="translate(3.25 10.25)" fill="#212121"></path></g></g>
+                  </svg>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action23">
+                  <a class="dropdown-item" href="#0">Action</a>
+                  <a class="dropdown-item" href="#0">Another action</a>
+                  <a class="dropdown-item" href="#0">Something else here</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="font-size-14 text-gray-800 ps-lg-5 ps-2">Jesus Bañuelos</span>
+            </td>
+            <td>25/8/2020</td>
+            <td>Online</td>
+            <td>Haifa</td>
+            <td>$911.35</td>
+            <td>
+              <div class="dropdown">
+                <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="Action24">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g data-name="Cell 06" transform="translate(0 -0.308)"><g transform="translate(0 0.308)">
+                    <path data-name="Icon Color" d="M14,1.75A1.75,1.75,0,1,1,15.75,3.5,1.751,1.751,0,0,1,14,1.75Zm1.5,0A.25.25,0,1,0,15.75,1.5.25.25,0,0,0,15.5,1.75ZM7,1.75A1.75,1.75,0,1,1,8.75,3.5,1.751,1.751,0,0,1,7,1.75Zm1.5,0A.25.25,0,1,0,8.75,1.5.25.25,0,0,0,8.5,1.75ZM0,1.75A1.75,1.75,0,1,1,1.75,3.5,1.751,1.751,0,0,1,0,1.75Zm1.5,0A.25.25,0,1,0,1.75,1.5.25.25,0,0,0,1.5,1.75Z" transform="translate(3.25 10.25)" fill="#212121"></path></g></g>
+                  </svg>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action24">
+                  <a class="dropdown-item" href="#0">Action</a>
+                  <a class="dropdown-item" href="#0">Another action</a>
+                  <a class="dropdown-item" href="#0">Something else here</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="font-size-14 text-gray-800 ps-lg-5 ps-2">Chikanso Chima</span>
+            </td>
+            <td>25/8/2020</td>
+            <td>Online</td>
+            <td>Bogotá</td>
+            <td>$911.35</td>
+            <td>
+              <div class="dropdown">
+                <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="Action24a">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g data-name="Cell 06" transform="translate(0 -0.308)"><g transform="translate(0 0.308)">
+                    <path data-name="Icon Color" d="M14,1.75A1.75,1.75,0,1,1,15.75,3.5,1.751,1.751,0,0,1,14,1.75Zm1.5,0A.25.25,0,1,0,15.75,1.5.25.25,0,0,0,15.5,1.75ZM7,1.75A1.75,1.75,0,1,1,8.75,3.5,1.751,1.751,0,0,1,7,1.75Zm1.5,0A.25.25,0,1,0,8.75,1.5.25.25,0,0,0,8.5,1.75ZM0,1.75A1.75,1.75,0,1,1,1.75,3.5,1.751,1.751,0,0,1,0,1.75Zm1.5,0A.25.25,0,1,0,1.75,1.5.25.25,0,0,0,1.5,1.75Z" transform="translate(3.25 10.25)" fill="#212121"></path></g></g>
+                  </svg>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action24a">
+                  <a class="dropdown-item" href="#0">Action</a>
+                  <a class="dropdown-item" href="#0">Another action</a>
+                  <a class="dropdown-item" href="#0">Something else here</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="font-size-14 text-gray-800 ps-lg-5 ps-2">Eva Lee</span>
+            </td>
+            <td>25/8/2020</td>
+            <td>Online</td>
+            <td>Gothenburg</td>
+            <td>$911.35</td>
+            <td>
+              <div class="dropdown">
+                <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="Action25">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g data-name="Cell 06" transform="translate(0 -0.308)"><g transform="translate(0 0.308)">
+                    <path data-name="Icon Color" d="M14,1.75A1.75,1.75,0,1,1,15.75,3.5,1.751,1.751,0,0,1,14,1.75Zm1.5,0A.25.25,0,1,0,15.75,1.5.25.25,0,0,0,15.5,1.75ZM7,1.75A1.75,1.75,0,1,1,8.75,3.5,1.751,1.751,0,0,1,7,1.75Zm1.5,0A.25.25,0,1,0,8.75,1.5.25.25,0,0,0,8.5,1.75ZM0,1.75A1.75,1.75,0,1,1,1.75,3.5,1.751,1.751,0,0,1,0,1.75Zm1.5,0A.25.25,0,1,0,1.75,1.5.25.25,0,0,0,1.5,1.75Z" transform="translate(3.25 10.25)" fill="#212121"></path></g></g>
+                  </svg>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action25">
+                  <a class="dropdown-item" href="#0">Action</a>
+                  <a class="dropdown-item" href="#0">Another action</a>
+                  <a class="dropdown-item" href="#0">Something else here</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="font-size-14 text-gray-800 ps-lg-5 ps-2">Ainara Vergara</span>
+            </td>
+            <td>25/8/2020</td>
+            <td>Online</td>
+            <td>Abidjan</td>
+            <td>$911.35</td>
+            <td>
+              <div class="dropdown">
+                <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="Action26">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g data-name="Cell 06" transform="translate(0 -0.308)"><g transform="translate(0 0.308)">
+                    <path data-name="Icon Color" d="M14,1.75A1.75,1.75,0,1,1,15.75,3.5,1.751,1.751,0,0,1,14,1.75Zm1.5,0A.25.25,0,1,0,15.75,1.5.25.25,0,0,0,15.5,1.75ZM7,1.75A1.75,1.75,0,1,1,8.75,3.5,1.751,1.751,0,0,1,7,1.75Zm1.5,0A.25.25,0,1,0,8.75,1.5.25.25,0,0,0,8.5,1.75ZM0,1.75A1.75,1.75,0,1,1,1.75,3.5,1.751,1.751,0,0,1,0,1.75Zm1.5,0A.25.25,0,1,0,1.75,1.5.25.25,0,0,0,1.5,1.75Z" transform="translate(3.25 10.25)" fill="#212121"></path></g></g>
+                  </svg>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action26">
+                  <a class="dropdown-item" href="#0">Action</a>
+                  <a class="dropdown-item" href="#0">Another action</a>
+                  <a class="dropdown-item" href="#0">Something else here</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="font-size-14 text-gray-800 ps-lg-5 ps-2">Tiontay Carroll</span>
+            </td>
+            <td>25/8/2020</td>
+            <td>Online</td>
+            <td>Turin</td>
+            <td>$911.35</td>
+            <td>
+              <div class="dropdown">
+                <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="Action27">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g data-name="Cell 06" transform="translate(0 -0.308)"><g transform="translate(0 0.308)">
+                    <path data-name="Icon Color" d="M14,1.75A1.75,1.75,0,1,1,15.75,3.5,1.751,1.751,0,0,1,14,1.75Zm1.5,0A.25.25,0,1,0,15.75,1.5.25.25,0,0,0,15.5,1.75ZM7,1.75A1.75,1.75,0,1,1,8.75,3.5,1.751,1.751,0,0,1,7,1.75Zm1.5,0A.25.25,0,1,0,8.75,1.5.25.25,0,0,0,8.5,1.75ZM0,1.75A1.75,1.75,0,1,1,1.75,3.5,1.751,1.751,0,0,1,0,1.75Zm1.5,0A.25.25,0,1,0,1.75,1.5.25.25,0,0,0,1.5,1.75Z" transform="translate(3.25 10.25)" fill="#212121"></path></g></g>
+                  </svg>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action27">
+                  <a class="dropdown-item" href="#0">Action</a>
+                  <a class="dropdown-item" href="#0">Another action</a>
+                  <a class="dropdown-item" href="#0">Something else here</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="font-size-14 text-gray-800 ps-lg-5 ps-2">Marysa Labrone</span>
+            </td>
+            <td>25/8/2020</td>
+            <td>Online</td>
+            <td>Paris</td>
+            <td>$911.35</td>
+            <td>
+              <div class="dropdown">
+                <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="Action26a">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g data-name="Cell 06" transform="translate(0 -0.308)"><g transform="translate(0 0.308)">
+                    <path data-name="Icon Color" d="M14,1.75A1.75,1.75,0,1,1,15.75,3.5,1.751,1.751,0,0,1,14,1.75Zm1.5,0A.25.25,0,1,0,15.75,1.5.25.25,0,0,0,15.5,1.75ZM7,1.75A1.75,1.75,0,1,1,8.75,3.5,1.751,1.751,0,0,1,7,1.75Zm1.5,0A.25.25,0,1,0,8.75,1.5.25.25,0,0,0,8.5,1.75ZM0,1.75A1.75,1.75,0,1,1,1.75,3.5,1.751,1.751,0,0,1,0,1.75Zm1.5,0A.25.25,0,1,0,1.75,1.5.25.25,0,0,0,1.5,1.75Z" transform="translate(3.25 10.25)" fill="#212121"></path></g></g>
+                  </svg>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action26a">
+                  <a class="dropdown-item" href="#0">Action</a>
+                  <a class="dropdown-item" href="#0">Another action</a>
+                  <a class="dropdown-item" href="#0">Something else here</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="font-size-14 text-gray-800 ps-lg-5 ps-2">Margje Jutten</span>
+            </td>
+            <td>25/8/2020</td>
+            <td>Online</td>
+            <td>Naples</td>
+            <td>$911.35</td>
+            <td>
+              <div class="dropdown">
+                <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="Action27a">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g data-name="Cell 06" transform="translate(0 -0.308)"><g transform="translate(0 0.308)">
+                    <path data-name="Icon Color" d="M14,1.75A1.75,1.75,0,1,1,15.75,3.5,1.751,1.751,0,0,1,14,1.75Zm1.5,0A.25.25,0,1,0,15.75,1.5.25.25,0,0,0,15.5,1.75ZM7,1.75A1.75,1.75,0,1,1,8.75,3.5,1.751,1.751,0,0,1,7,1.75Zm1.5,0A.25.25,0,1,0,8.75,1.5.25.25,0,0,0,8.5,1.75ZM0,1.75A1.75,1.75,0,1,1,1.75,3.5,1.751,1.751,0,0,1,0,1.75Zm1.5,0A.25.25,0,1,0,1.75,1.5.25.25,0,0,0,1.5,1.75Z" transform="translate(3.25 10.25)" fill="#212121"></path></g></g>
+                  </svg>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action27a">
+                  <a class="dropdown-item" href="#0">Action</a>
+                  <a class="dropdown-item" href="#0">Another action</a>
+                  <a class="dropdown-item" href="#0">Something else here</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="font-size-14 text-gray-800 ps-lg-5 ps-2">Dina Glenn</span>
+            </td>
+            <td>25/8/2020</td>
+            <td>Online</td>
+            <td>Dayton</td>
+            <td>$911.35</td>
+            <td>
+              <div class="dropdown">
+                <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="Action28">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g data-name="Cell 06" transform="translate(0 -0.308)"><g transform="translate(0 0.308)">
+                    <path data-name="Icon Color" d="M14,1.75A1.75,1.75,0,1,1,15.75,3.5,1.751,1.751,0,0,1,14,1.75Zm1.5,0A.25.25,0,1,0,15.75,1.5.25.25,0,0,0,15.5,1.75ZM7,1.75A1.75,1.75,0,1,1,8.75,3.5,1.751,1.751,0,0,1,7,1.75Zm1.5,0A.25.25,0,1,0,8.75,1.5.25.25,0,0,0,8.5,1.75ZM0,1.75A1.75,1.75,0,1,1,1.75,3.5,1.751,1.751,0,0,1,0,1.75Zm1.5,0A.25.25,0,1,0,1.75,1.5.25.25,0,0,0,1.5,1.75Z" transform="translate(3.25 10.25)" fill="#212121"></path></g></g>
+                  </svg>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action28">
+                  <a class="dropdown-item" href="#0">Action</a>
+                  <a class="dropdown-item" href="#0">Another action</a>
+                  <a class="dropdown-item" href="#0">Something else here</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="font-size-14 text-gray-800 ps-lg-5 ps-2">Andries Grootoonk</span>
+            </td>
+            <td>25/8/2020</td>
+            <td>Online</td>
+            <td>Astana</td>
+            <td>$911.35</td>
+            <td>
+              <div class="dropdown">
+                <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="Action29">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g data-name="Cell 06" transform="translate(0 -0.308)"><g transform="translate(0 0.308)">
+                    <path data-name="Icon Color" d="M14,1.75A1.75,1.75,0,1,1,15.75,3.5,1.751,1.751,0,0,1,14,1.75Zm1.5,0A.25.25,0,1,0,15.75,1.5.25.25,0,0,0,15.5,1.75ZM7,1.75A1.75,1.75,0,1,1,8.75,3.5,1.751,1.751,0,0,1,7,1.75Zm1.5,0A.25.25,0,1,0,8.75,1.5.25.25,0,0,0,8.5,1.75ZM0,1.75A1.75,1.75,0,1,1,1.75,3.5,1.751,1.751,0,0,1,0,1.75Zm1.5,0A.25.25,0,1,0,1.75,1.5.25.25,0,0,0,1.5,1.75Z" transform="translate(3.25 10.25)" fill="#212121"></path></g></g>
+                  </svg>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action29">
+                  <a class="dropdown-item" href="#0">Action</a>
+                  <a class="dropdown-item" href="#0">Another action</a>
+                  <a class="dropdown-item" href="#0">Something else here</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="font-size-14 text-gray-800 ps-lg-5 ps-2">Tokunaga Yae</span>
+            </td>
+            <td>25/8/2020</td>
+            <td>Online</td>
+            <td>Zurich</td>
+            <td>$911.35</td>
+            <td>
+              <div class="dropdown">
+                <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="Action30">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g data-name="Cell 06" transform="translate(0 -0.308)"><g transform="translate(0 0.308)">
+                    <path data-name="Icon Color" d="M14,1.75A1.75,1.75,0,1,1,15.75,3.5,1.751,1.751,0,0,1,14,1.75Zm1.5,0A.25.25,0,1,0,15.75,1.5.25.25,0,0,0,15.5,1.75ZM7,1.75A1.75,1.75,0,1,1,8.75,3.5,1.751,1.751,0,0,1,7,1.75Zm1.5,0A.25.25,0,1,0,8.75,1.5.25.25,0,0,0,8.5,1.75ZM0,1.75A1.75,1.75,0,1,1,1.75,3.5,1.751,1.751,0,0,1,0,1.75Zm1.5,0A.25.25,0,1,0,1.75,1.5.25.25,0,0,0,1.5,1.75Z" transform="translate(3.25 10.25)" fill="#212121"></path></g></g>
+                  </svg>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action30">
+                  <a class="dropdown-item" href="#0">Action</a>
+                  <a class="dropdown-item" href="#0">Another action</a>
+                  <a class="dropdown-item" href="#0">Something else here</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="font-size-14 text-gray-800 ps-lg-5 ps-2">Nitithorn Prinya</span>
+            </td>
+            <td>25/8/2020</td>
+            <td>Online</td>
+            <td>Sacramento</td>
+            <td>$911.35</td>
+            <td>
+              <div class="dropdown">
+                <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="Action31">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g data-name="Cell 06" transform="translate(0 -0.308)"><g transform="translate(0 0.308)">
+                    <path data-name="Icon Color" d="M14,1.75A1.75,1.75,0,1,1,15.75,3.5,1.751,1.751,0,0,1,14,1.75Zm1.5,0A.25.25,0,1,0,15.75,1.5.25.25,0,0,0,15.5,1.75ZM7,1.75A1.75,1.75,0,1,1,8.75,3.5,1.751,1.751,0,0,1,7,1.75Zm1.5,0A.25.25,0,1,0,8.75,1.5.25.25,0,0,0,8.5,1.75ZM0,1.75A1.75,1.75,0,1,1,1.75,3.5,1.751,1.751,0,0,1,0,1.75Zm1.5,0A.25.25,0,1,0,1.75,1.5.25.25,0,0,0,1.5,1.75Z" transform="translate(3.25 10.25)" fill="#212121"></path></g></g>
+                  </svg>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action31">
+                  <a class="dropdown-item" href="#0">Action</a>
+                  <a class="dropdown-item" href="#0">Another action</a>
+                  <a class="dropdown-item" href="#0">Something else here</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="font-size-14 text-gray-800 ps-lg-5 ps-2">Malin Quist</span>
+            </td>
+            <td>25/8/2020</td>
+            <td>Online</td>
+            <td>Managua</td>
+            <td>$911.35</td>
+            <td>
+              <div class="dropdown">
+                <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="Action32">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g data-name="Cell 06" transform="translate(0 -0.308)"><g transform="translate(0 0.308)">
+                    <path data-name="Icon Color" d="M14,1.75A1.75,1.75,0,1,1,15.75,3.5,1.751,1.751,0,0,1,14,1.75Zm1.5,0A.25.25,0,1,0,15.75,1.5.25.25,0,0,0,15.5,1.75ZM7,1.75A1.75,1.75,0,1,1,8.75,3.5,1.751,1.751,0,0,1,7,1.75Zm1.5,0A.25.25,0,1,0,8.75,1.5.25.25,0,0,0,8.5,1.75ZM0,1.75A1.75,1.75,0,1,1,1.75,3.5,1.751,1.751,0,0,1,0,1.75Zm1.5,0A.25.25,0,1,0,1.75,1.5.25.25,0,0,0,1.5,1.75Z" transform="translate(3.25 10.25)" fill="#212121"></path></g></g>
+                  </svg>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action32">
+                  <a class="dropdown-item" href="#0">Action</a>
+                  <a class="dropdown-item" href="#0">Another action</a>
+                  <a class="dropdown-item" href="#0">Something else here</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="font-size-14 text-gray-800 ps-lg-5 ps-2">Dashonte Clarke</span>
+            </td>
+            <td>25/8/2020</td>
+            <td>Online</td>
+            <td>Cardiff</td>
+            <td>$911.35</td>
+            <td>
+              <div class="dropdown">
+                <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="Action33">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g data-name="Cell 06" transform="translate(0 -0.308)"><g transform="translate(0 0.308)">
+                    <path data-name="Icon Color" d="M14,1.75A1.75,1.75,0,1,1,15.75,3.5,1.751,1.751,0,0,1,14,1.75Zm1.5,0A.25.25,0,1,0,15.75,1.5.25.25,0,0,0,15.5,1.75ZM7,1.75A1.75,1.75,0,1,1,8.75,3.5,1.751,1.751,0,0,1,7,1.75Zm1.5,0A.25.25,0,1,0,8.75,1.5.25.25,0,0,0,8.5,1.75ZM0,1.75A1.75,1.75,0,1,1,1.75,3.5,1.751,1.751,0,0,1,0,1.75Zm1.5,0A.25.25,0,1,0,1.75,1.5.25.25,0,0,0,1.5,1.75Z" transform="translate(3.25 10.25)" fill="#212121"></path></g></g>
+                  </svg>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Action33">
+                  <a class="dropdown-item" href="#0">Action</a>
+                  <a class="dropdown-item" href="#0">Another action</a>
+                  <a class="dropdown-item" href="#0">Something else here</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <!-- Fabrx Table Footer, My 3, My Md 3, Mx 3, Px 3, Px Lg 5 -->
+  <div class="fabrx-tables-footer my-3 my-md-5 mx-3 px-3 px-lg-5">
+    <div class="d-flex align-items-center justify-content-end flex-wrap">
+      <div class="fabrix-custom-pagination my-2">
+        <label class="me-2 mb-0">Rows</label>
+        <select class="custom-select custom-select-sm">
+          <option selected="">10</option>
+          <option value="1">11</option>
+          <option value="2">12</option>
+          <option value="3">13</option>
+        </select>
+        <label class="mx-2 mb-0">Page</label>
+        <input type="text" value="1" class="form-control form-control-sm">
+        <small class="ms-2 text-nowrap">of 366</small>
+      </div>
+      <nav aria-label="Page navigation" class="pagination-default my-2 ms-4">
+        <ul class="pagination mb-0">
+          <li class="page-item">
+            <a class="page-link" href="#0">
+              <svg data-name="Icon Left" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+                <path data-name="Icon Color" d="M.376,3.75a.375.375,0,0,1-.3-.6L.111,3.11l3-3A.375.375,0,0,1,3.6.073L3.641.11,6.657,3.128l.02.024.029.046.015.031.016.046.01.049,0,.025V3.4l0,.025-.01.049-.016.046-.015.032L6.675,3.6a.386.386,0,0,1-.045.051L6.6,3.677l-.046.029-.031.015-.046.016-.049.01H6.414l-.013,0Zm3-2.844h0L1.281,3H5.47L3.376.906Z" transform="translate(4.124 9.375) rotate(-90)" fill="#212121"></path>
+              </svg>
+            </a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+                <g data-name="Right Icon" transform="translate(12 12) rotate(-180)">
+                  <path data-name="Icon Color" d="M6.376,0h-6A.367.367,0,0,0,.04.209.371.371,0,0,0,.076.6L.111.64l3,3a.375.375,0,0,0,.488.036l.042-.036L6.657.622,6.677.6,6.706.552,6.721.521,6.737.475l.01-.049L6.75.4V.349l0-.025L6.737.275,6.721.229,6.706.2,6.675.149A.386.386,0,0,0,6.629.1L6.6.073,6.553.045,6.522.029,6.475.013,6.426,0,6.4,0Zm-3,2.844h0L1.281.75H5.47L3.376,2.844Z" transform="translate(7.875 2.625) rotate(90)" fill="#212121"></path>
+                </g>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<!-- Fabrx Scripts -->
+<script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/vendor/lodash/lodash.min.js"></script>
+<script src="../assets/js/html5.min.js"></script>
+<script src="../assets/js/highcharts.min.js"></script>
+<script src="../assets/js/highcharts-more.min.js"></script>
+<script src="../assets/vendor/flatpickr/dist/flatpickr.min.js"></script>
+<script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="../assets/js/loading-bar.min.js"></script>
+<script src="../assets/vendor/sticky-js/dist/sticky.min.js"></script>
+<script src="../assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="../assets/js/fabrx-scripts.js"></script>
+<script>
+  // Fabrx On Select All Add And Remove Class In Table Row and Checked Script
+  function checkAll(e) {
+   var fabrxChecks = document.getElementsByName('check');
+   if (e.checked) {
+     for (var i = 0; i < fabrxChecks.length; i++) {
+       fabrxChecks[i].checked = true;
+       document.querySelectorAll('.has-table tbody tr').forEach(fabrxCheckParent => fabrxCheckParent.classList.add('active'));
+     }
+   }
+   else {
+     for (var i = 0; i < fabrxChecks.length; i++) {
+       fabrxChecks[i].checked = false;
+       document.querySelectorAll('.has-table tbody tr').forEach(fabrxCheckParent => fabrxCheckParent.classList.remove('active'));
+     }
+   }
+ }
+document.querySelectorAll('table.has-table td:first-child input[type=checkbox]').forEach(fabrxCheck => {
+  fabrxCheck.addEventListener('click', ({target}) => {
+    target.closest('tr').classList.toggle('active');
+  });
+});
+</script>
+</body>
+</html>

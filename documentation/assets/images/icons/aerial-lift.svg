@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon/aerial-lift</title>
+    <g id="Icon/aerial-lift" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4,5 L20,3 M12,4 L12,14 M6.894,8 L17.2,8 C19.65,11 19.65,17 17,20 L6.894,20 C4.35,17 4.35,11 6.894,8 Z M5,14 L19,14" id="Icon-Color" stroke="#212121" stroke-width="1.5"></path>
+    </g>
+</svg>

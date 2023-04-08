@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon/media/play border</title>
+    <g id="Icon/media/play-border" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M6.25,4 L6.25,20 C6.25,20.5867405 6.89337063,20.9462529 7.39307307,20.6387437 L20.3930731,12.6387437 C20.8689756,12.3458806 20.8689756,11.6541194 20.3930731,11.3612563 L7.39307307,3.36125626 C6.89337063,3.05374707 6.25,3.41325948 6.25,4 Z M7.75,5.342 L18.568,12 L7.75,18.657 L7.75,5.342 Z" id="Icon-Color" fill="#212121"></path>
+    </g>
+</svg>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon/point</title>
+    <g id="Icon/point" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M12,7.25 C9.37664744,7.25 7.25,9.37664744 7.25,12 C7.25,14.6233526 9.37664744,16.75 12,16.75 C14.6233526,16.75 16.75,14.6233526 16.75,12 C16.75,9.37664744 14.6233526,7.25 12,7.25 Z M12,8.75 C13.7949254,8.75 15.25,10.2050746 15.25,12 C15.25,13.7949254 13.7949254,15.25 12,15.25 C10.2050746,15.25 8.75,13.7949254 8.75,12 C8.75,10.2050746 10.2050746,8.75 12,8.75 Z" id="Icon-Color" fill="#212121"></path>
+    </g>
+</svg>
