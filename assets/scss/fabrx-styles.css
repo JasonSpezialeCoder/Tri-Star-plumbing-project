@@ -1662,6 +1662,24 @@ footer .btn:focus {
   color: var(--accent-white-btn);
 }
 
+.career-detail-section li {
+  list-style-type: none;
+  padding-bottom: 1rem;
+}
+
+.career-detail-section li:last-child {
+  padding-bottom: 0;
+}
+
+.career-detail-section ul {
+  padding-left: 0;
+}
+
+.career-detail-section i {
+  color: var(--accent3-yellow-light);
+  padding-right: 1rem;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-tan-yellow: #ffd476;
