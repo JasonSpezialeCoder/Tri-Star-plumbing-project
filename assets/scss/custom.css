@@ -958,6 +958,30 @@ footer .btn:focus {
   }
 }
 
+.hero-contact-1 {
+  background-image: var(--gradient1), url(/assets/images/Tri-star-photos/contact-plumbing-1.jpg);
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-section-project-1 {
+  background-image: var(--gradient1), url(/assets/images/Tri-star-photos/all-plumbing-projects-1.jpg);
+  background-position: bottom center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-section-service-1 {
+  background-image: var(--gradient1), url(/assets/images/Tri-star-photos/all-plumbing-services-1.jpg);
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
 .hero-section-1 {
   background-image: var(--gradient1), url(/assets/images/New-Images/Plumbing-15.jpg);
   background-position: center center;
