@@ -348,6 +348,10 @@ html, body {
   max-width: 1200px;
 }
 
+.blog-content-section .container {
+  max-width: 1000px;
+}
+
 .fabrx-section {
   padding: 5rem 0;
 }

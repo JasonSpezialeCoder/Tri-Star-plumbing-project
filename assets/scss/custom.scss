@@ -89,6 +89,10 @@
 
     // navbar
     --nav-links: hsla(0, 0%, 100%, 0.631);
+    --nav-links-hover-blog: hsl(0, 0%, 40%);
+    /* --nav-link-blog-accent1: hsl(0, 0%, 7%);
+    --nav-link-blog-accent2: hsl(0, 0%, 7%);
+    --nav-link-blog-accent3: hsla(0, 0%, 100%, 0.631); */
 
     //social links
     --social-links: hsla(0, 0%, 100%, 0.631);
@@ -98,6 +102,7 @@
 
  @media(prefers-color-scheme: dark){
     :root {
+      // colors 
       --accent1: var(--accent2-white-light);
       --accent2: var(--accent1-light);
       --accent3: var(--accent1-dark);
@@ -106,8 +111,14 @@
       --accent1-nav-links: var(--accent2-white-light);
       --accent2-nav-links: var(--accent2-white-light);
       --accent3-nav-links: var(--accent1-dark);
+      --accent4-nav-links: var(--accent1-dark);
       --accent-social: var(--accent1);
+      --accent-social2: var(--accent3);
+
+      // gradient 
       --gradient1: var(--gradient2-light);
+
+      // background color 
       --bkg1: var(--bkg2-dark);
       --bkg2: var(--bkg3-light);
       --bkg4: var(--bkg6-light);
@@ -117,10 +128,12 @@
       --bkg8: var(--bkg3-dark);
       --bkg9: var(--bkg3-light);
       --bg-nav-header: var(--bkg4-light);
+      // border 
       --border1: var(--border1-dark);
       --border-bg1: var(--bkg1-dark);
       --border-bg2: var(--bkg3-light);
-      // Button
+
+      // buttons
       --bkg1-btn: var(--bkg1-light-btn);
       --bkg2-btn: var(--bkg2-light-btn);
       --bkg3-btn: var(--bkg3-dark-btn);
@@ -135,6 +148,7 @@
   
   @media(prefers-color-scheme: light){
     :root {
+      // colors 
       --accent1: var(--accent2-white-light);
       --accent3: var(--accent2-white-light);
       --accent4: var(--accent1-light);
@@ -142,7 +156,11 @@
       --accent1-nav-links: var(--accent2-white-light);
       --accent2-nav-links: var(--accent2-white-light);
       --accent3-nav-links: var(--accent1-dark);
+      --accent4-nav-links: var(--accent2-white-light);
       --accent-social: var(--accent1-light);
+      --accent-social2: var(--accent2);
+
+      // background color 
       --gradient1: var(--gradient1-dark);
       --bkg2: var(--bkg1-dark);
       --bkg4: var(--bkg1-dark);
@@ -155,6 +173,7 @@
       --border1: var(--border1-dark);
       --border-bg1: var(--bkg5-light);
       --border-bg2: var(--bkg3-light);
+
       // Button
       --bkg3-btn: var(--bkg2-light-btn);
       --bkg4-btn: var(--bkg3-dark-btn);
@@ -166,6 +185,7 @@
   }
   
   [color-scheme="dark"]{
+    // colors 
     --accent1: var(--accent2-white-light);
     --accent2: var(--accent1-light);
     --accent3: var(--accent1-dark);
@@ -174,8 +194,14 @@
     --accent1-nav-links: var(--accent2-white-light);
     --accent2-nav-links: var(--accent2-white-light);
     --accent3-nav-links: var(--accent1-dark);
+    --accent4-nav-links: var(--accent1-dark);
     --accent-social: var(--accent1);
+    --accent-social2: var(--accent3);
+
+    // gradient 
     --gradient1: var(--gradient2-light);
+
+    // background color 
     --bkg2: var(--bkg3-light);
     --bkg4: var(--bkg6-light);
     --bkg5: var(--bkg3-light);
@@ -187,7 +213,8 @@
     --border1: var(--border1-dark);
     --border-bg1: var(--bkg1-dark);
     --border-bg2: var(--bkg3-light);
-    // Button
+
+    // buttons
     --bkg1-btn: var(--bkg1-light-btn);
     --bkg2-btn: var(--bkg2-light-btn);
     --bkg3-btn: var(--bkg3-dark-btn);
@@ -200,6 +227,7 @@
   }
   
   [color-scheme="light"] {
+    // colors 
     --accent1: var(--accent2-white-light);
     --accent3: var(--accent2-white-light);
     --accent4: var(--accent1-light);
@@ -207,7 +235,11 @@
     --accent1-nav-links: var(--accent2-white-light);
     --accent2-nav-links: var(--accent2-white-light);
     --accent3-nav-links: var(--accent1-dark);
+    --accent4-nav-links: var(--accent2-white-light);
     --accent-social: var(--accent1-light);
+    --accent-social2: var(--accent2);
+
+    // background 
     --gradient1: var(--gradient1-dark);
     --bkg2: var(--bkg1-dark);
     --bkg4: var(--bkg1-dark);
@@ -220,6 +252,7 @@
     --border1: var(--border1-dark);
     --border-bg1: var(--bkg5-light);
     --border-bg2: var(--bkg3-light);
+
     // Button
     --bkg3-btn: var(--bkg2-light-btn);
     --bkg4-btn: var(--bkg3-dark-btn);
@@ -292,6 +325,15 @@
   }
 }
 
+.accent4-nav-links {
+  color: var(--accent4-nav-links);
+  fill: var(--accent4-nav-links);
+  @include media-breakpoint-up(lg) {
+    color: var(--accent4-nav-links);
+    fill: var(--accent4-nav-links);
+  }
+}
+
 .accent2-white {
   color: var(--accent2-white-light) !important;
   fill: var(--accent2-white-light);
@@ -307,12 +349,17 @@
   fill: var(--accent-social);
 }
 
+.accent-social2 {
+  color: var(--accent-social2);
+  fill: var(--accent-social2);
+}
+
 .gradient1 {
   color: var(--gradient1);
   fill: var(--gradient1);
 }
 
-// Backgrounds 
+// background colors 
 
 .bkg1 {
   background-color: var(--bkg1-light);
@@ -350,7 +397,7 @@
   background-color: var(--bkg9);
 }
 
-// Borders
+// border colors
 
 .border1 {
   color: var(--border1);
@@ -388,7 +435,7 @@ html, body {
   max-width: 1000px;
 }
 
-// Main section padding of my own
+// main section padding of my own
 
 .fabrx-section  {
   padding: 5rem 0;
@@ -411,6 +458,7 @@ p {
 }
 
 // Headings 
+
 .cta-heading {
   font-size: 2rem;
 
@@ -508,6 +556,7 @@ p {
 }
 
 // List ul li 
+
 .list-size-md {
   font-size: 1.2rem;
 }
@@ -517,6 +566,7 @@ p {
 }
 
 // Buttons 
+
 .btn {
   background-color: var(--bkg1-btn);
   color: var(--accent1-btn);
@@ -542,6 +592,7 @@ p {
 }
 
 // Borders 
+
 hr{
   opacity: 0.55;
 }
@@ -1656,4 +1707,38 @@ color: var(--accent-white-btn);
 .career-detail-section i{
   color: var(--accent3-yellow-light);
   padding-right: 1rem;
+}
+
+// blog page
+
+.blog-header .active{
+  color:var(--accent3) !important;
+}
+
+.blog-header .nav-link:hover {
+  color: var(--nav-links-hover-blog);
+}
+
+.blog-header .nav-link:active {
+  color: var(--nav-links-hover-blog);
+}
+
+.blog-header .nav-link:focus {
+  color: var(--nav-links-hover-blog);
+}
+
+.blog-content-section .text-blog-width-1 {
+  width: 100% !important;
+
+  @include media-breakpoint-up(lg) {
+    width: 50% !important;
+  }
+}
+
+.blog-content-section .text-blog-width-2 {
+  width: 100% !important;
+
+  @include media-breakpoint-up(lg) {
+    width: 75% !important;
+  }
 }
