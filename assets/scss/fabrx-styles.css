@@ -88,6 +88,10 @@
   --light-mode-btn: hsl(221, 50%, 60%);
   --dark-mode-btn: hsl(229, 74%, 21%);
   --nav-links: hsla(0, 0%, 100%, 0.631);
+  --nav-links-hover-blog: hsl(0, 0%, 40%);
+  /* --nav-link-blog-accent1: hsl(0, 0%, 7%);
+  --nav-link-blog-accent2: hsl(0, 0%, 7%);
+  --nav-link-blog-accent3: hsla(0, 0%, 100%, 0.631); */
   --social-links: hsla(0, 0%, 100%, 0.631);
 }
 
@@ -101,7 +105,9 @@
     --accent1-nav-links: var(--accent2-white-light);
     --accent2-nav-links: var(--accent2-white-light);
     --accent3-nav-links: var(--accent1-dark);
+    --accent4-nav-links: var(--accent1-dark);
     --accent-social: var(--accent1);
+    --accent-social2: var(--accent3);
     --gradient1: var(--gradient2-light);
     --bkg1: var(--bkg2-dark);
     --bkg2: var(--bkg3-light);
@@ -135,7 +141,9 @@
     --accent1-nav-links: var(--accent2-white-light);
     --accent2-nav-links: var(--accent2-white-light);
     --accent3-nav-links: var(--accent1-dark);
+    --accent4-nav-links: var(--accent2-white-light);
     --accent-social: var(--accent1-light);
+    --accent-social2: var(--accent2);
     --gradient1: var(--gradient1-dark);
     --bkg2: var(--bkg1-dark);
     --bkg4: var(--bkg1-dark);
@@ -165,7 +173,9 @@
   --accent1-nav-links: var(--accent2-white-light);
   --accent2-nav-links: var(--accent2-white-light);
   --accent3-nav-links: var(--accent1-dark);
+  --accent4-nav-links: var(--accent1-dark);
   --accent-social: var(--accent1);
+  --accent-social2: var(--accent3);
   --gradient1: var(--gradient2-light);
   --bkg2: var(--bkg3-light);
   --bkg4: var(--bkg6-light);
@@ -197,7 +207,9 @@
   --accent1-nav-links: var(--accent2-white-light);
   --accent2-nav-links: var(--accent2-white-light);
   --accent3-nav-links: var(--accent1-dark);
+  --accent4-nav-links: var(--accent2-white-light);
   --accent-social: var(--accent1-light);
+  --accent-social2: var(--accent2);
   --gradient1: var(--gradient1-dark);
   --bkg2: var(--bkg1-dark);
   --bkg4: var(--bkg1-dark);
@@ -278,6 +290,17 @@
   }
 }
 
+.accent4-nav-links {
+  color: var(--accent4-nav-links);
+  fill: var(--accent4-nav-links);
+}
+@media (min-width: 992px) {
+  .accent4-nav-links {
+    color: var(--accent4-nav-links);
+    fill: var(--accent4-nav-links);
+  }
+}
+
 .accent2-white {
   color: var(--accent2-white-light) !important;
   fill: var(--accent2-white-light);
@@ -291,6 +314,11 @@
 .accent-social {
   color: var(--accent-social);
   fill: var(--accent-social);
+}
+
+.accent-social2 {
+  color: var(--accent-social2);
+  fill: var(--accent-social2);
 }
 
 .gradient1 {
@@ -951,6 +979,30 @@ footer .btn:focus {
   }
 }
 
+.hero-contact-1 {
+  background-image: var(--gradient1), url(/assets/images/Tri-star-photos/contact-plumbing-1.jpg);
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-section-project-1 {
+  background-image: var(--gradient1), url(/assets/images/Tri-star-photos/all-plumbing-projects-1.jpg);
+  background-position: bottom center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-section-service-1 {
+  background-image: var(--gradient1), url(/assets/images/Tri-star-photos/all-plumbing-services-1.jpg);
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
 .hero-section-1 {
   background-image: var(--gradient1), url(/assets/images/New-Images/Plumbing-15.jpg);
   background-position: center center;
@@ -1287,6 +1339,15 @@ footer .btn:focus {
 
 #gallery-modal .modal-header {
   border-bottom: none;
+}
+
+.service-link a {
+  font-size: 1rem;
+  color: var(--accent1-light);
+}
+
+.service-link a:hover {
+  color: var(--accent3-yellow-light);
 }
 
 .hero-service-1 {
@@ -1698,6 +1759,40 @@ footer .btn:focus {
 .career-detail-section i {
   color: var(--accent3-yellow-light);
   padding-right: 1rem;
+}
+
+.blog-header .active {
+  color: var(--accent3) !important;
+}
+
+.blog-header .nav-link:hover {
+  color: var(--nav-links-hover-blog);
+}
+
+.blog-header .nav-link:active {
+  color: var(--nav-links-hover-blog);
+}
+
+.blog-header .nav-link:focus {
+  color: var(--nav-links-hover-blog);
+}
+
+.blog-content-section .text-blog-width-1 {
+  width: 100% !important;
+}
+@media (min-width: 992px) {
+  .blog-content-section .text-blog-width-1 {
+    width: 50% !important;
+  }
+}
+
+.blog-content-section .text-blog-width-2 {
+  width: 100% !important;
+}
+@media (min-width: 992px) {
+  .blog-content-section .text-blog-width-2 {
+    width: 75% !important;
+  }
 }
 
 :root {

@@ -1320,6 +1320,15 @@ footer .btn:focus {
   border-bottom: none;
 }
 
+.service-link a {
+  font-size: 1rem;
+  color: var(--accent1-light);
+}
+
+.service-link a:hover {
+  color: var(--accent3-yellow-light);
+}
+
 .hero-service-1 {
   background-image: var(--gradient1), url(/assets/images/New-Images/Placeholder-plumbing-39.jpg);
   background-position: center center;
