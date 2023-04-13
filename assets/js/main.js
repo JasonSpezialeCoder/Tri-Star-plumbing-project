@@ -106,3 +106,4 @@ splideTwo.mount();
 
 let redirect = document.getElementById('redirect');
 redirect.value = new URL('Success.html', location).href;
+
