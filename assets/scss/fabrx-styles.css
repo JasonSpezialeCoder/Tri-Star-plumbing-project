@@ -382,8 +382,33 @@
   background-color: var(--badge-accent1);
 }
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 html, body {
   overflow-x: hidden;
+  min-width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.logo-header {
+  width: 180px;
+}
+@media (min-width: 992px) {
+  .logo-header {
+    width: 250px;
+  }
+}
+
+.logo-header img {
+  height: 100%;
 }
 
 .container {
@@ -723,15 +748,13 @@ a:hover, a:focus {
   flex-direction: column !important;
 }
 
-.logo-header {
+/* .logo-header {
   font-size: 1.2rem;
-}
-@media (min-width: 992px) {
-  .logo-header {
+
+  @include media-breakpoint-up(lg) {
     font-size: 1.5rem;
   }
-}
-
+} */
 .icons {
   display: inline-flex;
   margin-left: auto;
@@ -1397,7 +1420,7 @@ footer .btn:focus {
 }
 
 .hero-service-1 {
-  background-image: var(--gradient1), url(/assets/images/New-Images/Placeholder-plumbing-39.jpg);
+  background-image: var(--gradient1), url(/assets/images/Tri-star-photos/backflow/back-flow-4-7x.jpg);
   background-position: center center;
   background-size: cover;
   position: relative;

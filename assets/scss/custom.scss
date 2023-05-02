@@ -419,10 +419,35 @@
   background-color: var(--badge-accent1);
 }
 
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 // html body class 
 
 html, body {
   overflow-x: hidden;
+  min-width:100%;
+}
+
+// images 
+img {
+  max-width: 100%;
+  height: auto; 
+}
+
+.logo-header {
+  width: 180px;
+
+  @include media-breakpoint-up(lg) {
+    width: 250px;
+  }
+}
+
+.logo-header img {
+  height: 100%;
 }
 
 // New container class for more responsiveness 
@@ -762,13 +787,17 @@ a:hover, a:focus {
   flex-direction: column !important;
 }
 
-.logo-header {
+footer .navbar-brand {
+  margin-right: 0;
+}
+
+/* .logo-header {
   font-size: 1.2rem;
 
   @include media-breakpoint-up(lg) {
     font-size: 1.5rem;
   }
-}
+} */
 
 .icons {
   display: inline-flex;
@@ -1416,11 +1445,37 @@ footer .btn:focus {
 }
 
 .hero-service-1 {
-  background-image: var(--gradient1), url(/assets/images/Tri-star-photos/backflow/back-flow-3-7x.jpg);    
+  background-image: var(--gradient1), url(/assets/images/Tri-star-photos/backflow/back-flow-4-mobile.jpg);    
   background-position: center center;
   background-size: cover;
   position: relative;
   z-index: 1;
+
+  @include media-breakpoint-up(md) {
+    background-image: var(--gradient1), url(/assets/images/Tri-star-photos/backflow/back-flow-4-tablet.jpg);   
+  }
+
+  @include media-breakpoint-up(lg) {
+    background-image: var(--gradient1), url(/assets/images/Tri-star-photos/backflow/back-flow-4-desktop.jpg);   
+  }
+}
+
+.hero-service-Sewer-maintenance {
+  background-image: var(--gradient1), url(/assets/images/Tri-star-photos/Sewer-maintenance/sewer-maintenance-hero-mobile.jpg);    
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+
+  @include media-breakpoint-up(md) {
+    background-image: var(--gradient1), url(/assets/images/Tri-star-photos/Sewer-maintenance/sewer-maintenance-hero-tablet.jpg); 
+    background-position: center center;  
+  }
+
+  @include media-breakpoint-up(lg) {
+    background-image: var(--gradient1), url(/assets/images/Tri-star-photos/Sewer-maintenance/sewer-maintenance-hero-desktop.jpg);  
+    background-position: top center; 
+  }
 }
 
 .service-grid .service-image-grid {
