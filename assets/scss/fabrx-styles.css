@@ -480,7 +480,7 @@ p {
 }
 @media (min-width: 1400px) {
   .heading-1 {
-    font-size: 3.7rem;
+    font-size: 3.5rem;
   }
 }
 
@@ -499,7 +499,7 @@ p {
 }
 @media (min-width: 1400px) {
   .heading-2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -748,6 +748,10 @@ a:hover, a:focus {
   flex-direction: column !important;
 }
 
+footer .navbar-brand {
+  margin-right: 0;
+}
+
 /* .logo-header {
   font-size: 1.2rem;
 
@@ -825,7 +829,7 @@ a:hover, a:focus {
 }
 @media (min-width: 992px) {
   .hero-heading-home {
-    font-size: 3.3rem;
+    font-size: 4rem;
   }
 }
 
@@ -1420,11 +1424,77 @@ footer .btn:focus {
 }
 
 .hero-service-1 {
-  background-image: var(--gradient1), url(/assets/images/Tri-star-photos/backflow/back-flow-4-7x.jpg);
+  background-image: var(--gradient1), url(/assets/images/Tri-star-photos/backflow/back-flow-4-mobile.jpg);
   background-position: center center;
   background-size: cover;
   position: relative;
   z-index: 1;
+}
+@media (min-width: 768px) {
+  .hero-service-1 {
+    background-image: var(--gradient1), url(/assets/images/Tri-star-photos/backflow/back-flow-4-tablet.jpg);
+  }
+}
+@media (min-width: 992px) {
+  .hero-service-1 {
+    background-image: var(--gradient1), url(/assets/images/Tri-star-photos/backflow/back-flow-4-desktop.jpg);
+  }
+}
+
+.hero-service-Sewer-maintenance {
+  background-image: var(--gradient1), url(/assets/images/Tri-star-photos/Sewer-maintenance/sewer-maintenance-hero-mobile-2.jpg);
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  .hero-service-Sewer-maintenance {
+    background-image: var(--gradient1), url(/assets/images/Tri-star-photos/Sewer-maintenance/sewer-maintenance-hero-tablet-2.jpg);
+    background-position: center center;
+  }
+}
+@media (min-width: 992px) {
+  .hero-service-Sewer-maintenance {
+    background-image: var(--gradient1), url(/assets/images/Tri-star-photos/Sewer-maintenance/sewer-maintenance-hero-desktop-2.jpg);
+    background-position: top center;
+  }
+}
+
+.hero-service-hot-water-boilers {
+  background-image: var(--gradient1), url(/assets/images/Tri-star-photos/waterheater/Hot-water-boilers-hero-mobile.jpg);
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  .hero-service-hot-water-boilers {
+    background-image: var(--gradient1), url(/assets/images/Tri-star-photos/waterheater/Hot-water-boilers-hero-tablet.jpg);
+  }
+}
+@media (min-width: 992px) {
+  .hero-service-hot-water-boilers {
+    background-image: var(--gradient1), url(/assets/images/Tri-star-photos/waterheater/Hot-water-boilers-hero-desktop.jpg);
+  }
+}
+
+.hero-service-gas-leak-detection {
+  background-image: var(--gradient1), url(/assets/images/Tri-star-photos/gas-leak-detection/gas-leak-detection-hero-mobile-1.jpg);
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  .hero-service-gas-leak-detection {
+    background-image: var(--gradient1), url(/assets/images/Tri-star-photos/gas-leak-detection/gas-leak-detection-hero-tablet-1.jpg);
+  }
+}
+@media (min-width: 992px) {
+  .hero-service-gas-leak-detection {
+    background-image: var(--gradient1), url(/assets/images/Tri-star-photos/gas-leak-detection/gas-leak-detection-hero-desktop-1.jpg);
+  }
 }
 
 .service-grid .service-image-grid {
@@ -3824,8 +3894,7 @@ progress {
 .form-control::file-selector-button {
   padding: 0.375rem 0.75rem;
   margin: -0.375rem -0.75rem;
-  -webkit-margin-end: 0.75rem;
-          margin-inline-end: 0.75rem;
+  margin-inline-end: 0.75rem;
   color: #212529;
   background-color: #e9ecef;
   pointer-events: none;
@@ -3847,8 +3916,7 @@ progress {
 .form-control::-webkit-file-upload-button {
   padding: 0.375rem 0.75rem;
   margin: -0.375rem -0.75rem;
-  -webkit-margin-end: 0.75rem;
-          margin-inline-end: 0.75rem;
+  margin-inline-end: 0.75rem;
   color: #212529;
   background-color: #e9ecef;
   pointer-events: none;
@@ -3895,14 +3963,12 @@ progress {
 .form-control-sm::file-selector-button {
   padding: 0.25rem 0.5rem;
   margin: -0.25rem -0.5rem;
-  -webkit-margin-end: 0.5rem;
-          margin-inline-end: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 .form-control-sm::-webkit-file-upload-button {
   padding: 0.25rem 0.5rem;
   margin: -0.25rem -0.5rem;
-  -webkit-margin-end: 0.5rem;
-          margin-inline-end: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
 .form-control-lg {
@@ -3914,14 +3980,12 @@ progress {
 .form-control-lg::file-selector-button {
   padding: 0.5rem 1rem;
   margin: -0.5rem -1rem;
-  -webkit-margin-end: 1rem;
-          margin-inline-end: 1rem;
+  margin-inline-end: 1rem;
 }
 .form-control-lg::-webkit-file-upload-button {
   padding: 0.5rem 1rem;
   margin: -0.5rem -1rem;
-  -webkit-margin-end: 1rem;
-          margin-inline-end: 1rem;
+  margin-inline-end: 1rem;
 }
 
 textarea.form-control {

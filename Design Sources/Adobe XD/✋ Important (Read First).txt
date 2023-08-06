@@ -1,5 +1,0 @@
-Please make sure to have that both "Roboto" and "Montserrat "fonts installed on your computer before opening the Sketch file.
-
-To download the fonts directly from Google follow those links
-https://fonts.google.com/specimen/Roboto
-https://fonts.google.com/specimen/Montserrat

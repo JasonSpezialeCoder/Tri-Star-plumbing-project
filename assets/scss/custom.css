@@ -459,7 +459,7 @@ p {
 }
 @media (min-width: 1400px) {
   .heading-1 {
-    font-size: 3.7rem;
+    font-size: 3.5rem;
   }
 }
 
@@ -478,7 +478,7 @@ p {
 }
 @media (min-width: 1400px) {
   .heading-2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -808,7 +808,7 @@ footer .navbar-brand {
 }
 @media (min-width: 992px) {
   .hero-heading-home {
-    font-size: 3.3rem;
+    font-size: 4rem;
   }
 }
 
@@ -1421,7 +1421,7 @@ footer .btn:focus {
 }
 
 .hero-service-Sewer-maintenance {
-  background-image: var(--gradient1), url(/assets/images/Tri-star-photos/Sewer-maintenance/sewer-maintenance-hero-mobile.jpg);
+  background-image: var(--gradient1), url(/assets/images/Tri-star-photos/Sewer-maintenance/sewer-maintenance-hero-mobile-2.jpg);
   background-position: center center;
   background-size: cover;
   position: relative;
@@ -1429,14 +1429,50 @@ footer .btn:focus {
 }
 @media (min-width: 768px) {
   .hero-service-Sewer-maintenance {
-    background-image: var(--gradient1), url(/assets/images/Tri-star-photos/Sewer-maintenance/sewer-maintenance-hero-tablet.jpg);
+    background-image: var(--gradient1), url(/assets/images/Tri-star-photos/Sewer-maintenance/sewer-maintenance-hero-tablet-2.jpg);
     background-position: center center;
   }
 }
 @media (min-width: 992px) {
   .hero-service-Sewer-maintenance {
-    background-image: var(--gradient1), url(/assets/images/Tri-star-photos/Sewer-maintenance/sewer-maintenance-hero-desktop.jpg);
+    background-image: var(--gradient1), url(/assets/images/Tri-star-photos/Sewer-maintenance/sewer-maintenance-hero-desktop-2.jpg);
     background-position: top center;
+  }
+}
+
+.hero-service-hot-water-boilers {
+  background-image: var(--gradient1), url(/assets/images/Tri-star-photos/waterheater/Hot-water-boilers-hero-mobile.jpg);
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  .hero-service-hot-water-boilers {
+    background-image: var(--gradient1), url(/assets/images/Tri-star-photos/waterheater/Hot-water-boilers-hero-tablet.jpg);
+  }
+}
+@media (min-width: 992px) {
+  .hero-service-hot-water-boilers {
+    background-image: var(--gradient1), url(/assets/images/Tri-star-photos/waterheater/Hot-water-boilers-hero-desktop.jpg);
+  }
+}
+
+.hero-service-gas-leak-detection {
+  background-image: var(--gradient1), url(/assets/images/Tri-star-photos/gas-leak-detection/gas-leak-detection-hero-mobile-1.jpg);
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  .hero-service-gas-leak-detection {
+    background-image: var(--gradient1), url(/assets/images/Tri-star-photos/gas-leak-detection/gas-leak-detection-hero-tablet-1.jpg);
+  }
+}
+@media (min-width: 992px) {
+  .hero-service-gas-leak-detection {
+    background-image: var(--gradient1), url(/assets/images/Tri-star-photos/gas-leak-detection/gas-leak-detection-hero-desktop-1.jpg);
   }
 }
 
