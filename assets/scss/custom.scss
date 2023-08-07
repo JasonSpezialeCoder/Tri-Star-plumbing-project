@@ -1133,13 +1133,13 @@ footer .btn:focus {
   font-weight: 200;
   font-size: 2.8rem;
   @include media-breakpoint-up(md) {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
   @include media-breakpoint-up(lg) {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
   @include media-breakpoint-up(xxl) {
-    font-size: 6.5rem;
+    font-size: 4rem;
   }
 }
 
@@ -1605,6 +1605,22 @@ footer .btn:focus {
     border: 1px solid var(--border4-dark) !important;
 }
 
+.cta-service-card  {
+  height: 0%;
+}
+
+.img-fluid-2 {
+  max-width: 100%;
+  height: auto;
+
+  @include media-breakpoint-up(md) {
+    max-width: 50%;
+  }
+
+  @include media-breakpoint-up(lg) {
+    max-width: 100%;
+  }
+}
 // Contact section 
 
 .contact-section .form-control {

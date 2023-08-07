@@ -1069,17 +1069,17 @@ footer .btn:focus {
 }
 @media (min-width: 768px) {
   .hero-heading-2 {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
 }
 @media (min-width: 992px) {
   .hero-heading-2 {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
 }
 @media (min-width: 1400px) {
   .hero-heading-2 {
-    font-size: 6.5rem;
+    font-size: 4rem;
   }
 }
 
@@ -1582,6 +1582,25 @@ footer .btn:focus {
 
 .service-section .border {
   border: 1px solid var(--border4-dark) !important;
+}
+
+.cta-service-card {
+  height: 0%;
+}
+
+.img-fluid-2 {
+  max-width: 100%;
+  height: auto;
+}
+@media (min-width: 768px) {
+  .img-fluid-2 {
+    max-width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .img-fluid-2 {
+    max-width: 100%;
+  }
 }
 
 .contact-section .form-control {

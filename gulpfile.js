@@ -43,7 +43,7 @@ function scss() {
 function browserSync(done) {
   browsersync.init({
     files: "./*.html",
-    startPath: "./Home.html",
+    startPath: "./services/Leak-detection.html",
     server: {
       baseDir: "./",
       routes: {},
@@ -69,7 +69,8 @@ function watch() {
   gulp.watch('./assets/scss/**/*.scss', scss);
   gulp.watch(
     [
-      './html/**/*.html'
+      './html/**/*.html',
+      'services/**/*.html'
     ],
     gulp.series(browserSyncReload)
   );
