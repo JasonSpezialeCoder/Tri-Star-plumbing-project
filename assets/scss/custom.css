@@ -430,7 +430,7 @@ p {
 }
 @media (min-width: 768px) {
   .cta-heading {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 @media (min-width: 992px) {
@@ -998,6 +998,25 @@ footer .accent-social:hover {
   color: var(--nav-links);
 }
 
+footer .fabrx-social {
+  text-align: left !important;
+}
+@media (min-width: 768px) {
+  footer .fabrx-social {
+    text-align: left !important;
+  }
+}
+@media (min-width: 992px) {
+  footer .fabrx-social {
+    text-align: right !important;
+  }
+}
+@media (min-width: 1200px) {
+  footer .fabrx-social {
+    text-align: right !important;
+  }
+}
+
 footer .btn:focus {
   background-color: var(--bkg2-light-dark-btn);
   color: var(--accent1-dark);
@@ -1095,6 +1114,12 @@ footer .btn:focus {
   margin: 0 0 60px 0;
 }
 
+.our-story h2 {
+  font-weight: 700;
+  max-width: 65%;
+  margin: 0 0 40px 0;
+}
+
 .about .fa-circle-play {
   color: var(--bkg1-light);
 }
@@ -1109,7 +1134,12 @@ footer .btn:focus {
 }
 
 .about .our-story {
-  padding: 40px 20% 40px 40px;
+  padding: 30px 20% 30px 30px;
+}
+@media (min-width: 992px) {
+  .about .our-story {
+    padding: 50px 20% 50px 50px;
+  }
 }
 
 .about .about-grid {

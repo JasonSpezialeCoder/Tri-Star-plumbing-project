@@ -43,7 +43,7 @@ function scss() {
 function browserSync(done) {
   browsersync.init({
     files: "./*.html",
-    startPath: "./About.html",
+    startPath: "./Home.html",
     server: {
       baseDir: "./",
       routes: {},
